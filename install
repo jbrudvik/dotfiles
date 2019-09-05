@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+brew install zsh zsh-completions
+# sudo echo /usr/local/bin/zsh | sudo tee -a /etc/shells
+# chsh -s /usr/local/bin/zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# TODO: Figure out why this isn't showing up properly on install
+ln -s "$(pwd)/.zshrc" "$HOME"
+ln -s "$(pwd)/.zsh_aliases" "$HOME"
+touch "$HOME/.zsh_local"
+touch "$HOME/.hushlogin"
+
+ln -s "$(pwd)/.gitconfig" "$HOME"
+ln -s "$(pwd)/.gitignore_global" "$HOME"
+
+ln -s "$(pwd)/.vimrc" "$HOME"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall! +qall
