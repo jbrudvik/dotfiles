@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 
+# zsh (+ bash fallback)
 rm "$HOME/.zshrc"
 rm "$HOME/.zsh_aliases"
+rm "$HOME/.bashrc"
+rm "$HOME/.bash_profile"
 rm "$HOME/.hushlogin"
 rm -rf "$HOME/.oh-my-zsh"
 brew uninstall zsh zsh-completions
-# chsh -s /bin/bash # TODO: Change to /bin/zsh after MacOS 10.15 is released
+# Q: Does this require sudo? Maybe this is actually ok.
+chsh -s /bin/bash # TODO: Change to /bin/zsh after MacOS 10.15 is released
 
+# git
 rm "$HOME/.gitconfig"
 rm "$HOME/.gitignore_global"
 
+# vim
 rm "$HOME/.vimrc"
 rm -rf "$HOME/.vim/bundle/Vundle.vim"

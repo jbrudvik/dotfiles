@@ -1,5 +1,10 @@
+#!/usr/bin/env zsh
+
+# Ensure that /usr/local/bin overrides /usr/bin
+export PATH="/usr/local/bin:$PATH"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# TODO: Ensure $PATH is: /Users/jbrudvik/.pyenv/shims:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jbrudvik/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jbrudvik/.oh-my-zsh"
@@ -17,14 +22,8 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -48,6 +47,7 @@ ZSH_THEME="robbyrussell"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# TODO: Add terraform plugin (if one exists)
 plugins=(git docker kubectl zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -57,9 +57,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Default editor used by other programs
 export EDITOR='vim'
-
-# Ensure that /usr/local/bin overrides /usr/bin
-export PATH="/usr/local/bin:$PATH"
 
 # Highlight grep matches
 export GREP_OPTIONS='--color=auto'
