@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# zsh (+ bash)
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+ln -s "$(pwd)/.zshrc" "$HOME"
+ln -s "$(pwd)/.zsh_config" "$HOME"
+ln -s "$(pwd)/.zsh_aliases" "$HOME"
+ln -s "$(pwd)/.bashrc" "$HOME"
+ln -s "$(pwd)/.bash_profile" "$HOME"
+touch "$HOME/.zsh_local"
+touch "$HOME/.hushlogin"
+
+# git
+ln -s "$(pwd)/.gitconfig" "$HOME"
+ln -s "$(pwd)/.gitignore_global" "$HOME"
+
+# vim
+ln -s "$(pwd)/.vimrc" "$HOME"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall! +qall

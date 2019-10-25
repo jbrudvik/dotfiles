@@ -1,0 +1,109 @@
+[user]
+    name = Jeremy Brudvik
+    email = jeremy@brudvik.me
+[alias]
+
+    #
+    # Useful modifiers:
+    #
+    #   --staged
+    #   --stat
+    #   -p
+    #   --reverse
+    #   --graph
+    #   --amend (NOTE: Not -a)
+    #
+    # Useful commands:
+    #
+    #   $ git grep <pattern>
+    #   $ git remote prune origin --dry-run
+    #   $ git b -vv
+    #   $ git shortlog
+    #
+    # To try:
+    #
+    #   $ git checkout -p
+    #   $ git reset -p
+    #
+
+    # Basics
+    co = checkout
+    s = status -s
+    d = diff
+    f = fetch
+    a = add
+    c = commit -v
+    b = branch
+
+
+    # Helpers
+    #
+    # - current-branch (alias: cb): current branch name
+    # - other: origin/<current-branch>, fallback to master
+    # - mine: in local branch but not "other"
+    # - theirs: in "other" but not local branch
+
+    current-branch = rev-parse --abbrev-ref HEAD
+    cb = "!git current-branch"
+
+    # Maybe it isn't so useful to have this be so smart. Just have different helpers
+    # g vto (theirs-origin)
+    # g vmo (theirs-origin)
+    # g vm (vs master)
+    # g gt (vs master)
+    # Or maybe the default should be vs origin? (especially because I've been used to that)
+    # - Yes, probably that.
+    # - g vmm
+    # - g vtm
+    other = "!if $(git log origin/$(git current-branch) &> /dev/null); then echo origin/$(git current-branch); else echo master; fi"
+    ; mine = "!echo HEAD ^$(git other)"
+    ; theirs = "!echo $(git other) ^HEAD"
+
+    mine = "!echo HEAD ^origin/$(git current-branch)"
+    theirs = "!echo origin/$(git current-branch) ^HEAD"
+
+
+    # Logging. "Options":
+    #
+    # - m (mine): code in local branch but not in "other"
+    # - t (theirs): code in "other" but not in local branch
+
+    # diff
+    dm = "!git d $(git mine)"
+    dt = "!git d $(git theirs)"
+    dmm = "!git d HEAD ^master"
+    dtm = "!git d master ^HEAD"
+
+    # log (compressed)
+    t = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
+    tm = "!git t $(git mine)"
+    tt = "!git t $(git theirs)"
+    tmm = "!git t HEAD ^master"
+    ttm = "!git t master ^HEAD"
+
+    # log
+    l = log --date=local
+    lm = "!git l $(git mine)"
+    lt = "!git l $(git theirs)"
+    lmm = "!git l HEAD ^master"
+    ltm = "!git l master ^HEAD"
+
+    # log (verbose)
+    v = "!git l -p"
+    vm = "!git lm -p"
+    vt = "!git lt -p"
+    vmm = "!git lmm -p"
+    vtm = "!git ltt -p"
+
+[log]
+    decorate
+[push]
+    default = simple
+[color]
+    ui = auto
+[color "diff"]
+    meta = blue
+[difftool]
+    prompt = false
+[core]
+    excludesfile = ~/.gitignore_global

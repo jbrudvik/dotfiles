@@ -1,0 +1,12 @@
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+.localized
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN
