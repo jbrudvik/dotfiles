@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# Default editor used by other programs
+export EDITOR='vim'
+
+# Highlight grep matches
+export GREP_OPTIONS='--color=auto'
+
+# Go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+# Python: Initialize pyenv minimally (Python version management)
+export PATH="/Users/jbrudvik/.pyenv/shims:$PATH"
+
+# Aliases
+if [ -f "$HOME/.zsh_aliases" ]; then
+  source "$HOME/.zsh_aliases"
+fi
+
+# Local settings
+if [ -f "$HOME/.zsh_local" ]; then
+  source "$HOME/.zsh_local"
+fi

@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-# zsh (+ bash fallback)
-brew install zsh zsh-completions
-# sudo echo /usr/local/bin/zsh | sudo tee -a /etc/shells # TODO: Only do this if it isn't contained
-chsh -s /usr/local/bin/zsh # Q: Does this require sudo?
+# zsh (+ bash)
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ln -s "$(pwd)/.zshrc" "$HOME"
+ln -s "$(pwd)/.zsh_config" "$HOME"
 ln -s "$(pwd)/.zsh_aliases" "$HOME"
 ln -s "$(pwd)/.bashrc" "$HOME"
 ln -s "$(pwd)/.bash_profile" "$HOME"
