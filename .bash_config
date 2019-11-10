@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Ensure that /usr/local/bin overrides /usr/bin
+export PATH="/usr/local/bin:$PATH"
+
+# Default editor used by other programs
+# TODO: Use TERM_PROGRAM (TERM_PROGRAM=vscode) to make EDITOR `code` in shells in vscode
+# - Is there a ternary operator in bash?
+export EDITOR='vim'
+
+# Highlight grep matches
+export GREP_OPTIONS='--color=auto'
+
+# Go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+# Python: Initialize pyenv minimally (Python version management)
+export PATH="/Users/jbrudvik/.pyenv/shims:$PATH"
+
+# Aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+  source "$HOME/.bash_aliases"
+fi
+
+# Local settings
+if [ -f "$HOME/.bash_local" ]; then
+  source "$HOME/.bash_local"
+fi

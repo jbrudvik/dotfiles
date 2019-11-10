@@ -1,21 +1,28 @@
 #!/usr/bin/env bash
 
-# zsh (+ bash)
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-ln -s "$(pwd)/.zshrc" "$HOME"
-ln -s "$(pwd)/.zsh_config" "$HOME"
-ln -s "$(pwd)/.zsh_aliases" "$HOME"
-ln -s "$(pwd)/.bashrc" "$HOME"
-ln -s "$(pwd)/.bash_profile" "$HOME"
-touch "$HOME/.zsh_local"
-touch "$HOME/.hushlogin"
+symlink_with_backup() {
+  if [ -e "$1" ]; then
+    mv -v "$1" "$1.bak"
+  fi
+  ln -sv "$1" "$2"
+}
 
-# git
-ln -s "$(pwd)/.gitconfig" "$HOME"
-ln -s "$(pwd)/.gitignore_global" "$HOME"
+# "Install" dotfiles only if it has not already been installed
+for f in .*; do
+  if [ -f "$f" ]; then
+    if [ "$(readlink $HOME/$f)" != "$(pwd)/$f" ]; then
+      echo "Installing $f"
+      # symlink_with_backup "$f" "$HOME"
+    else
+      echo "Skipping $f"
+    fi
+  fi
+done
 
-# vim
-ln -s "$(pwd)/.vimrc" "$HOME"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall! +qall
+# zsh: oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# vim: Vundle
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# vim +PluginInstall! +qall

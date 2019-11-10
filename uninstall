@@ -1,20 +1,27 @@
 #!/usr/bin/env bash
 
-rm_if_link(){ [ ! -L "$1" ] || rm -v "$1"; }
+rm_symlink_and_restore() {
+  if [ -L "$1" ]; then
+    rm -v "$1"
+    
+    if [ -f "$1.bak" ]; then
+      mv -v "$1.bak" "$1"
+    fi
+  fi
+}
 
-# zsh (+ bash)
-rm_if_link "$HOME/.zshrc"
-rm_if_link "$HOME/.zsh_config"
-rm_if_link "$HOME/.zsh_aliases"
-rm_if_link "$HOME/.bashrc"
-rm_if_link "$HOME/.bash_profile"
-rm_if_link "$HOME/.hushlogin"
-rm -rf "$HOME/.oh-my-zsh"
+# "Uninstall" dotfiles that are symlinks pointing at files in this directory
+for f in .*; do
+  if [ -f "$f" ]; then
+    if [ -L "$HOME/$f" ]; then
+      if [ "$(readlink $HOME/$f)" = "$(pwd)/$f" ]; then
+        echo "Uninstalling $f"
+        # rm_symlink_and_restore "$f"
+      fi
+    fi
+  fi
+done
 
-# git
-rm_if_link "$HOME/.gitconfig"
-rm_if_link "$HOME/.gitignore_global"
-
-# vim
-rm_if_link "$HOME/.vimrc"
-rm -rf "$HOME/.vim/bundle/Vundle.vim"
+# TODO: Uncomment
+# rm -rf ".oh-my-zsh"
+# rm -rf ".vim/bundle/Vundle.vim"

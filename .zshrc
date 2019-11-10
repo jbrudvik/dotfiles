@@ -1,15 +1,16 @@
 #!/usr/bin/env zsh
 
-# Ensure that /usr/local/bin overrides /usr/bin
-export PATH="/usr/local/bin:$PATH"
-
-# Core zsh + oh-my-zsh setup
+# Set up oh-my-zsh
 export ZSH="/Users/jbrudvik/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git docker kubectl zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+# Set prompt
+# TODO: Set prompt (L & R)
+
+# Q: Do I need to swap this with above? So the path settings are correct (before running oh-my-zsh config)
 # User settings
-if [ -f "$HOME/.zsh_config" ]; then
-  source "$HOME/.zsh_config"
+if [ -f "$HOME/.bash_config" ]; then
+  source "$HOME/.bash_config"
 fi
