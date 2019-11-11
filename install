@@ -12,7 +12,7 @@ for f in .*; do
   if [ -f "$f" ]; then
     if [ "$(readlink $HOME/$f)" != "$(pwd)/$f" ]; then
       echo "Installing $f"
-      # symlink_with_backup "$f" "$HOME"
+      symlink_with_backup "$f" "$HOME"
     else
       echo "Skipping $f"
     fi

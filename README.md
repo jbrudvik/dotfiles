@@ -21,7 +21,7 @@ $ sudo sh -c "echo $(which zsh) >> /etc/shells"
 $ sudo chsh -s $(which zsh) $(whoami)
 ```
 
-### Install dotfiles
+### Install
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
