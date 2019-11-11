@@ -2,11 +2,11 @@
 
 rm_symlink_and_restore() {
   if [ -L "$1" ]; then
-    echo "- Removing symlink $1"
+    echo "    - Removing symlink $1"
     rm "$1"
     
     if [ -f "$1.bak" ]; then
-      echo "- Restoring $1 from backup $1.bak"
+      echo "    - Restoring $1 from backup $1.bak"
       mv "$1.bak" "$1"
     fi
   fi
@@ -17,7 +17,7 @@ for f in .*; do
   if [ -f "$f" ]; then
     if [ -L "$HOME/$f" ]; then
       if [ "$(readlink $HOME/$f)" = "$(pwd)/$f" ]; then
-        echo "Uninstalling $f"
+        echo "- Uninstalling $f"
         rm_symlink_and_restore "$HOME/$f"
       fi
     fi

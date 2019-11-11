@@ -2,10 +2,10 @@
 
 symlink_with_backup() {
   if [ -e "$2" ]; then
-    echo "- Backing up $2 as $2.bak"
+    echo "    - Backing up $2 as $2.bak"
     mv "$2" "$2.bak"
   fi
-  echo "- Creating symlink $2 -> $1"
+  echo "    - Creating symlink $2 -> $1"
   ln -s "$1" "$2"
 }
 
@@ -13,10 +13,10 @@ symlink_with_backup() {
 for f in .*; do
   if [ -f "$f" ]; then
     if [ "$(readlink $HOME/$f)" != "$(pwd)/$f" ]; then
-      echo "Installing $f"
+      echo "- Installing $f"
       symlink_with_backup "$(pwd)/$f" "$HOME/$f"
     else
-      echo "Skipping $f"
+      echo "- Skipping $f"
     fi
   fi
 done
