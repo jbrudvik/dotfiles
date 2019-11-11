@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 symlink_with_backup() {
-  if [ -e "$1" ]; then
-    mv -v "$1" "$1.bak"
+  if [ -e "$2" ]; then
+    mv -v "$2" "$2.bak"
   fi
   ln -sv "$1" "$2"
 }
@@ -12,7 +12,7 @@ for f in .*; do
   if [ -f "$f" ]; then
     if [ "$(readlink $HOME/$f)" != "$(pwd)/$f" ]; then
       echo "Installing $f"
-      symlink_with_backup "$f" "$HOME"
+      symlink_with_backup "$f" "$HOME/$f"
     else
       echo "Skipping $f"
     fi
