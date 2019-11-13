@@ -12,8 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/TaskList.vim'
-Plugin 'ekalinin/Dockerfile.vim'
 
 
 " Settings
@@ -23,7 +21,7 @@ filetype plugin on " Enable loading of plugin files for specific file types
 filetype indent on " Enable smart indentation based on filetype
 syntax on " Turn on syntax highlighting
 set ruler " Show ruler (line and column number, position in file)
-set nohlsearch " Do not highlight all search matches
+set hlsearch " Highlight all search matches
 set expandtab " Insert tabs instead of spaces when using the tab button
 set softtabstop=2 " Size of tabs -- coupled with expandtab -> number of spaces
 set tabstop=2 " Visual size of tab characters
@@ -55,12 +53,9 @@ set notimeout " Do not time out in the middle of custom mappings
 set ttimeout " ...but still time out on key codes
 set ttimeoutlen=100 " ...after 100 milliseconds
 
-" Y -> yank to EOL.
-" This is more consistent with other commands (e.g., D -> delete to EOL, C -> change to EOL) than the default behavior: yank the whole line (covered by yy). See further discussion: http://vimdoc.sourceforge.net/htmldoc/change.html#Y
+" Y -> yank to EOL
+" This is more consistent with other commands (e.g., D -> delete to EOL, C -> change to EOL) than the default behavior: yank the whole line (covered by yy)
 nnoremap Y y$
-
-" Add a bigger area for pinky to hit when trying to exit insert mode
-inoremap <C-]> <Esc>
 
 " Enable saving with :W (common typo of :w)
 cnoreabbrev W w
@@ -77,8 +72,8 @@ nnoremap <leader>k O<Esc>
 " Toggle line numbers
 nnoremap <silent> <leader>3 :set nu!<CR>
 
-" Toggle highlighting of search term
-nnoremap <silent> <leader>h :set hlsearch!<CR>
+" Disable search term highlighting until next search
+nnoremap <silent> <leader>h :noh<CR>
 
 " Toggle display of invisibles
 nnoremap <silent> <leader>l :set list!<CR>
