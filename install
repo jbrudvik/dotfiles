@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-backup() {
+backup_if_none() {
   if [ -e "$1" ]; then
+    if [ ! -e "$1.bak" ]
     echo "- Back up $1 -> $1.bak"
     mv "$1" "$1.bak"
   fi
@@ -16,18 +17,18 @@ symlink() {
 for f in .*; do
   if [ -f "$f" ]; then
     if [ "$(readlink $HOME/$f)" != "$(pwd)/$f" ]; then
-      backup "$HOME/$f"
+      backup_if_none "$HOME/$f"
       symlink "$(pwd)/$f" "$HOME/$f"
     fi
   fi
 done
 
-# zsh: oh-my-zsh
-backup "$HOME/.oh-my-zsh"
+# Install oh-my-zsh (zsh config)
+backup_if_none "$HOME/.oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# vim: Vundle
-backup "$HOME/.vim"
+# Install and use Vundle (Vim plugin manager)
+backup_if_none "$HOME/.vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall! +qall
