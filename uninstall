@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 rm_and_restore() {
-  echo "- Remove $1"
-  rm -rf "$1"
+  if [ -e $1 ]; then
+    echo "- Remove $1"
+    rm -rf "$1"
+  fi
 
   if [ -f "$1.bak" ]; then
     echo "- Restore $1 <- $1.bak"
