@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-rm_symlink_and_restore() {
-  if [ -L "$1" ]; then
-    echo "- Remove symlink $1"
-    rm "$1"
-    
-    if [ -f "$1.bak" ]; then
-      echo "- Restore $1 <- $1.bak"
-      mv "$1.bak" "$1"
-    fi
+rm_and_restore() {
+  echo "- Remove $1"
+  rm -rf "$1"
+
+  if [ -f "$1.bak" ]; then
+    echo "- Restore $1 <- $1.bak"
+    mv "$1.bak" "$1"
   fi
 }
 
@@ -17,12 +15,12 @@ for f in .*; do
   if [ -f "$f" ]; then
     if [ -L "$HOME/$f" ]; then
       if [ "$(readlink $HOME/$f)" = "$(pwd)/$f" ]; then
-        rm_symlink_and_restore "$HOME/$f"
+        rm_and_restore "$HOME/$f"
       fi
     fi
   fi
 done
 
 # Remove oh-my-zsh, Vundle
-rm -rf ".oh-my-zsh"
-rm -rf ".vim/bundle/Vundle.vim"
+rm_and_restore "$HOME/.oh-my-zsh"
+rm_and_restore "$HOME/.vim"
