@@ -23,6 +23,6 @@ for f in .*; do
   fi
 done
 
-# TODO: Fail silently (e.g., if it isn't there -- or maybe only remove if it is there, otherwise don't fail silently
+# Remove oh-my-zsh, Vundle
 rm -rf ".oh-my-zsh"
 rm -rf ".vim/bundle/Vundle.vim"
