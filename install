@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 backup() {
-  if [ -e "$2" ]; then
-    echo "- Back up $2 -> $2.bak"
-    mv "$2" "$2.bak"
+  if [ -e "$1" ]; then
+    echo "- Back up $1 -> $1.bak"
+    mv "$1" "$1.bak"
   fi
 }
 
