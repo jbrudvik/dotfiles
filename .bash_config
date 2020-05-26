@@ -4,8 +4,6 @@
 export PATH="/usr/local/bin:$PATH"
 
 # Default editor used by other programs
-# TODO: Use TERM_PROGRAM (TERM_PROGRAM=vscode) to make EDITOR `code` in shells in vscode
-# - Is there a ternary operator in bash?
 export EDITOR='vim'
 
 # Highlight grep matches
