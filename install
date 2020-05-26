@@ -1,35 +1,40 @@
 #!/usr/bin/env bash
 
-backup_if_none() {
-  if [ -e "$1" ]; then
-    if [ ! -e "$1.bak" ]; then
-      echo "- Back up $1 -> $1.bak"
-      mv "$1" "$1.bak"
-    fi
-  fi
-}
-
 symlink() {
   echo "- Symlink $2 -> $1"
   ln -s "$1" "$2"
 }
 
+# Install zsh
+if command -v brew &> /dev/null; then
+  brew install zsh zsh-completions
+elif command -v apt-get &> /dev/null; then
+  apt-get install zsh
+fi
+
+# Add zsh to valid login shells
+grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
+
+# Set zsh as default shell
+if [ $(command -v zsh) != $SHELL ]; then
+  sudo chsh -s $(command -v zsh) $(whoami)
+fi
+
+# Install oh-my-zsh syntax highlighting
+if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
 # "Install" dotfiles that have not already been installed
+cd $(dirname "$0")
 for f in .*; do
   if [ -f "$f" ]; then
-    if [ "$(readlink $HOME/$f)" != "$(pwd)/$f" ]; then
-      backup_if_none "$HOME/$f"
-      symlink "$(pwd)/$f" "$HOME/$f"
-    fi
+    ln -sfv "$(pwd)/$f" "$HOME/$f"
   fi
 done
 
-# Install oh-my-zsh (zsh config)
-backup_if_none "$HOME/.oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 # Install and use Vundle (Vim plugin manager)
-backup_if_none "$HOME/.vim"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 vim +PluginInstall! +qall
