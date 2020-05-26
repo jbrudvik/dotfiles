@@ -1,4 +1,7 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
+
+# Ensure that /usr/local/bin overrides /usr/bin
+export PATH="/usr/local/bin:$PATH"
 
 # Default editor used by other programs
 export EDITOR='vim'
@@ -14,11 +17,11 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="/Users/jbrudvik/.pyenv/shims:$PATH"
 
 # Aliases
-if [ -f "$HOME/.zsh_aliases" ]; then
-  source "$HOME/.zsh_aliases"
+if [ -f "$HOME/.bash_aliases" ]; then
+  source "$HOME/.bash_aliases"
 fi
 
 # Local settings
-if [ -f "$HOME/.zsh_local" ]; then
-  source "$HOME/.zsh_local"
+if [ -f "$HOME/.bash_local" ]; then
+  source "$HOME/.bash_local"
 fi

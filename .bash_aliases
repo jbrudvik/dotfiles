@@ -1,21 +1,13 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-
-# Overrides of existing commands
-# ----
-
-# Prompt before overwriting files and report what was done
+# Override: Prompt before overwriting files and report what was done
 alias mv='mv -iv'
 alias cp='cp -iv'
 
-
-# Variants of existing commands
-# ----
-
-# ls
+# Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
 
-# grep
+# Variant: grep
 alias grepc='grep --color=always' # Always use color, even when redirecting output
 function greph() { # Always include first line (e.g., header)
   IFS= read -r header
@@ -23,18 +15,14 @@ function greph() { # Always include first line (e.g., header)
   grep "$1"
 }
 
-# diff
+# Variant: diff
 alias dp='diff -Naur' # patch
 
-# colordiff
+# Variant: colordiff
 alias di='colordiff -Naur' # patch
 alias dm='colordiff --suppress-common-lines -w --width $(tput cols)' # minimal
 alias ds='colordiff --side-by-side -w --width $(tput cols) --suppress-common-lines' # side-by-side, minimal
 alias dsa='colordiff --side-by-side -w --width $(tput cols)' # side-by-side, all lines
 
-
-# New commands
-# ----
-
-# What is my IP?
+# New: What is my IP?
 alias ip='ipconfig getifaddr en0'
