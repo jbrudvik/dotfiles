@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Set up oh-my-zsh
-export ZSH="/Users/jbrudvik/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git docker kubectl zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh

@@ -14,7 +14,7 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
 # Python: Initialize pyenv minimally (Python version management)
-export PATH="/Users/jbrudvik/.pyenv/shims:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
 
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
