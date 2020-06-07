@@ -16,9 +16,7 @@ fi
 grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
 
 # Set zsh as default shell
-if [ $(command -v zsh) != $SHELL ]; then
-  sudo chsh -s $(command -v zsh) $(whoami)
-fi
+sudo chsh -s $(command -v zsh) $(whoami)
 
 # Install oh-my-zsh syntax highlighting
 if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
