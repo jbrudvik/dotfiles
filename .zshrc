@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # Set up oh-my-zsh
+ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git docker kubectl zsh-syntax-highlighting)
