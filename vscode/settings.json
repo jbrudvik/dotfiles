@@ -1,168 +1,103 @@
 {
-    // Go
-    "go.formatTool": "gofmt",
-    "go.buildOnSave": "package",
-    "go.lintOnSave": "package",
-    "go.vetOnSave": "package",
-    "go.testOnSave": true,
-    // Git Lens
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
+  // Go
+  "go.formatTool": "gofmt",
+  "go.buildOnSave": "package",
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package",
+  "go.testOnSave": true,
+  // Git Lens
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.enabled": true,
+  "gitlens.keymap": "chorded",
+  // Other
+  "window.restoreWindows": "all",
+  "window.openFilesInNewWindow": "default",
+  "editor.formatOnSave": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.sideBar.location": "left",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": false,
+  "git.confirmSync": false,
+  "files.exclude": {
+    "**/*.pyc": true
+  },
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.enabled": true,
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path": "/Users/jbrudvik/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.minikube-path": "/Users/jbrudvik/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "terminal.integrated.shell.osx": "zsh",
+  "terminal.integrated.lineHeight": 1.2,
+  "workbench.panel.defaultLocation": "right",
+  "terminal.integrated.rendererType": "dom",
+  // Vim
+  "vim.useSystemClipboard": true,
+  "vim.leader": ";",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "commands": ["undo"]
     },
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": true,
-    "gitlens.hovers.currentLine.enabled": true,
-    "gitlens.keymap": "chorded",
-    // Other
-    "window.restoreWindows": "all",
-    "window.openFilesInNewWindow": "default",
-    "editor.formatOnSave": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.sideBar.location": "left",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "editor.renderWhitespace": "none",
-    "editor.minimap.enabled": false,
-    "git.confirmSync": false,
-    "files.exclude": {
-        "**/*.pyc": true
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
     },
-    "python.formatting.provider": "black",
-    "python.linting.pylintEnabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.enabled": true,
-    "vs-kubernetes": {
-        "vs-kubernetes.helm-path": "/Users/jbrudvik/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-        "vs-kubernetes.minikube-path": "/Users/jbrudvik/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
     },
-    "terminal.integrated.shell.osx": "zsh",
-    "terminal.integrated.lineHeight": 1.2,
-    "workbench.panel.defaultLocation": "right",
-    "terminal.integrated.rendererType": "dom",
-    // Vim
-    "vim.useSystemClipboard": true,
-    "vim.leader": ";",
-    "vim.hlsearch": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "u"
-            ],
-            "commands": [
-                "undo"
-            ]
-        },
-        {
-            "before": [
-                "<C-r>"
-            ],
-            "commands": [
-                "redo"
-            ]
-        },
-        {
-            "before": [
-                "Y"
-            ],
-            "after": [
-                "y",
-                "$"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "h"
-            ],
-            "commands": [
-                ":noh"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "<leader>"
-            ],
-            "commands": [
-                ":w"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "n"
-            ],
-            "after": [
-                "m",
-                "N",
-                "o",
-                "<Esc>",
-                "`",
-                "N"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "i"
-            ],
-            "after": [
-                "m",
-                "N",
-                "O",
-                "<Esc>",
-                "`",
-                "N"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "j"
-            ],
-            "after": [
-                "o",
-                "<Esc>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "k"
-            ],
-            "after": [
-                "O",
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine",
-            ]
-        }
-    ]
+    {
+      "before": ["<leader>", "h"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["<leader>", "<leader>"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "after": ["m", "N", "o", "<Esc>", "`", "N"]
+    },
+    {
+      "before": ["<leader>", "i"],
+      "after": ["m", "N", "O", "<Esc>", "`", "N"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "after": ["o", "<Esc>"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "after": ["O", "<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ]
 }
