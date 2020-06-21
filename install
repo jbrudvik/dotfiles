@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-symlink() {
-  echo "- Symlink $2 -> $1"
-  ln -s "$1" "$2"
-}
-
 # Install zsh
 if command -v brew &> /dev/null; then
   brew install zsh zsh-completions
@@ -26,8 +21,19 @@ fi
 # Install dotfiles
 cd $(dirname "$0")
 for f in .*; do
-  ln -sfv "$(pwd)/$f" "$HOME/$f"
+  if [ -f "$f" ]; then
+    ln -sfv "$(pwd)/$f" "$HOME/$f"
+  fi
 done
+
+# Install VS Code settings
+cd vscode
+for f in *.json; do
+  if [ -f "$f" ]; then
+    ln -sfv "$(pwd)/$f" "$HOME/Library/Application Support/Code/User/$f"
+  fi
+done
+cd -
 
 # Install and use Vundle (Vim plugin manager)
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
