@@ -23,12 +23,10 @@ if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; 
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
-# "Install" dotfiles that have not already been installed
+# Install dotfiles
 cd $(dirname "$0")
 for f in .*; do
-  if [ -f "$f" ]; then
-    ln -sfv "$(pwd)/$f" "$HOME/$f"
-  fi
+  ln -sfv "$(pwd)/$f" "$HOME/$f"
 done
 
 # Install and use Vundle (Vim plugin manager)
