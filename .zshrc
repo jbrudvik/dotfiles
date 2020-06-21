@@ -22,7 +22,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
 
-# Q: Do I need to swap this with above? So the path settings are correct (before running oh-my-zsh config)
 # User settings
 if [ -f "$HOME/.bash_config" ]; then
   source "$HOME/.bash_config"
