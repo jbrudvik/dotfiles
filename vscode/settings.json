@@ -101,5 +101,8 @@
       "commands": ["editor.action.commentLine"]
     }
   ],
-  "workbench.colorTheme": "Twilight"
+  "workbench.colorTheme": "Twilight",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
