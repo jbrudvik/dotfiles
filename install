@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+GLOBIGNORE=".:..:.git"
+shopt -u dotglob
+
 function brew_install_or_upgrade {
   for package in "$@"; do
     if brew ls --versions "$package" >/dev/null; then
@@ -31,9 +34,7 @@ fi
 # Install dotfiles
 cd $(dirname "$0")
 for f in .*; do
-  if [ -f "$f" ]; then
-    ln -sfv "$(pwd)/$f" "$HOME/$f"
-  fi
+  ln -sfv "$(pwd)/$f" "$HOME/$f"
 done
 
 # Install VS Code settings
@@ -44,9 +45,3 @@ for f in *.json; do
   fi
 done
 cd -
-
-# Install and use Vundle (Vim plugin manager)
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
-vim +PluginInstall! +qall

@@ -1,24 +1,10 @@
-set nocompatible " Break compatibility with vi
-
-
-" Plugins
-" ----
-
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-
-
 " Settings
 " ----
 
+set nocompatible " Break compatibility with vi
 filetype plugin on " Enable loading of plugin files for specific file types
 filetype indent on " Enable smart indentation based on filetype
+colorscheme twilight256
 syntax on " Turn on syntax highlighting
 set ruler " Show ruler (line and column number, position in file)
 set hlsearch " Highlight all search matches
@@ -46,6 +32,7 @@ endif
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
 
 " Key bindings
 " ----
