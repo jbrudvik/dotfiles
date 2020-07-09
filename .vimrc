@@ -82,6 +82,9 @@ nnoremap <silent> <leader>h :noh<CR>
 " Toggle display of invisibles
 nnoremap <silent> <leader>l :set list!<CR>
 
+" Open all buffers in separate tabs
+nnoremap <silent> <leader>t :tab all<CR>
+
 " Tab management
 "
 " J -> go to prev tab (set default J to C-j)
