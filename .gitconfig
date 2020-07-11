@@ -3,28 +3,24 @@
     email = jeremy@brudvik.me
 [alias]
 
-    #
     # Useful modifiers:
     #
-    #   --staged
-    #   --stat
-    #   -p
-    #   --reverse
-    #   --graph
-    #   --amend (NOTE: Not -a)
-    #
+    # --staged
+    # --stat
+    # -p
+    # --reverse
+    # --graph
+    # --amend (NOTE: Not -a)
+
     # Useful commands:
     #
-    #   $ git grep <pattern>
-    #   $ git remote prune origin --dry-run
-    #   $ git b -vv
-    #   $ git shortlog
-    #
-    # To try:
-    #
-    #   $ git checkout -p
-    #   $ git reset -p
-    #
+    # $ git grep <pattern>
+    # $ git remote prune origin --dry-run
+    # $ git b -vv
+    # $ git shortlog
+    # $ git checkout -p
+    # $ git reset -p
+
 
     # Basics
     co = checkout
@@ -36,37 +32,22 @@
     b = branch
 
 
-    # Helpers
+    # Logging
     #
-    # - current-branch (alias: cb): current branch name
+    # Options:
+    # - m (mine): code in local branch but not in "other"
+    # - t (theirs): code in "other" but not in local branch
+
+    # Logging helpers
+    #
+    # - current-branch: current working branch
     # - other: origin/<current-branch>, fallback to master
     # - mine: in local branch but not "other"
     # - theirs: in "other" but not local branch
-
     current-branch = rev-parse --abbrev-ref HEAD
-    cb = "!git current-branch"
-
-    # Maybe it isn't so useful to have this be so smart. Just have different helpers
-    # g vto (theirs-origin)
-    # g vmo (theirs-origin)
-    # g vm (vs master)
-    # g gt (vs master)
-    # Or maybe the default should be vs origin? (especially because I've been used to that)
-    # - Yes, probably that.
-    # - g vmm
-    # - g vtm
     other = "!if $(git log origin/$(git current-branch) &> /dev/null); then echo origin/$(git current-branch); else echo master; fi"
-    ; mine = "!echo HEAD ^$(git other)"
-    ; theirs = "!echo $(git other) ^HEAD"
-
     mine = "!echo HEAD ^origin/$(git current-branch)"
     theirs = "!echo origin/$(git current-branch) ^HEAD"
-
-
-    # Logging. "Options":
-    #
-    # - m (mine): code in local branch but not in "other"
-    # - t (theirs): code in "other" but not in local branch
 
     # diff
     dm = "!git d $(git mine)"
