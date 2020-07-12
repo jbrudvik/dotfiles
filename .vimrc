@@ -54,6 +54,9 @@ cnoreabbrev W w
 " Easy saving
 nnoremap <leader><leader> :w<CR>
 
+" Close
+nnoremap <leader>w :q<CR>
+
 " Insert newlines without changing modes or moving cursor
 nnoremap <leader>n mNo<Esc>`N
 nnoremap <leader>i mNO<Esc>`N
