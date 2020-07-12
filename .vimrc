@@ -68,7 +68,7 @@ nnoremap <silent> <leader>h :noh<CR>
 nnoremap <silent> <leader>l :set list!<CR>
 
 " Open all buffers in separate tabs
-nnoremap <silent> <leader>t :tab all<CR>
+nnoremap <silent> <leader>T :tab all<CR>
 
 
 " Tab management
