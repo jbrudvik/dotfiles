@@ -63,7 +63,7 @@ nnoremap <leader>n mNo<Esc>`N
 nnoremap <leader>i mNO<Esc>`N
 
 " Toggle line numbers
-nnoremap <silent> <leader>3 :set nu!<CR>
+nnoremap <silent> <leader>m :set nu!<CR>
 
 " Disable search term highlighting until next search
 nnoremap <silent> <leader>h :noh<CR>
