@@ -37,11 +37,22 @@ for f in .*; do
   ln -sfv "$(pwd)/$f" "$HOME/$f"
 done
 
-# Install VS Code settings
-cd vscode
-for f in *.json; do
-  if [ -f "$f" ]; then
-    ln -sfv "$(pwd)/$f" "$HOME/Library/Application Support/Code/User/$f"
-  fi
-done
-cd -
+# Install VS Code settings (if VS Code is installed)
+VS_CODE_SETTINGS_PATH=""
+case "$(uname -s)" in
+  Darwin)
+    VS_CODE_SETTINGS_PATH="$HOME/Library/Application Support/Code/User"
+    ;;
+  Linux)
+    VS_CODE_SETTINGS_PATH="$HOME/.config/Code/User"
+    ;;
+esac
+if [ -d "$VS_CODE_SETTINGS_PATH" ]; then
+  cd vscode
+  for f in *.json; do
+    if [ -f "$f" ]; then
+      ln -sfv "$(pwd)/$f" "$VS_CODE_SETTINGS_PATH/$f"
+    fi
+  done
+  cd -
+fi
