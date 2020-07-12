@@ -57,5 +57,5 @@ if [ -d "$VS_CODE_SETTINGS_PATH" ]; then
       ln -sfv "$(pwd)/$f" "$VS_CODE_SETTINGS_PATH/$f"
     fi
   done
-  cd -
+  cd "$OLDPWD"
 fi
