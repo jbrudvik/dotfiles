@@ -77,10 +77,10 @@ nnoremap <silent> <leader>T :tab all<CR>
 " K -> go to next tab (set default K to C-k)
 " <leader>[1-9] -> go to tab number [1-9]
 " <leader>0 -> go to last tab
-" <leader>mw -> move tab left (wrap to last if at first)
-" <leader>me -> move tab right (wrap to first if at last)
-" <leader>mW -> move tab to first
-" <leader>mE -> move tab to last
+" <leader>j -> move tab left (wrap to last if at first)
+" <leader>k -> move tab right (wrap to first if at last)
+" <leader>J -> move tab to first
+" <leader>K -> move tab to last
 " <leader>t -> open last closed tab
 
 nnoremap <C-J> J
