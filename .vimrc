@@ -52,11 +52,11 @@ nnoremap Y y$
 " Enable saving with :W (common typo of :w)
 cnoreabbrev W w
 
-" Easy saving
-nnoremap <leader><leader> :w<CR>
+" Easy save
+nnoremap <leader>w :w<CR>
 
-" Close
-nnoremap <leader>w :q<CR>
+" Ease close
+nnoremap <leader>x :q<CR>
 
 " Insert newlines without changing modes or moving cursor
 nnoremap <leader>n mNo<Esc>`N
