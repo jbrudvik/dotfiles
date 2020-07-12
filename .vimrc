@@ -57,8 +57,6 @@ nnoremap <leader><leader> :w<CR>
 " Insert newlines without changing modes or moving cursor
 nnoremap <leader>n mNo<Esc>`N
 nnoremap <leader>i mNO<Esc>`N
-nnoremap <leader>j o<Esc>
-nnoremap <leader>k O<Esc>
 
 " Toggle line numbers
 nnoremap <silent> <leader>3 :set nu!<CR>
@@ -72,66 +70,55 @@ nnoremap <silent> <leader>l :set list!<CR>
 " Open all buffers in separate tabs
 nnoremap <silent> <leader>t :tab all<CR>
 
+
 " Tab management
 "
 " J -> go to prev tab (set default J to C-j)
 " K -> go to next tab (set default K to C-k)
-" <leader>W -> go to first tab
-" <leader>E -> go to last tab
+" <leader>[1-9] -> go to tab number [1-9]
+" <leader>0 -> go to last tab
 " <leader>mw -> move tab left (wrap to last if at first)
 " <leader>me -> move tab right (wrap to first if at last)
 " <leader>mW -> move tab to first
 " <leader>mE -> move tab to last
-" <leader>r -> go to previous tab
-" <leader>T -> open last closed tab
+" <leader>t -> open last closed tab
 
 nnoremap <C-J> J
 nnoremap <C-K> K
-nnoremap <silent> J :tabprevious<CR>
-nnoremap <silent> K :tabnext<CR>
-nnoremap <silent> <leader>W :tabfirst<CR>
-nnoremap <silent> <leader>E :tablast<CR>
-nnoremap <silent> <leader>mw :execute 'silent! tabmove ' . (tabpagenr() == 1 ? tabpagenr('$') : tabpagenr() - 2)<CR>
-nnoremap <silent> <leader>me :execute 'silent! tabmove ' . (tabpagenr() == tabpagenr('$') ? 0 : (tabpagenr() + 1))<CR>
-nnoremap <silent> <leader>mW :tabmove 0<CR>
-nnoremap <silent> <leader>mE :tabmove<CR>
+nnoremap J gT
+nnoremap K gt
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+nnoremap <leader>0 :tablast<CR>
 
+nnoremap <silent> <leader>j :execute 'silent! tabmove ' . (tabpagenr() == 1 ? tabpagenr('$') : tabpagenr() - 2)<CR>
+nnoremap <silent> <leader>k :execute 'silent! tabmove ' . (tabpagenr() == tabpagenr('$') ? 0 : (tabpagenr() + 1))<CR>
+nnoremap <silent> <leader>J :tabmove 0<CR>
+nnoremap <silent> <leader>K :tabmove<CR>
+
+" Stack of closed windows
 let g:closed_windows=[]
 
-function! OnTabLeave()
-  " Set previous previous tab
-  if exists('g:previous_tab')
-    let g:previous_previous_tab=g:previous_tab
-  endif
-  " Set previous tab
-  let g:previous_tab=tabpagenr()
-endfunction
-
 function! OnBufWinLeave()
-  " Push closed tab's file's path onto g:closed_windows stack
+  " Push closed tab's file path onto g:closed_windows stack
   call insert(g:closed_windows, expand("<afile>:p:gs/ /\\\\ /"))
-
-  " Set previous tab to previous previous tab since previous tab was closed
-  if exists('g:previous_previous_tab')
-    let g:previous_tab=g:previous_previous_tab
-  endif
-endfunction
-
-function! GoToPreviousTab()
-  if exists('g:previous_tab')
-    :execute 'tabn ' . g:previous_tab
-  endif
 endfunction
 
 function! OpenLastClosedWindow()
   if !empty(g:closed_windows)
-    " pop (from front)
+    " Pop file path from g:closed_windows stack + open it
     :execute 'tabe ' . remove(g:closed_windows, 0)
   endif
 endfunction
 
 if has('autocmd')
-  au TabLeave * call OnTabLeave()
   au BufWinLeave * call OnBufWinLeave()
 
   " Recognize *.md files as Markdown
@@ -141,8 +128,7 @@ if has('autocmd')
   au BufRead,BufNewFile *.md set shiftwidth=4
 endif
 
-nnoremap <silent> <leader>r :execute GoToPreviousTab()<CR>
-nnoremap <silent> <leader>T :execute OpenLastClosedWindow()<CR>
+nnoremap <silent> <leader>t :execute OpenLastClosedWindow()<CR>
 
 
 " Plugin settings
