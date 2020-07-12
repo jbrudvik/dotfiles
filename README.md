@@ -1,4 +1,4 @@
-# dotfiles (for macOS, Ubuntu): zsh/bash, git, vim, VS Code
+# dotfiles: zsh/bash, git, vim, VS Code, ...
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@
 $ brew install zsh zsh-completions
 ```
 
-#### Linux
+#### Debian / Ubuntu
 
 ```sh
 $ sudo apt-get install zsh
@@ -19,7 +19,7 @@ $ sudo apt-get install zsh
 ### Add zsh to valid login shells
 
 ```sh
-grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
+$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
 ```
 
 ### Set zsh as login shell
