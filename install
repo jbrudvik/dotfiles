@@ -34,7 +34,10 @@ fi
 # Install dotfiles
 cd $(dirname "$0")
 for f in .*; do
-  ln -sfv "$(pwd)/$f" "$HOME/$f"
+  if [ -L "$HOME/$f" ]; then
+    rm "$HOME/$f"
+  fi
+  ln -sv "$(pwd)/$f" "$HOME/$f"
 done
 
 # Install VS Code settings (if VS Code is installed)
