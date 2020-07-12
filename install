@@ -3,29 +3,6 @@
 GLOBIGNORE=".:..:.git"
 shopt -u dotglob
 
-function brew_install_or_upgrade {
-  for package in "$@"; do
-    if brew ls --versions "$package" >/dev/null; then
-      HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade "$package"
-    else
-      HOMEBREW_NO_AUTO_UPDATE=1 brew install "$package"
-    fi
-  done
-}
-
-# Install zsh
-if command -v brew &> /dev/null; then
-  brew_install_or_upgrade zsh zsh-completions
-elif command -v apt-get &> /dev/null; then
-  apt-get install zsh
-fi
-
-# Add zsh to valid login shells
-grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
-
-# Set zsh as default shell
-sudo chsh -s $(command -v zsh) $(whoami)
-
 # Install oh-my-zsh syntax highlighting
 if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
