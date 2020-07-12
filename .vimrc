@@ -89,11 +89,10 @@ nnoremap <C-J> J
 nnoremap <C-K> K
 nnoremap <silent> J :tabprevious<CR>
 nnoremap <silent> K :tabnext<CR>
-
 nnoremap <silent> <leader>W :tabfirst<CR>
 nnoremap <silent> <leader>E :tablast<CR>
-nnoremap <silent> <leader>mw :execute 'silent! tabmove ' . (tabpagenr() == 1 ? tabpagenr('$') - 1 : tabpagenr() - 2)<CR>
-nnoremap <silent> <leader>me :execute 'silent! tabmove ' . (tabpagenr() % tabpagenr('$'))<CR>
+nnoremap <silent> <leader>mw :execute 'silent! tabmove ' . (tabpagenr() == 1 ? tabpagenr('$') : tabpagenr() - 2)<CR>
+nnoremap <silent> <leader>me :execute 'silent! tabmove ' . (tabpagenr() == tabpagenr('$') ? 0 : (tabpagenr() + 1))<CR>
 nnoremap <silent> <leader>mW :tabmove 0<CR>
 nnoremap <silent> <leader>mE :tabmove<CR>
 
