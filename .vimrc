@@ -20,6 +20,7 @@ set shortmess+=I " Don't show intro message
 set iskeyword+=i " Consider hyphens to be part of keywords/identifiers
 set showcmd " Show more command feedback
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣ " Show lots of invisibles (when that mode is on)
+set tabpagemax=50 " Set max number of tabs that can be exploded out
 
 " Use system clipboard
 if has('unnamedplus')
