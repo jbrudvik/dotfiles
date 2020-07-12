@@ -26,6 +26,7 @@
     co = checkout
     s = status -s
     d = diff
+    ds = diff --staged
     f = fetch
     a = add
     c = commit -v
