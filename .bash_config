@@ -6,9 +6,6 @@ export PATH="/usr/local/bin:$PATH"
 # Default editor used by other programs
 export EDITOR='vim'
 
-# Highlight grep matches
-export GREP_OPTIONS='--color=auto'
-
 # Go
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
