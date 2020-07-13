@@ -8,6 +8,17 @@ if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; 
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 
+case "$(uname -s)" in
+  Darwin)
+    VS_CODE_SETTINGS_PATH="$HOME/Library/Application Support/Code/User"
+    FIREFOX_PROFILES_PATH="$HOME/Library/Application Support/Firefox/Profiles"
+    ;;
+  Linux)
+    VS_CODE_SETTINGS_PATH="$HOME/.config/Code/User"
+    FIREFOX_PROFILES_PATH="$HOME/.mozilla/firefox"
+    ;;
+esac
+
 # Install dotfiles
 cd $(dirname "$0")
 for f in .*; do
@@ -17,22 +28,26 @@ for f in .*; do
   ln -sfv "$(pwd)/$f" "$HOME/$f"
 done
 
-# Install VS Code settings (if VS Code is installed)
-VS_CODE_SETTINGS_PATH=""
-case "$(uname -s)" in
-  Darwin)
-    VS_CODE_SETTINGS_PATH="$HOME/Library/Application Support/Code/User"
-    ;;
-  Linux)
-    VS_CODE_SETTINGS_PATH="$HOME/.config/Code/User"
-    ;;
-esac
+# Install VS Code settings (if installed)
 if [ -d "$VS_CODE_SETTINGS_PATH" ]; then
   cd vscode
   for f in *.json; do
     if [ -f "$f" ]; then
       ln -sfv "$(pwd)/$f" "$VS_CODE_SETTINGS_PATH/$f"
     fi
+  done
+  cd "$OLDPWD"
+fi
+
+# Install Firefox UI customizations (if installed)
+if [ -d "$FIREFOX_PROFILES_PATH" ]; then
+  for _dir in "$FIREFOX_PROFILES_PATH"/*.default; do break; done
+  FIREFOX_DEFAULT_PROFILE_CUSTOM_UI_PATH="$_dir/chrome"
+  echo "$FIREFOX_DEFAULT_PROFILE_CUSTOM_UI_PATH"
+  mkdir -pv "$FIREFOX_DEFAULT_PROFILE_CUSTOM_UI_PATH"
+  cd firefox
+  for f in *; do
+    ln -sfv "$(pwd)/$f" "$FIREFOX_DEFAULT_PROFILE_CUSTOM_UI_PATH/$f"
   done
   cd "$OLDPWD"
 fi
