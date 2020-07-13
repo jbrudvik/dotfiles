@@ -1,11 +1,9 @@
 {
-  // Go
   "go.formatTool": "gofmt",
   "go.buildOnSave": "package",
   "go.lintOnSave": "package",
   "go.vetOnSave": "package",
   "go.testOnSave": true,
-  // Git Lens
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -22,7 +20,6 @@
   "gitlens.currentLine.enabled": true,
   "gitlens.hovers.currentLine.enabled": true,
   "gitlens.keymap": "chorded",
-  // Other
   "window.restoreWindows": "all",
   "window.openFilesInNewWindow": "default",
   "editor.formatOnSave": true,
@@ -49,7 +46,10 @@
   "terminal.integrated.lineHeight": 1.2,
   "workbench.panel.defaultLocation": "right",
   "terminal.integrated.rendererType": "dom",
-  // Vim
+  "workbench.colorTheme": "Twilight",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
   "vim.useSystemClipboard": true,
   "vim.leader": ";",
   "vim.hlsearch": true,
@@ -71,7 +71,7 @@
       "commands": [":noh"]
     },
     {
-      "before": ["<leader>", "<leader>"],
+      "before": ["<leader>", "w"],
       "commands": [":w"]
     },
     {
@@ -87,12 +87,12 @@
       "after": ["m", "N", "O", "<Esc>", "`", "N"]
     },
     {
-      "before": ["<leader>", "j"],
-      "after": ["o", "<Esc>"]
+      "before": ["J"],
+      "after": ["g", "T"]
     },
     {
-      "before": ["<leader>", "k"],
-      "after": ["O", "<Esc>"]
+      "before": ["K"],
+      "after": ["g", "t"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -100,9 +100,5 @@
       "before": ["<leader>", "c"],
       "commands": ["editor.action.commentLine"]
     }
-  ],
-  "workbench.colorTheme": "Twilight",
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  ]
 }
