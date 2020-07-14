@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Short aliases
+alias v='vim'
+alias g='git'
+alias d='docker'
+alias k='kubectl'
+alias p='python'
+
 # Override: Prompt before overwriting files and report what was done
 alias mv='mv -iv'
 alias cp='cp -iv'
