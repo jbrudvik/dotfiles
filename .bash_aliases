@@ -4,6 +4,7 @@
 alias v='vim'
 alias g='git'
 alias d='docker'
+alias dc='docker-compose'
 alias k='kubectl'
 alias p='python'
 
