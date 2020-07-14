@@ -46,49 +46,30 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
+  "vim.vimrc.enable": true,
   "vim.useSystemClipboard": true,
   "vim.leader": ";",
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["u"],
-      "commands": ["undo"]
-    },
-    {
-      "before": ["<C-r>"],
-      "commands": ["redo"]
-    },
-    {
-      "before": ["Y"],
-      "after": ["y", "$"]
-    },
-    {
       "before": ["<leader>", "h"],
       "commands": [":noh"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": [":w"]
     },
     {
       "before": ["<leader>", "c"],
       "commands": ["editor.action.commentLine"]
     },
     {
-      "before": ["<leader>", "n"],
-      "after": ["m", "N", "o", "<Esc>", "`", "N"]
+      "before": ["<leader>", "l"],
+      "commands": ["editor.action.toggleRenderWhitespace"]
     },
     {
-      "before": ["<leader>", "i"],
-      "after": ["m", "N", "O", "<Esc>", "`", "N"]
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
     },
     {
-      "before": ["J"],
-      "after": ["g", "T"]
-    },
-    {
-      "before": ["K"],
-      "after": ["g", "t"]
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
