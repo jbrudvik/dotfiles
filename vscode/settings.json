@@ -37,10 +37,6 @@
   "python.linting.pylintEnabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.enabled": true,
-  "vs-kubernetes": {
-    "vs-kubernetes.helm-path": "/Users/jbrudvik/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.minikube-path": "/Users/jbrudvik/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-  },
   "terminal.integrated.shell.osx": "zsh",
   "terminal.integrated.shell.linux": "zsh",
   "terminal.integrated.lineHeight": 1.2,
