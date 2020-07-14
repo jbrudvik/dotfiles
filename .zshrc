@@ -14,7 +14,7 @@ PS2='%{$FG[105]%}\ %{$reset_color%}'
 # Right prompt
 RPS1='${return_code}'
 (( $+functions[virtualenv_prompt_info] )) && RPS1+='$(virtualenv_prompt_info)'
-RPS1+=' %{$my_gray%}%n@%m [%D{%T %-m/%-d}]%{$reset_color%}%'
+RPS1+=' %{$my_gray%}%n@%m%{$reset_color%}%'
 
 # Git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]($FG[078]"
