@@ -33,6 +33,7 @@
   "files.exclude": {
     "**/*.pyc": true
   },
+  "python.showStartPage": false,
   "python.formatting.provider": "black",
   "python.linting.pylintEnabled": true,
   "python.linting.mypyEnabled": true,
@@ -43,6 +44,10 @@
   "workbench.panel.defaultLocation": "right",
   "terminal.integrated.rendererType": "dom",
   "workbench.colorTheme": "Twilight",
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
