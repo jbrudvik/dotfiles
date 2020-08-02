@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
-# Ensure that /usr/local/bin overrides /usr/bin
-export PATH="/usr/local/bin:$PATH"
-
 # Default editor used by other programs
 export EDITOR='vim'
 
-# Go
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+# Set PATH: Prioritize local over global
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Python: Initialize pyenv minimally (Python version management)
 export PATH="$HOME/.pyenv/shims:$PATH"
