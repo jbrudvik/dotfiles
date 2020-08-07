@@ -57,6 +57,10 @@
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["<leader>", "<leader>"],
+      "commands": [":w"]
+    },
+    {
       "before": ["<leader>", "h"],
       "commands": [":noh"]
     },
