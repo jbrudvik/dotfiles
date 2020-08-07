@@ -94,5 +94,11 @@
       "before": ["<leader>", "c"],
       "commands": ["editor.action.commentLine"]
     }
-  ]
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
