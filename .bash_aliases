@@ -15,6 +15,7 @@ alias cp='cp -iv'
 
 # Override: Highlight grep matches
 alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
