@@ -74,6 +74,9 @@ nnoremap <silent> <leader>l :set list!<CR>
 " Open all buffers in separate tabs
 nnoremap <silent> <leader>T :tab all<CR>
 
+" Select current word
+nnoremap <silent> <leader>w viw
+nnoremap <silent> <leader>W viW
 
 " Tab management
 "

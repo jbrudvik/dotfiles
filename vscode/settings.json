@@ -75,6 +75,14 @@
     {
       "before": ["<leader>", "k"],
       "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "after": ["v", "i", "w"]
+    },
+    {
+      "before": ["<leader>", "W"],
+      "after": ["v", "i", "W"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
