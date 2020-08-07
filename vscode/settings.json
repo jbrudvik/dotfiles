@@ -44,6 +44,7 @@
   "python.linting.pylintEnabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.enabled": true,
+  "python.pythonPath": "${env:PYTHON}",
   "[python]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4

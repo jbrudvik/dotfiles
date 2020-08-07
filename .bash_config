@@ -7,8 +7,11 @@ export EDITOR='vim'
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-# Python: Initialize pyenv minimally (Python version management)
-export PATH="$HOME/.pyenv/shims:$PATH"
+# Initialize pyenv
+eval "$(pyenv init -)"
+
+# Set PYTHON: Pointer to global Python install
+export PYTHON=$(which python)
 
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
