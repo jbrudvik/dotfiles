@@ -39,3 +39,7 @@ alias dsa='colordiff --side-by-side -w --width $(tput cols)' # side-by-side, all
 
 # New: What is my IP?
 alias ip='ipconfig getifaddr en0'
+
+# New: Get first and last lines
+alias first='head -1'
+alias last='tail -1'
