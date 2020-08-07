@@ -86,14 +86,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+r",
-    "command": "extension.rerunLastCommand"
-  },
-  {
-    "key": "cmd+f7",
-    "command": "-extension.rerunLastCommand"
-  },
-  {
     "key": "alt+cmd+right",
     "command": "workbench.action.terminal.focusNext"
   },
