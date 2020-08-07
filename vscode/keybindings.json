@@ -1,6 +1,44 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
+    "key": "cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-revealFileInOS",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-workbench.action.terminal.toggleFindRegex",
+    "when": "terminalFindFocused || terminalFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleFindRegex",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleSearchEditorRegex",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleSearchRegex",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "workbench.action.debug.start"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.debug.run"
+  },
+  {
     "key": "shift+cmd+\\",
     "command": "workbench.action.toggleSidebarVisibility"
   },
@@ -71,10 +109,6 @@
     "key": "ctrl+shift+b",
     "command": "cursorLeftSelect",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+cmd+r",
-    "command": "workbench.view.scm"
   },
   {
     "key": "ctrl+shift+g",
