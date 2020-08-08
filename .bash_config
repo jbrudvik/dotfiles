@@ -7,8 +7,8 @@ export EDITOR='vim'
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-# Initialize pyenv
-eval "$(pyenv init -)"
+# Initialize pyenv (if it exists)
+command -v pyenv > /dev/null && eval "$(pyenv init -)"
 
 # Set PYTHON: Pointer to global Python install
 export PYTHON=$(which python)
