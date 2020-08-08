@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Install dotfiles (optional arg: host)
+
+if [ -z "$1" ]; then
+  cd $(dirname "$0")
+  git pull
+  ./install
+  cd "$OLDPWD"
+else
+  ssh "$1" $(basename "$0")
+fi

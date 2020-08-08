@@ -38,5 +38,17 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
-$ dotfiles/install
+$ dotfiles/install_dotfiles
+```
+
+## Update dotfiles
+
+```sh
+$ update_dotfiles
+```
+
+## Update dotfiles on a remote machine
+
+```sh
+$ update_dotfiles $HOSTNAME
 ```

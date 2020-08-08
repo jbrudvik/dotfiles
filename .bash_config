@@ -7,6 +7,11 @@ export EDITOR='vim'
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+# Add dotfiles directory to PATH
+REALPATH=$([ -L "$0" ] && readlink "$0")
+REALDIR=$(dirname "$REALPATH")
+export PATH="$REALDIR:$PATH"
+
 # Initialize pyenv (if it exists)
 command -v pyenv > /dev/null && eval "$(pyenv init -)"
 
