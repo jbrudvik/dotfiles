@@ -5,7 +5,7 @@
 if [ -z "$1" ]; then
   cd $(dirname "$0")
   git pull
-  ./install
+  ./install_dotfiles
   cd "$OLDPWD"
 else
   ssh "$1" $(basename "$0")
