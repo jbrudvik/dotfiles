@@ -29,6 +29,9 @@ for f in .*; do
   ln -sfv "$(pwd)/$f" "$TARGET"
 done
 
+# Install Vim plugins
+vim -E +'PlugInstall' +qa > /dev/null && echo "vim-plug: Installed Vim plugins"
+
 # Install VS Code settings (if installed)
 if [ -d "$VS_CODE_SETTINGS_PATH" ]; then
   cd vscode

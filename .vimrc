@@ -138,8 +138,14 @@ endif
 nnoremap <silent> <leader>t :execute OpenLastClosedWindow()<CR>
 
 
-" Plugin settings
+" Plugins
 " ----
+
+call plug#begin('~/.vim-plug')
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+call plug#end()
 
 " NERDCommenter
 let g:NERDSpaceDelims=1 " Pad comment delimiters with spaces where reasonable
