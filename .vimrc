@@ -145,7 +145,15 @@ call plug#begin('~/.vim-plug')
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " NERDCommenter
 let g:NERDSpaceDelims=1 " Pad comment delimiters with spaces where reasonable
+
+" vim-gitgutter
+autocmd BufWritePost * GitGutter " Update on save
+highlight! link SignColumn LineNr
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#005fd7 ctermfg=26
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
