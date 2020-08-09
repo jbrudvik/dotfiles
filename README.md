@@ -46,9 +46,3 @@ $ dotfiles/install_dotfiles
 ```sh
 $ update_dotfiles
 ```
-
-## Update dotfiles on a remote machine
-
-```sh
-$ update_dotfiles $HOSTNAME
-```
