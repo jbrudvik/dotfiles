@@ -11,14 +11,13 @@ source $ZSH/oh-my-zsh.sh
 typeset +H my_gray="$FG[243]"
 
 preexec() {
-  cmd_start_millis=$(strftime %s%3. $epochtime)
+  cmd_start_seconds=$EPOCHREALTIME
 }
 
 precmd() {
-  if [ $cmd_start_millis ]; then
-    cmd_end_millis=$(strftime %s%3. $epochtime)
-    cmd_elapsed_millis=$(($cmd_end_millis - $cmd_start_millis))
-    cmd_elapsed_seconds=$(($cmd_elapsed_millis / 1000.0))
+  if [ $cmd_start_seconds ]; then
+    cmd_end_seconds=$EPOCHREALTIME
+    cmd_elapsed_seconds=$cmd_end_seconds-$cmd_start_seconds
     cmd_elapsed_seconds_fmt=$(printf '%.*f\n' 3 $cmd_elapsed_seconds)
   fi
 }
