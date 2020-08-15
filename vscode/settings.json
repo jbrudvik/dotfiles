@@ -101,5 +101,7 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "python.dataScience.alwaysTrustNotebooks": true,
+  "shellcheck.run": "onSave"
 }
