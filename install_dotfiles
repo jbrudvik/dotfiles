@@ -4,8 +4,9 @@ GLOBIGNORE=".:..:.git"
 shopt -u dotglob
 
 # Install oh-my-zsh syntax highlighting
-if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+ZSH_SYNTAX_HIGHLIGHTING_PATH="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+if [ ! -d "$ZSH_SYNTAX_HIGHLIGHTING_PATH" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_SYNTAX_HIGHLIGHTING_PATH"
 fi
 
 case "$(uname -s)" in
@@ -20,7 +21,7 @@ case "$(uname -s)" in
 esac
 
 # Install dotfiles
-cd $(dirname "$0")
+cd "$(dirname "$0")" || exit
 for f in .*; do
   TARGET="$HOME/$f"
   if [ -d "$TARGET" ] && [ -L "$TARGET" ]; then
@@ -34,18 +35,18 @@ vim -E +'PlugInstall' +qa > /dev/null && echo "vim-plug: Installed Vim plugins"
 
 # Install VS Code settings (if installed)
 if [ -d "$VS_CODE_SETTINGS_PATH" ]; then
-  cd vscode
+  cd vscode || exit
   for f in *.json; do
     if [ -f "$f" ]; then
       ln -sfv "$(pwd)/$f" "$VS_CODE_SETTINGS_PATH/$f"
     fi
   done
-  cd "$OLDPWD"
+  cd "$OLDPWD" || exit
 fi
 
 # Install Firefox UI customizations (if installed)
 if [ -d "$FIREFOX_PROFILES_PATH" ]; then
-  cd firefox
+  cd firefox || exit
   for profile_dir in "$FIREFOX_PROFILES_PATH"/*.default*; do
     for f in *; do
       TARGET="$profile_dir/$f"
@@ -55,5 +56,5 @@ if [ -d "$FIREFOX_PROFILES_PATH" ]; then
       ln -sfv "$(pwd)/$f" "$TARGET"
     done
   done
-  cd "$OLDPWD"
+  cd "$OLDPWD" || exit
 fi

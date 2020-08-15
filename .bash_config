@@ -16,7 +16,8 @@ export PATH="$REALDIR:$PATH"
 command -v pyenv > /dev/null && eval "$(pyenv init -)"
 
 # Set PYTHON: Pointer to global Python install
-export PYTHON=$(which python)
+PYTHON=$(command -v python)
+export PYTHON
 
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
