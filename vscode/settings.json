@@ -103,5 +103,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "python.dataScience.alwaysTrustNotebooks": true,
-  "shellcheck.run": "onSave"
+  "shellcheck.run": "onSave",
+  "rust.build_on_save": true,
+  "rust.clippy_preference": "on"
 }

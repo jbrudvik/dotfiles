@@ -19,6 +19,9 @@ command -v pyenv > /dev/null && eval "$(pyenv init -)"
 PYTHON=$(command -v python)
 export PYTHON
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
   source "$HOME/.bash_aliases"
