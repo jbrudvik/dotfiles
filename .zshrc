@@ -4,7 +4,7 @@
 ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
-plugins=(git docker kubectl zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting git docker kubectl)
 source $ZSH/oh-my-zsh.sh
 
 # Make af-magic's $my_gray brighter
