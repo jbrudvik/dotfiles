@@ -152,6 +152,7 @@ call plug#end()
 
 " NERDCommenter
 let g:NERDSpaceDelims=1 " Pad comment delimiters with spaces where reasonable
+let g:NERDCustomDelimiters = { 'python': { 'left': '#', 'leftAlt': '#' } }
 
 " vim-gitgutter
 autocmd BufWritePost * GitGutter " Update on save
