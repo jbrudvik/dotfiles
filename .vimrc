@@ -147,6 +147,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'Chiel92/vim-autoformat'
 Plug 'cespare/vim-toml'
 call plug#end()
 
@@ -160,3 +161,6 @@ highlight! link SignColumn LineNr
 highlight GitGutterAdd    guifg=#009900 ctermfg=2
 highlight GitGutterChange guifg=#005fd7 ctermfg=26
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
+" Autoformat on save: Rust, Python
+au BufWrite *.rs,*.py :Autoformat
