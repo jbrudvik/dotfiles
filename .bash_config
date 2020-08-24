@@ -5,6 +5,7 @@ export EDITOR='vim'
 
 # Set PATH: Prioritize local over global
 export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 # Add dotfiles directory to PATH
