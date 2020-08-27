@@ -43,3 +43,27 @@ alias ip='ipconfig getifaddr en0'
 # New: Get first and last lines
 alias first='head -1'
 alias last='tail -1'
+
+# Python venv
+alias venv-init='python -m venv .venv'
+function venv-activate() {
+  if [[ -f '.venv/bin/activate' ]]; then
+    source '.venv/bin/activate'
+  fi
+}
+alias venv-deactivate='deactivate'
+
+# Override cd to activate/deactivate venv automatically
+function cd() {
+  builtin cd "$@" || exit
+
+  if [[ -z "$VIRTUAL_ENV" ]]; then
+    venv-activate
+  else
+    parentdir="$(dirname "$VIRTUAL_ENV")"
+    if [[ "$PWD"/ != "$parentdir"/* ]]; then
+      deactivate
+      venv-activate
+    fi
+  fi
+}
