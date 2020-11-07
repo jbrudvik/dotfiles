@@ -20,6 +20,10 @@ command -v pyenv > /dev/null && eval "$(pyenv init -)"
 PYTHON=$(command -v python)
 export PYTHON
 
+# Go
+GOPATH=$(go env GOPATH)
+export PATH="$GOPATH/bin:$PATH"
+
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 

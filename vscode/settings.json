@@ -106,5 +106,6 @@
   "shellcheck.run": "onSave",
   "rust.build_on_save": true,
   "rust.clippy_preference": "on",
-  "debug.allowBreakpointsEverywhere": true
+  "debug.allowBreakpointsEverywhere": true,
+  "go.useLanguageServer": true
 }
