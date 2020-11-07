@@ -42,33 +42,34 @@
     # Logging helpers
     #
     # - current-branch: current working branch
-    # - other: origin/<current-branch>, fallback to master
+    # - other: origin/<current-branch>, fallback to default branch
     # - mine: in local branch but not "other"
     # - theirs: in "other" but not local branch
+    default-branch = symbolic-ref --short HEAD
     current-branch = rev-parse --abbrev-ref HEAD
-    other = "!if $(git log origin/$(git current-branch) &> /dev/null); then echo origin/$(git current-branch); else echo master; fi"
+    other = "!if $(git log origin/$(git current-branch) &> /dev/null); then echo origin/$(git current-branch); else echo $(git default-branch); fi"
     mine = "!echo HEAD ^origin/$(git current-branch)"
     theirs = "!echo origin/$(git current-branch) ^HEAD"
 
     # diff
     dm = "!git d $(git mine)"
     dt = "!git d $(git theirs)"
-    dmm = "!git d HEAD ^master"
-    dtm = "!git d master ^HEAD"
+    dmm = "!git d HEAD ^$(git default-branch)"
+    dtm = "!git d $(git default-branch) ^HEAD"
 
     # log (compressed)
     t = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
     tm = "!git t $(git mine)"
     tt = "!git t $(git theirs)"
-    tmm = "!git t HEAD ^master"
-    ttm = "!git t master ^HEAD"
+    tmm = "!git t HEAD ^$(git default-branch)"
+    ttm = "!git t $(git default-branch) ^HEAD"
 
     # log
     l = log --date=local
     lm = "!git l $(git mine)"
     lt = "!git l $(git theirs)"
-    lmm = "!git l HEAD ^master"
-    ltm = "!git l master ^HEAD"
+    lmm = "!git l HEAD ^$(git default-branch)"
+    ltm = "!git l $(git default-branch) ^HEAD"
 
     # log (verbose)
     v = "!git l -p"

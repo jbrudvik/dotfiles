@@ -107,5 +107,10 @@
   "rust.build_on_save": true,
   "rust.clippy_preference": "on",
   "debug.allowBreakpointsEverywhere": true,
-  "go.useLanguageServer": true
+  "go.useLanguageServer": true,
+  "vs-kubernetes": {
+    "vs-kubernetes.helm-path.mac": "${env:HOME}/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.minikube-path.mac": "${env:HOME}/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.draft-path.mac": "${env:HOME}/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+  }
 }
