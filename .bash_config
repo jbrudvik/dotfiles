@@ -21,8 +21,10 @@ PYTHON=$(command -v python)
 export PYTHON
 
 # Go
-GOPATH=$(go env GOPATH)
-export PATH="$GOPATH/bin:$PATH"
+if command -v go; then
+  GOPATH=$(go env GOPATH)
+  export PATH="$GOPATH/bin:$PATH"
+fi
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
