@@ -21,7 +21,7 @@ PYTHON=$(command -v python)
 export PYTHON
 
 # Go
-if command -v go; then
+if command -v go > /dev/null; then
   GOPATH=$(go env GOPATH)
   export PATH="$GOPATH/bin:$PATH"
 fi
