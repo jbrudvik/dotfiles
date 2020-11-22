@@ -162,5 +162,5 @@ highlight GitGutterAdd    guifg=#009900 ctermfg=2
 highlight GitGutterChange guifg=#005fd7 ctermfg=26
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
-" Autoformat on save: Rust, Python
-au BufWrite *.rs,*.py :Autoformat
+" Autoformat on save: Rust, Python, Go
+au BufWrite *.rs,*.py,*.go :Autoformat
