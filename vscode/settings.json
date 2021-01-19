@@ -58,6 +58,14 @@
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["J"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
       "before": ["<leader>", "<leader>"],
       "commands": [":w"]
     },
