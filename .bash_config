@@ -20,6 +20,9 @@ command -v pyenv > /dev/null && eval "$(pyenv init -)"
 PYTHON=$(command -v python)
 export PYTHON
 
+# Python: Poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # Go
 if command -v go > /dev/null; then
   GOPATH=$(go env GOPATH)
