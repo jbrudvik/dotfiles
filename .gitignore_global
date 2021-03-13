@@ -17,3 +17,6 @@ $RECYCLE.BIN
 # Python venv
 .venv
 venv
+
+# VS Code
+.vscode
