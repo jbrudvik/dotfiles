@@ -39,9 +39,6 @@ if [ -f "$HOME/.bash_aliases" ]; then
   source "$HOME/.bash_aliases"
 fi
 
-# Activate Python venv (if in a relevant directory)
-venv-activate
-
 # Local settings
 if [ -f "$HOME/.bash_local" ]; then
   source "$HOME/.bash_local"
