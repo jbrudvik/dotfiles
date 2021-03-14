@@ -14,9 +14,10 @@ $RECYCLE.BIN
 # Vim
 .netrwhist
 
-# Python venv
+# Python
 .venv
 venv
+__pycache__
 
 # VS Code
 .vscode
