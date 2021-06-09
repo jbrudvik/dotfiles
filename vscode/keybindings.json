@@ -116,10 +116,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+cmd+g",
-    "command": "workbench.view.scm"
-  },
-  {
     "key": "alt+cmd+right",
     "command": "workbench.action.terminal.focusNext"
   },
@@ -181,20 +177,5 @@
   {
     "key": "cmd+b",
     "command": "-workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-editor.action.previousMatchFindAction",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+g",
-    "command": "workbench.action.terminal.findPrevious",
-    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-workbench.action.terminal.findPrevious",
-    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
   }
 ]
