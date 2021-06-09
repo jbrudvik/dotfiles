@@ -129,5 +129,12 @@
       "viewType": "jupyter.notebook.ipynb",
       "filenamePattern": "*.ipynb"
     }
-  ]
+  ],
+  "editor.lineNumbers": "on",
+  "workbench.editor.untitled.hint": "hidden",
+  "[elm]": {
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  }
 }
