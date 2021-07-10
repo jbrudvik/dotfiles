@@ -6,8 +6,6 @@ alias g='git'
 alias d='docker'
 alias dc='docker-compose'
 alias k='kubectl'
-alias p='python'
-alias i='ipython'
 
 # Override: Prompt before overwriting files and report what was done
 alias mv='mv -iv'
