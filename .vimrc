@@ -8,6 +8,7 @@ colorscheme twilight256
 syntax on " Turn on syntax highlighting
 set ruler " Show ruler (line and column number, position in file)
 set hlsearch " Highlight all search matches
+set noignorecase " Case-sensitive search
 set expandtab " Insert tabs instead of spaces when using the tab button
 set softtabstop=2 " Size of tabs -- coupled with expandtab -> number of spaces
 set tabstop=2 " Visual size of tab characters
