@@ -11,11 +11,9 @@ fi
 
 case "$(uname -s)" in
   Darwin)
-    VS_CODE_SETTINGS_PATH="$HOME/Library/Application Support/Code/User"
     FIREFOX_PROFILES_PATH="$HOME/Library/Application Support/Firefox/Profiles"
     ;;
   Linux)
-    VS_CODE_SETTINGS_PATH="$HOME/.config/Code/User"
     FIREFOX_PROFILES_PATH="$HOME/.mozilla/firefox"
     ;;
 esac
@@ -32,17 +30,6 @@ done
 
 # Install Vim plugins
 vim -E +'PlugInstall' +qa > /dev/null && echo "vim-plug: Installed Vim plugins"
-
-# Install VS Code settings (if installed)
-if [ -d "$VS_CODE_SETTINGS_PATH" ]; then
-  cd vscode || exit
-  for f in *.json; do
-    if [ -f "$f" ]; then
-      ln -sfv "$(pwd)/$f" "$VS_CODE_SETTINGS_PATH/$f"
-    fi
-  done
-  cd "$OLDPWD" || exit
-fi
 
 # Install Firefox UI customizations (if installed)
 if [ -d "$FIREFOX_PROFILES_PATH" ]; then
