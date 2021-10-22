@@ -9,15 +9,6 @@ if [ ! -d "$ZSH_SYNTAX_HIGHLIGHTING_PATH" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_SYNTAX_HIGHLIGHTING_PATH"
 fi
 
-case "$(uname -s)" in
-  Darwin)
-    FIREFOX_PROFILES_PATH="$HOME/Library/Application Support/Firefox/Profiles"
-    ;;
-  Linux)
-    FIREFOX_PROFILES_PATH="$HOME/.mozilla/firefox"
-    ;;
-esac
-
 # Install dotfiles
 cd "$(dirname "$0")" || exit
 for f in .*; do
@@ -30,18 +21,3 @@ done
 
 # Install Vim plugins
 vim -E +'PlugInstall' +qa > /dev/null && echo "vim-plug: Installed Vim plugins"
-
-# Install Firefox UI customizations (if installed)
-if [ -d "$FIREFOX_PROFILES_PATH" ]; then
-  cd firefox || exit
-  for profile_dir in "$FIREFOX_PROFILES_PATH"/*.default*; do
-    for f in *; do
-      TARGET="$profile_dir/$f"
-      if [ -d "$TARGET" ] && [ -L "$TARGET" ]; then
-        rm "$TARGET"
-      fi
-      ln -sfv "$(pwd)/$f" "$TARGET"
-    done
-  done
-  cd "$OLDPWD" || exit
-fi
