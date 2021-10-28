@@ -7,14 +7,6 @@ alias d='docker'
 alias dc='docker-compose'
 alias k='kubectl'
 
-# Override: Prompt before overwriting files and report what was done
-alias mv='mv -iv'
-alias cp='cp -iv'
-
-# Override: Highlight grep matches
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
 
