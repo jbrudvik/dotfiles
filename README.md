@@ -47,6 +47,10 @@ $ dotfiles/install_dotfiles
 
 - [Official Go installer (wizard)](https://go.dev/doc/install)
 
+```sh
+$ go install golang.org/x/tools/gopls@latest
+```
+
 #### Elm
 
 - [Official Elm installer (wizard)](https://guide.elm-lang.org/install/elm.html)
