@@ -6,6 +6,9 @@ alias g='git'
 alias d='docker'
 alias dc='docker-compose'
 alias k='kubectl'
+alias b='go build'
+alias r='go run .'
+alias i='go install'
 
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
