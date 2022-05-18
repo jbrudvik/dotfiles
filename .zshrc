@@ -18,7 +18,9 @@ precmd() {
   if [ $cmd_start_seconds ]; then
     cmd_end_seconds=$EPOCHREALTIME
     cmd_elapsed_seconds=$cmd_end_seconds-$cmd_start_seconds
-    cmd_elapsed_seconds_fmt=$(printf '%.*f\n' 3 $cmd_elapsed_seconds)
+    cmd_elapsed_seconds_fmt=$(printf '%.*fms\n' 3 $cmd_elapsed_seconds)
+  else
+    cmd_elapsed_seconds_fmt="0ms"
   fi
 }
 
