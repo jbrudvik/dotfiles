@@ -24,12 +24,22 @@ precmd() {
   fi
 }
 
+exit_code_with_color() {
+  exit_code=$?
+  if [[ ${exit_code} -eq 0 ]]; then
+    echo "%{$fg[green]%}$exit_code%{$reset_color%}"
+  else
+    echo "%{$fg[red]%}$exit_code%{$reset_color%}"
+  fi
+}
+
 # Primary prompt
 PS1='$FG[032]%~$(git_prompt_info) $FG[105]%(!.#.$)%{$reset_color%} '
 PS2='%{$FG[105]%}\ %{$reset_color%}'
 
 # Right prompt
-RPS1='${return_code}'
+RPS1=''
+RPS1+='$(exit_code_with_color)'
 (( $+functions[virtualenv_prompt_info] )) && RPS1+='$(virtualenv_prompt_info)'
 RPS1+=' $FG[101]${cmd_elapsed_seconds_fmt} %{$my_gray%}%n@%m%{$reset_color%}%'
 
