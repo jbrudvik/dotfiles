@@ -10,7 +10,7 @@ alias b='go build'
 alias r='go run .'
 alias i='go install'
 alias c='go clean'
-alias t='go test -v ./...'
+alias t='go test ./...'
 
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
