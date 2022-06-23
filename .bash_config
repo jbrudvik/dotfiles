@@ -26,6 +26,8 @@ if command -v go > /dev/null; then
 else
   export PATH=$PATH:/usr/local/go/bin
 fi
+export GOOS=darwin
+export GOARCH=arm64
 
 # n + Node/npm
 export N_PREFIX=$HOME/.n
