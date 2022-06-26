@@ -12,6 +12,9 @@ alias i='go install'
 alias c='go clean'
 alias t='go test ./...'
 
+# Memorable aliases
+alias hex='hecate'
+
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
 
