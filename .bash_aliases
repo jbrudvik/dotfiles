@@ -3,14 +3,16 @@
 # Short aliases
 alias v='vim'
 alias g='git'
-alias d='docker'
-alias dc='docker-compose'
+# alias d='docker'
+# alias dc='docker-compose'
 alias k='kubectl'
 alias b='go build'
 alias r='go run .'
 alias i='go install'
 alias c='go clean'
 alias t='go test ./...'
+alias d='dlv debug'
+alias dt='dlv test'
 
 # Memorable aliases
 alias hex='hecate'
