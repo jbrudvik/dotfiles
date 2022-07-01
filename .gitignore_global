@@ -13,12 +13,3 @@ $RECYCLE.BIN
 
 # Vim
 .netrwhist
-
-# Python
-.venv
-venv
-__pycache__
-.ipynb_checkpoints
-
-# VS Code
-.vscode
