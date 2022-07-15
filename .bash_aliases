@@ -17,6 +17,7 @@ alias god='dlv debug'
 alias godt='dlv test'
 alias gog='goimports -w . && go build && go vet ./... && go test ./...'
 alias gc='gcloud'
+alias gs='gsutil'
 
 # Memorable aliases
 alias hex='hecate'
