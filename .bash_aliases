@@ -48,3 +48,6 @@ alias ip='ipconfig getifaddr en0'
 # New: Get first and last lines
 alias first='head -1'
 alias last='tail -1'
+
+# Variant: dig
+alias digsimple='dig +nostats +nocomments +nocmd'
