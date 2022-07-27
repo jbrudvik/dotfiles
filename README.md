@@ -2,6 +2,20 @@
 
 ## Prerequisites
 
+### Very basics
+
+### macOS
+
+- Install [Homebrew](https://brew.sh)
+
+#### Linux
+
+Install Git:
+
+```sh
+$ sudo apt update && sudo apt install git
+```
+
 ### Install zsh
 
 macOS:
@@ -10,7 +24,7 @@ macOS:
 $ brew install zsh zsh-completions
 ```
 
-Debian / Ubuntu:
+Linux:
 
 ```sh
 $ sudo apt-get install zsh
