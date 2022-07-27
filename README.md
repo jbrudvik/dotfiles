@@ -4,13 +4,13 @@
 
 ### Install zsh
 
-#### macOS
+macOS:
 
 ```sh
 $ brew install zsh zsh-completions
 ```
 
-#### Debian / Ubuntu
+Debian / Ubuntu:
 
 ```sh
 $ sudo apt-get install zsh
