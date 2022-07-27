@@ -16,15 +16,10 @@ $ brew install zsh zsh-completions
 $ sudo apt-get install zsh
 ```
 
-### Add zsh to valid login shells
-
-```sh
-$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
-```
-
 ### Set zsh as login shell
 
 ```sh
+$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
 $ sudo chsh -s $(command -v zsh) $(whoami)
 ```
 
