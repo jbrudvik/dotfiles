@@ -31,10 +31,21 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 
 ## Installing
 
-**WARNING: This is destructive!**
+Clone this repo:
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
+```
+
+Alternatively, clone using SSH if you have keys:
+
+```sh
+$ git clone https://github.com/jbrudvik/dotfiles.git
+```
+
+Install the dotfiles: **WARNING: This is destructive!**
+
+```sh
 $ dotfiles/install_dotfiles
 ```
 
