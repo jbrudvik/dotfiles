@@ -29,14 +29,16 @@ $ sudo chsh -s $(command -v zsh) $(whoami)
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Install dotfiles (WARNING: Destructive!)
+## Installing
+
+**WARNING: This is destructive!**
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
 $ dotfiles/install_dotfiles
 ```
 
-### Install programming languages
+### Installing programming languages
 
 #### Go
 
