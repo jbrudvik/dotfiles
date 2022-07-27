@@ -18,13 +18,13 @@ $ sudo apt update && sudo apt install git
 
 ### Install zsh
 
-macOS:
+#### macOS
 
 ```sh
 $ brew install zsh zsh-completions
 ```
 
-Linux:
+#### Linux
 
 ```sh
 $ sudo apt-get install zsh
