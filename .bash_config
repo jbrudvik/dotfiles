@@ -17,7 +17,7 @@ export PATH="$REALDIR:$PATH"
 export PATH="/Applications/racket/bin:$PATH"
 
 # Initialize Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+command -v /opt/homebrew/bin/brew > /dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Go
 export GOOS=darwin
