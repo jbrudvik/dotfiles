@@ -6,11 +6,21 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
+      - name: Set up Node (for installing Prettier)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install shfmt
+        run: sudo apt install shfmt
+      - name: Install Prettier
+        run: npm install --location=global prettier
+      - name: Install shellcheck
+        run: sudo apt install shellcheck
       - name: Check format
-        run: output=$(goimports -d .); echo -n $output; test -z $output
+        run: make check-format
       - name: Lint
-        run: go vet ./...
+        run: make lint
       - name: Test install
-        run: go test ./...
+        run: dotfiles/install
       - name: Test update
-        run: go test ./...
+        run: dotfiles/update
