@@ -67,7 +67,11 @@ $ dotfiles/install
 
 ### Go
 
+Install Go:
+
 - [Official Go installer (wizard)](https://go.dev/doc/install)
+
+Install Go language server:
 
 ```sh
 $ go install golang.org/x/tools/gopls@latest
