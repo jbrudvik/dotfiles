@@ -20,13 +20,19 @@ export PATH="/Applications/racket/bin:$PATH"
 command -v /opt/homebrew/bin/brew > /dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Go
-export GOOS=darwin
-export GOARCH=arm64
-if command -v go > /dev/null; then
-  GOPATH=$(go env GOPATH)
-  export PATH="$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}:$PATH"
+if [ $(uname -s) = "Darwin" ]; then
+  export GOOS=darwin
+  export GOARCH=arm64
+  if command -v go > /dev/null; then
+    GOPATH=$(go env GOPATH)
+    export PATH="$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}:$PATH"
+  else
+    export PATH=$PATH:/usr/local/go/bin
+  fi
 else
-  export PATH=$PATH:/usr/local/go/bin
+  export PATH=$PATH:"$HOME/.go/bin"
+  export GOPATH="$HOME/go"
+  export PATH=$PATH:"$HOME/go/bin"
 fi
 
 # n + Node/npm
