@@ -110,7 +110,8 @@ $ n lts
 #### Install Node on Linux
 
 ```sh
-...TODO
+$ sudo apt-get install build-essential
+$ curl -L https://bit.ly/n-install | bash
 $ n lts
 ```
 
