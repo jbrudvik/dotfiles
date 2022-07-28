@@ -13,5 +13,5 @@ export HISTFILESIZE=5000
 
 # User settings
 if [ -f "$HOME/.bash_config" ]; then
-  source "$HOME/.bash_config"
+	source "$HOME/.bash_config"
 fi

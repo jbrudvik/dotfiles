@@ -2,5 +2,5 @@
 
 # Apply settings in .bashrc if it exists
 if [ -f "$HOME/.bashrc" ]; then
-  source "$HOME/.bashrc"
+	source "$HOME/.bashrc"
 fi

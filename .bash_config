@@ -17,22 +17,22 @@ export PATH="$REALDIR:$PATH"
 export PATH="/Applications/racket/bin:$PATH"
 
 # Initialize Homebrew
-command -v /opt/homebrew/bin/brew > /dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
+command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Go
 if [ $(uname -s) = "Darwin" ]; then
-  export GOOS=darwin
-  export GOARCH=arm64
-  if command -v go > /dev/null; then
-    GOPATH=$(go env GOPATH)
-    export PATH="$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}:$PATH"
-  else
-    export PATH=$PATH:/usr/local/go/bin
-  fi
+	export GOOS=darwin
+	export GOARCH=arm64
+	if command -v go >/dev/null; then
+		GOPATH=$(go env GOPATH)
+		export PATH="$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}:$PATH"
+	else
+		export PATH=$PATH:/usr/local/go/bin
+	fi
 else
-  export PATH=$PATH:"$HOME/.go/bin"
-  export GOPATH="$HOME/go"
-  export PATH=$PATH:"$HOME/go/bin"
+	export PATH=$PATH:"$HOME/.go/bin"
+	export GOPATH="$HOME/go"
+	export PATH=$PATH:"$HOME/go/bin"
 fi
 
 # n + Node/npm
@@ -41,7 +41,7 @@ export PATH="$HOME/.n/bin:$PATH"
 
 # Python
 # Initialize pyenv (if it exists)
-command -v pyenv > /dev/null && eval "$(pyenv init -)"
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
 export PATH="$HOME/.pyenv/shims:$PATH"
 # Set PYTHON: Pointer to global Python install
 PYTHON=$(command -v python)
@@ -54,10 +54,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
-  source "$HOME/.bash_aliases"
+	source "$HOME/.bash_aliases"
 fi
 
 # Local settings
 if [ -f "$HOME/.bash_local" ]; then
-  source "$HOME/.bash_local"
+	source "$HOME/.bash_local"
 fi
