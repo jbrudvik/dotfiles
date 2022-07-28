@@ -58,7 +58,7 @@ $ git clone https://github.com/jbrudvik/dotfiles.git
 ### Install the dotfiles: **WARNING: This is destructive!**
 
 ```sh
-$ dotfiles/install_dotfiles
+$ dotfiles/install
 ```
 
 ## Installing programming languages
@@ -74,7 +74,7 @@ $ go install golang.org/x/tools/gopls@latest
 ## Updating dotfiles
 
 ```sh
-$ dotfiles/update_dotfiles
+$ dotfiles/update
 ```
 
 ### Elm
