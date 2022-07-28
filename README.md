@@ -63,9 +63,17 @@ $ git clone https://github.com/jbrudvik/dotfiles.git
 $ dotfiles/install
 ```
 
+## Updating dotfiles
+
+```sh
+$ dotfiles/update
+```
+
 ## Installing programming languages
 
-### Go
+### Install Go
+
+#### Install Go on macOS
 
 Install Go:
 
@@ -77,24 +85,36 @@ Install Go language server:
 $ go install golang.org/x/tools/gopls@latest
 ```
 
-## Updating dotfiles
+#### Install Go on Linux (Debian / Ubuntu)
 
 ```sh
-$ dotfiles/update
+$ sudo apt update && sudo apt install wget
+$ wget https://storage.googleapis.com/golang/getgo/installer_linux
+$ chmod u+x installer_linux
+$ ./installer_linux
 ```
 
-### Elm
+### Install Elm
 
-- [Official Elm installer (wizard)](https://guide.elm-lang.org/install/elm.html)
+- [Install Elm](https://guide.elm-lang.org/install/elm.html)
 
-### Node
+### Install Node
+
+#### Install Node on macOS
 
 ```sh
 $ brew install n
 $ n lts
 ```
 
-### Python
+#### Install Node on Linux
+
+```sh
+...TODO
+$ n lts
+```
+
+### Install Python
 
 ```sh
 $ brew install pyenv
@@ -102,7 +122,7 @@ $ pyenv install <latest>
 $ pyenv global <latest>
 ```
 
-### Haskell
+### Install Haskell
 
 Force installing in x86 mode (M1 Macs not fully supported as of January 2022):
 
@@ -110,7 +130,7 @@ Force installing in x86 mode (M1 Macs not fully supported as of January 2022):
 $ curl -sSL https://get.haskellstack.org/ | arch -x86_64 sh
 ```
 
-### Rust
+### Install Rust
 
 ```sh
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
