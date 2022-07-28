@@ -20,7 +20,7 @@ export PATH="/Applications/racket/bin:$PATH"
 command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Go
-if [ $(uname -s) = "Darwin" ]; then
+if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
 	export GOARCH=arm64
 	if command -v go >/dev/null; then
