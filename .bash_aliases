@@ -22,6 +22,9 @@ alias gs='gsutil'
 # Memorable aliases
 alias hex='hecate'
 
+# Better top
+alias top='gotop'
+
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
 
