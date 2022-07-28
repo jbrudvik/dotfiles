@@ -21,6 +21,6 @@ jobs:
       - name: Lint
         run: make lint
       - name: Test install
-        run: install
+        run: ./install
       - name: Test update
-        run: update
+        run: ./update
