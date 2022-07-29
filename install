@@ -20,4 +20,4 @@ for f in .*; do
 done
 
 # Install Vim plugins
-vim -E +'PlugInstall' +qa && echo "vim-plug: Installed Vim plugins"
+# vim -E +'PlugInstall' +qa && echo "vim-plug: Installed Vim plugins"
