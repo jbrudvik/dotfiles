@@ -13,7 +13,7 @@ jobs:
       - name: Set up Vim
         uses: rhysd/action-setup-vim@v1
         with:
-          version: v8.2.0
+          version: v8.2.0000
       - name: Install shfmt
         run: sudo snap install shfmt
       - name: Install Prettier
