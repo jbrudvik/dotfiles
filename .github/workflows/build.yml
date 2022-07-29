@@ -10,10 +10,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Set up Vim
-        uses: rhysd/action-setup-vim@v1
-        with:
-          version: v8.2.0000
+      # - name: Set up Vim
+      #   uses: rhysd/action-setup-vim@v1
+      #   with:
+      #     version: v8.2.0000
+      - name: Check installed Vim
+        run: vim --version
       - name: Install shfmt
         run: sudo snap install shfmt
       - name: Install Prettier
