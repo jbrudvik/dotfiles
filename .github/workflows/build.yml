@@ -10,10 +10,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      # - name: Set up Vim
-      #   uses: rhysd/action-setup-vim@v1
-      #   with:
-      #     version: v8.2.0000
       - name: Check installed Vim
         run: vim --version
       - name: Install shfmt
@@ -26,12 +22,7 @@ jobs:
         run: make check-format
       - name: Lint
         run: make lint
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        with:
-          limit-access-to-actor: true
-          limit-access-to-users: jbrudvik
-      # - name: Test install
-      #   run: ./install
-      # - name: Test update
-      #   run: ./update
+      - name: Test install
+        run: ./install
+      - name: Test update
+        run: ./update
