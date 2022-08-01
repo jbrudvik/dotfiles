@@ -26,7 +26,12 @@ jobs:
         run: make check-format
       - name: Lint
         run: make lint
-      - name: Test install
-        run: ./install
-      - name: Test update
-        run: ./update
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+        with:
+          limit-access-to-actor: true
+          limit-access-to-users: jbrudvik
+      # - name: Test install
+      #   run: ./install
+      # - name: Test update
+      #   run: ./update
