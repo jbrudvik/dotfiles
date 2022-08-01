@@ -20,7 +20,7 @@ for f in .*; do
 done
 
 # Install Vim plugins
-if vim -E +'PlugInstall' +qa; then
+if vim +PlugInstall +qa; then
 	echo "Installed Vim plugins"
 else
 	echo "Failed to install Vim plugins"
