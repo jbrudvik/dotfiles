@@ -1,4 +1,4 @@
-# dotfiles: zsh/bash, git, vim, ...
+# dotfiles
 
 [![Build](https://github.com/jbrudvik/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/jbrudvik/dotfiles/actions/workflows/build.yml)
 
