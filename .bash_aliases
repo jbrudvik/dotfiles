@@ -21,6 +21,7 @@ alias gs='gsutil'
 
 # Memorable aliases
 alias hex='hecate'
+alias tower='gittower'
 
 # Better top
 alias top='gotop'
