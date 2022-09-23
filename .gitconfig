@@ -55,9 +55,9 @@
 
     # diff
     dm = "!git d $(git mine)"
-    dt = "!git d $(git theirs)"
+    dth = "!git d $(git theirs)"
     dmm = "!git d HEAD ^$(git default-branch)"
-    dtm = "!git d $(git default-branch) ^HEAD"
+    dthm = "!git d $(git default-branch) ^HEAD"
 
     # log (compressed)
     t = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
