@@ -27,6 +27,8 @@
     s = status -s
     d = diff
     ds = diff --staged
+    dt = difftool
+    dts = difftool --staged
     f = fetch
     a = add
     c = commit -v
@@ -88,9 +90,26 @@
     meta = blue
 [difftool]
     prompt = false
+    trustExitCode = true
 [core]
     excludesfile = ~/.gitignore_global
 [pull]
-	ff = only
+    ff = only
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[diff]
+    tool = Kaleidoscope
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
