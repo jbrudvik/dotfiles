@@ -29,6 +29,7 @@
     ds = diff --staged
     dt = difftool
     dts = difftool --staged
+    mt = mergetool
     f = fetch
     a = add
     c = commit -v
