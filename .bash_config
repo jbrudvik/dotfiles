@@ -10,9 +10,6 @@ REALPATH=$([ -L "$0" ] && readlink "$0")
 REALDIR=$(dirname "$REALPATH")
 export PATH="$REALDIR:$PATH"
 
-# Racket
-export PATH="/Applications/racket/bin:$PATH"
-
 # Initialize Homebrew
 command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -55,6 +52,9 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Racket
+export PATH="/Applications/racket/bin:$PATH"
 
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
