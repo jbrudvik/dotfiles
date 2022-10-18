@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Default editor used by other programs
-export EDITOR='vim'
-
 # Set PATH: Prioritize local over global
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -18,6 +15,13 @@ export PATH="/Applications/racket/bin:$PATH"
 
 # Initialize Homebrew
 command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Default editor used by other programs
+if command -v hx >/dev/null; then
+	export EDITOR='hx'
+else
+	export EDITOR='vim'
+fi
 
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
