@@ -3,7 +3,7 @@
 # Short aliases
 alias t='tmux'
 alias g='git'
-alias h='helix'
+alias h='hx'
 alias v='vim'
 alias d='docker'
 alias k='kubectl'
