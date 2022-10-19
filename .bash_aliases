@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # Short aliases
-alias v='vim'
+alias t='tmux'
 alias g='git'
+alias h='helix'
+alias v='vim'
 alias d='docker'
-alias dc='docker-compose'
 alias k='kubectl'
 alias gor='go run .'
 alias gof='goimports -w .'
@@ -17,7 +18,6 @@ alias god='dlv debug'
 alias godt='dlv test'
 alias gog='goimports -w . && go build && go vet ./... && go test ./...'
 alias gc='gcloud'
-alias gs='gsutil'
 
 # Memorable aliases
 alias hex='hecate'
