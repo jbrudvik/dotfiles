@@ -4,7 +4,6 @@
 set nocompatible " Break compatibility with vi
 filetype plugin on " Enable loading of plugin files for specific file types
 filetype indent on " Enable smart indentation based on filetype
-colorscheme twilight256
 syntax on " Turn on syntax highlighting
 set ruler " Show ruler (line and column number, position in file)
 set hlsearch " Highlight all search matches
@@ -22,18 +21,6 @@ set iskeyword+=i " Consider hyphens to be part of keywords/identifiers
 set showcmd " Show more command feedback
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣ " Show lots of invisibles (when that mode is on)
 set tabpagemax=50 " Set max number of tabs that can be exploded out
-
-" Use system clipboard
-if has('unnamedplus')
-  set clipboard=unnamedplus
-else
-  set clipboard=unnamed
-endif
-
-" Cursor settings for macOS Terminal
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 
 " Key bindings
@@ -55,34 +42,3 @@ nnoremap <silent> <leader>m :set nu!<CR>
 
 " Disable search term highlighting until next search
 nnoremap <silent> <leader>h :noh<CR>
-
-" Toggle display of invisibles
-nnoremap <silent> <leader>l :set list!<CR>
-
-
-" Plugins
-" ----
-
-call plug#begin('~/.vim-plug')
-Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'Chiel92/vim-autoformat'
-Plug 'cespare/vim-toml'
-call plug#end()
-
-" NERDCommenter
-let g:NERDSpaceDelims=1 " Pad comment delimiters with spaces where reasonable
-let g:NERDCustomDelimiters = { 'python': { 'left': '#', 'leftAlt': '#' } }
-
-" vim-gitgutter
-autocmd BufWritePost * GitGutter " Update on save
-highlight! link SignColumn LineNr
-highlight GitGutterAdd    guifg=#009900 ctermfg=2
-highlight GitGutterChange guifg=#005fd7 ctermfg=26
-highlight GitGutterDelete guifg=#ff2222 ctermfg=1
-
-" Autoformat on save: Rust, Python, Go
-au BufWrite *.rs,*.py,*.go :Autoformat

@@ -18,10 +18,3 @@ for f in .*; do
 	fi
 	ln -sfv "$(pwd)/$f" "$TARGET"
 done
-
-# Install Vim plugins
-if vim +PlugInstall +qa; then
-	echo "Installed Vim plugins"
-else
-	echo "Failed to install Vim plugins"
-fi
