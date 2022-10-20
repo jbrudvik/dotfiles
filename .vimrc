@@ -50,19 +50,6 @@ set ttimeoutlen=100 " ...after 100 milliseconds
 " This is more consistent with other commands (e.g., D -> delete to EOL, C -> change to EOL) than the default behavior: yank the whole line (covered by yy)
 nnoremap Y y$
 
-" Enable saving with :W (common typo of :w)
-cnoreabbrev W w
-
-" Easy save
-nnoremap <leader><leader> :w<CR>
-
-" Easy close
-nnoremap <leader>x :q<CR>
-
-" Insert newlines without changing modes or moving cursor
-nnoremap <leader>n mNo<Esc>`N
-nnoremap <leader>i mNO<Esc>`N
-
 " Toggle line numbers
 nnoremap <silent> <leader>m :set nu!<CR>
 
@@ -71,72 +58,6 @@ nnoremap <silent> <leader>h :noh<CR>
 
 " Toggle display of invisibles
 nnoremap <silent> <leader>l :set list!<CR>
-
-" Open all buffers in separate tabs
-nnoremap <silent> <leader>T :tab all<CR>
-
-" Select current word
-nnoremap <silent> <leader>w viw
-nnoremap <silent> <leader>W viW
-
-" Tab management
-"
-" J -> go to prev tab (set default J to C-j)
-" K -> go to next tab (set default K to C-k)
-" <leader>[1-9] -> go to tab number [1-9]
-" <leader>0 -> go to last tab
-" <leader>j -> move tab left (wrap to last if at first)
-" <leader>k -> move tab right (wrap to first if at last)
-" <leader>J -> move tab to first
-" <leader>K -> move tab to last
-" <leader>t -> open last closed tab
-
-nnoremap <C-J> J
-nnoremap <C-K> K
-nnoremap J gT
-nnoremap K gt
-nnoremap <leader>1 1gt
-nnoremap <leader>2 2gt
-nnoremap <leader>3 3gt
-nnoremap <leader>4 4gt
-nnoremap <leader>5 5gt
-nnoremap <leader>6 6gt
-nnoremap <leader>7 7gt
-nnoremap <leader>8 8gt
-nnoremap <leader>9 9gt
-nnoremap <leader>0 :tablast<CR>
-
-nnoremap <silent> <leader>j :execute 'silent! tabmove ' . (tabpagenr() == 1 ? tabpagenr('$') : tabpagenr() - 2)<CR>
-nnoremap <silent> <leader>k :execute 'silent! tabmove ' . (tabpagenr() == tabpagenr('$') ? 0 : (tabpagenr() + 1))<CR>
-nnoremap <silent> <leader>J :tabmove 0<CR>
-nnoremap <silent> <leader>K :tabmove<CR>
-
-" Stack of closed windows
-let g:closed_windows=[]
-
-function! OnBufWinLeave()
-  " Push closed tab's file path onto g:closed_windows stack
-  call insert(g:closed_windows, expand("<afile>:p:gs/ /\\\\ /"))
-endfunction
-
-function! OpenLastClosedWindow()
-  if !empty(g:closed_windows)
-    " Pop file path from g:closed_windows stack + open it
-    :execute 'tabe ' . remove(g:closed_windows, 0)
-  endif
-endfunction
-
-if has('autocmd')
-  au BufWinLeave * call OnBufWinLeave()
-
-  " Recognize *.md files as Markdown
-  au BufRead,BufNewFile *.md set filetype=markdown
-  au BufRead,BufNewFile *.md set softtabstop=4
-  au BufRead,BufNewFile *.md set tabstop=4
-  au BufRead,BufNewFile *.md set shiftwidth=4
-endif
-
-nnoremap <silent> <leader>t :execute OpenLastClosedWindow()<CR>
 
 
 " Plugins
