@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Fix tmux issues
+alias git='TERM=xterm git'
+alias top='TERM=xterm top'
+alias gotop='TERM=xterm gotop'
+
 # Short aliases
 alias t='tmux'
 alias g='git'
