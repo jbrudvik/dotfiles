@@ -23,9 +23,6 @@ alias gc='gcloud'
 alias hex='hecate'
 alias tower='gittower'
 
-# Better top
-alias top='gotop'
-
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
 
@@ -36,15 +33,6 @@ function greph() {                # Always include first line (e.g., header)
 	echo "$header"
 	grep "$1"
 }
-
-# Variant: diff
-alias dp='diff -Naur' # patch
-
-# Variant: colordiff
-alias di='colordiff -Naur'                                                          # patch
-alias dm='colordiff --suppress-common-lines -w --width $(tput cols)'                # minimal
-alias ds='colordiff --side-by-side -w --width $(tput cols) --suppress-common-lines' # side-by-side, minimal
-alias dsa='colordiff --side-by-side -w --width $(tput cols)'                        # side-by-side, all lines
 
 # New: What is my IP?
 alias ip='ipconfig getifaddr en0'
