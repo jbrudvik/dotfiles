@@ -51,7 +51,7 @@ export PYTHON
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+source ~/.cargo/env
 
 # Racket
 export PATH="/Applications/racket/bin:$PATH"
