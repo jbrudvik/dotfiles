@@ -28,7 +28,6 @@ alias gc='gcloud'
 
 # Memorable aliases
 alias hex='hecate'
-alias tower='gittower'
 
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
