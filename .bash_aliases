@@ -12,9 +12,11 @@ alias watchexec='TERM=xterm watchexec'
 alias t='tmux'
 alias g='git'
 alias h='hx'
-alias f='hx $(fzf)'
 alias d='docker'
 alias k='kubectl'
+
+# fzf to open files in helix
+alias f='result=$(fzf); if [ -z "${result}" ]; then echo "No file selected"; else hx "${result}"; fi'
 
 # ag: Use pager by default
 alias ag="ag $* --pager 'TERM=xterm less -R'"
