@@ -12,7 +12,7 @@ alias watchexec='TERM=xterm watchexec'
 alias t='tmux'
 alias g='git'
 alias h='hx'
-alias f='fzf'
+alias f='hx $(fzf)'
 alias d='docker'
 alias k='kubectl'
 
