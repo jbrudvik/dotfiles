@@ -17,17 +17,17 @@ alias k='kubectl'
 
 # f = Use fzf to open files in helix
 function f {
-  result=$(fzf)
-  if [ -z "${result}" ]; then
-    echo "No file selected"
-  else
-    hx "${result}"
-  fi
+	result=$(fzf)
+	if [ -z "${result}" ]; then
+		echo "No file selected"
+	else
+		hx "${result}"
+	fi
 }
 
 # a = ag with pager
 function a {
-  ag "$*" --pager "TERM=xterm less -R"
+	ag "$*" --pager "TERM=xterm less -R"
 }
 
 # Memorable aliases
