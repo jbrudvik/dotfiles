@@ -15,11 +15,20 @@ alias h='hx'
 alias d='docker'
 alias k='kubectl'
 
-# fzf to open files in helix
-alias f='result=$(fzf); if [ -z "${result}" ]; then echo "No file selected"; else hx "${result}"; fi'
+# f = Use fzf to open files in helix
+function f {
+  result=$(fzf)
+  if [ -z "${result}" ]; then
+    echo "No file selected"
+  else
+    hx "${result}"
+  fi
+}
 
-# ag: Use pager by default
-alias ag="ag $* --pager 'TERM=xterm less -R'"
+# a = ag with pager
+function a {
+  ag "$*" --pager "TERM=xterm less -R"
+}
 
 # Memorable aliases
 alias hex='hecate'
