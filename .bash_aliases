@@ -22,14 +22,6 @@ alias hex='hecate'
 # Variant: ls
 alias lsc='CLICOLOR_FORCE=1 ls -G'
 
-# Variant: grep
-alias grepc='grep --color=always' # Always use color, even when redirecting output
-function greph() {                # Always include first line (e.g., header)
-	IFS= read -r header
-	echo "$header"
-	grep "$1"
-}
-
 # New: What is my IP?
 alias ip='ipconfig getifaddr en0'
 
