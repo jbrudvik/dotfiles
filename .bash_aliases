@@ -16,6 +16,9 @@ alias f='hx $(fzf)'
 alias d='docker'
 alias k='kubectl'
 
+# ag: Use pager by default
+alias ag="ag $* --pager 'TERM=xterm less -R'"
+
 # Memorable aliases
 alias hex='hecate'
 
