@@ -29,3 +29,9 @@ $ make format
 # Lint
 $ make lint
 ```
+
+## Watch and lint
+
+```sh
+$ make watch
+```
