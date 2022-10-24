@@ -71,6 +71,16 @@ $ dotfiles/install
 $ dotfiles/update
 ```
 
+## Installing tools
+
+- tmux
+- helix
+- fzf
+- ag
+- watchexec
+- hecate
+- gotop
+
 ## Installing programming languages
 
 ### Install Go
