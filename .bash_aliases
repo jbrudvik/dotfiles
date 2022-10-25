@@ -20,7 +20,8 @@ alias k='kubectl'
 function f {
 	result=$(fzf)
 	if [ -z "${result}" ]; then
-		echo "No file selected"
+		# echo "No file selected"
+		true
 	else
 		hx "${result}"
 	fi
