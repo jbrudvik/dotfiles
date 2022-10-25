@@ -7,6 +7,7 @@ alias git='TERM=xterm git'
 alias top='TERM=xterm top'
 alias gotop='TERM=xterm gotop'
 alias watchexec='TERM=xterm watchexec'
+alias bat='TERM=xterm bat'
 
 # Short aliases
 alias t='tmux'
