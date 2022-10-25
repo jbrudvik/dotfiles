@@ -15,6 +15,7 @@ alias g='git'
 alias h='hx'
 alias d='docker'
 alias k='kubectl'
+alias b='br'
 
 # f = Use fzf to open files in helix
 function f {
