@@ -20,6 +20,12 @@ else
 	export EDITOR='vim'
 fi
 
+# broot file browser
+source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
+
+# Rust
+source ~/.cargo/env
+
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
@@ -49,12 +55,6 @@ PYTHON=$(command -v python)
 export PYTHON
 # Python: Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
-
-# Rust
-source ~/.cargo/env
-
-# Racket
-export PATH="/Applications/racket/bin:$PATH"
 
 # Aliases
 if [ -f "$HOME/.bash_aliases" ]; then
