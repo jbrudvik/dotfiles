@@ -45,106 +45,35 @@ $ sudo chsh -s $(command -v zsh) $(whoami)
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Installing dotfiles
-
-### Clone this repo
+## Install dotfiles (DESTRUCTIVE)
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
-```
-
-Alternatively, clone using SSH if you have keys:
-
-```sh
-$ git clone https://github.com/jbrudvik/dotfiles.git
-```
-
-### Install the dotfiles: **WARNING: This is destructive!**
-
-```sh
 $ dotfiles/install
 ```
 
-## Updating dotfiles
+## Update dotfiles
 
 ```sh
 $ dotfiles/update
 ```
 
-## Installing tools
+## Install tools
 
-- tmux
-- helix
-- fzf
-- ag
-- watchexec
-- hecate
-- gotop
+- [tmux](https://github.com/tmux/tmux/wiki/Installing)
+- [helix](https://docs.helix-editor.com/install.html)
+- [fzf](https://github.com/junegunn/fzf#installation)
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [watchexec](https://github.com/watchexec/watchexec#install)
+- [broot](https://dystroy.org/broot/install/)
+- [hecate](https://github.com/evanmiller/hecate)
+- [gotop](https://github.com/xxxserxxx/gotop#installation)
 
-## Installing programming languages
+## Install programming languages
 
-### Install Go
-
-#### Install Go on macOS
-
-Install Go:
-
-- [Official Go installer (wizard)](https://go.dev/doc/install)
-
-Install Go language server:
-
-```sh
-$ go install golang.org/x/tools/gopls@latest
-```
-
-#### Install Go on Linux (Debian / Ubuntu)
-
-```sh
-$ sudo apt update && sudo apt install wget
-$ wget https://storage.googleapis.com/golang/getgo/installer_linux
-$ chmod u+x installer_linux
-$ ./installer_linux
-```
-
-### Install Elm
-
-- [Install Elm](https://guide.elm-lang.org/install/elm.html)
-
-### Install Node
-
-#### Install Node on macOS
-
-```sh
-$ brew install n
-$ n lts
-```
-
-#### Install Node on Linux
-
-```sh
-$ sudo apt-get install build-essential
-$ curl -L https://bit.ly/n-install | bash
-$ n lts
-```
-
-### Install Python
-
-```sh
-$ brew install pyenv
-$ pyenv install <latest>
-$ pyenv global <latest>
-```
-
-### Install Haskell
-
-Force installing in x86 mode (M1 Macs not fully supported as of January 2022):
-
-```sh
-$ curl -sSL https://get.haskellstack.org/ | arch -x86_64 sh
-```
-
-### Install Rust
-
-```sh
-$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+- [Rust](https://www.rust-lang.org/tools/install)
+- [Elm](https://www.rust-lang.org/tools/install)
+- [Go](https://go.dev/doc/install)
+- [Node](https://github.com/pyenv/pyenv#installation)
+- [Python](https://github.com/pyenv/pyenv#installation)
+- [Haskell](https://docs.haskellstack.org/en/stable/#how-to-install-stack)
