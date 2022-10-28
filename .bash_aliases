@@ -24,7 +24,7 @@ function r {
 
 # f = Use fzf to open files in helix
 function f {
-	result=$(rg --hidden -l "" | fzf)
+	result=$(rg --hidden -l "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')
 	if [ -z "${result}" ]; then
 		# echo "No file selected"
 		true
