@@ -24,7 +24,7 @@ function r {
 
 # f = Use fzf to open files in helix
 function f {
-	result=$(fzf)
+	result=$(rg --hidden -l "" | fzf)
 	if [ -z "${result}" ]; then
 		# echo "No file selected"
 		true
