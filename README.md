@@ -62,10 +62,11 @@ $ dotfiles/update
 
 - [tmux](https://github.com/tmux/tmux/wiki/Installing)
 - [helix](https://docs.helix-editor.com/install.html)
-- [broot](https://dystroy.org/broot/install/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [bat](https://github.com/sharkdp/bat#installation)
 - [fzf](https://github.com/junegunn/fzf#installation)
 - [watchexec](https://github.com/watchexec/watchexec#install)
+- [broot](https://dystroy.org/broot/install/)
 - [hecate](https://github.com/evanmiller/hecate)
 - [gotop](https://github.com/xxxserxxx/gotop#installation)
 
