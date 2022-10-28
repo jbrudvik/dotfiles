@@ -16,6 +16,7 @@ alias h='hx'
 alias d='docker'
 alias k='kubectl'
 alias b='br'
+alias r='rg'
 
 # f = Use fzf to open files in helix
 function f {
@@ -26,11 +27,6 @@ function f {
 	else
 		hx "${result}"
 	fi
-}
-
-# a = ag with pager
-function a {
-	ag "$*" --pager "TERM=xterm less -R"
 }
 
 # Memorable aliases
