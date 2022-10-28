@@ -16,7 +16,11 @@ alias h='hx'
 alias d='docker'
 alias k='kubectl'
 alias b='br'
-alias r='rg'
+
+# r = ripgrep on hidden files with pager
+function r {
+	rg -.p "$*" | less -R
+}
 
 # f = Use fzf to open files in helix
 function f {
