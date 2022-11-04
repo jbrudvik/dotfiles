@@ -45,7 +45,7 @@ $ sudo chsh -s $(command -v zsh) $(whoami)
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Install dotfiles (DESTRUCTIVE)
+## Install dotfiles (WARNING: DESTRUCTIVE!)
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
