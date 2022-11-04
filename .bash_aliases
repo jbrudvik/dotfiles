@@ -3,6 +3,7 @@
 # Fix tmux issues
 alias less='TERM=xterm less'
 alias man='TERM=xterm man'
+alias vim='TERM=xterm vim'
 alias git='TERM=xterm git'
 alias top='TERM=xterm top'
 alias gotop='TERM=xterm gotop'
