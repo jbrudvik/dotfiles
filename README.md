@@ -69,6 +69,7 @@ $ dotfiles/update
 - [watchexec](https://github.com/watchexec/watchexec#install)
 - [delta](https://github.com/dandavison/delta#get-started)
 - [broot](https://dystroy.org/broot/install/)
+- [xh](https://github.com/ducaale/xh#installation)
 - [tldr](https://github.com/tldr-pages/tldr)
 - [hecate](https://github.com/evanmiller/hecate)
 - [gotop](https://github.com/xxxserxxx/gotop#installation)
