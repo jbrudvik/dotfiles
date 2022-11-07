@@ -1,6 +1,3 @@
-" Settings
-" ----
-
 set nocompatible " Break compatibility with vi
 set noswapfile " Disable swap file creation
 syntax on " Turn on syntax highlighting
