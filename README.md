@@ -65,6 +65,7 @@ $ dotfiles/update
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - [bat](https://github.com/sharkdp/bat#installation)
 - [fzf](https://github.com/junegunn/fzf#installation)
+- [exa](https://github.com/ogham/exa#installation)
 - [watchexec](https://github.com/watchexec/watchexec#install)
 - [delta](https://github.com/dandavison/delta#get-started)
 - [broot](https://dystroy.org/broot/install/)

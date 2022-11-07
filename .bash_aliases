@@ -19,6 +19,13 @@ alias k='kubectl'
 alias c='cargo'
 alias b='br'
 
+# Replace ls with exa
+alias l='exa'
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -l'
+alias lla='exa -la'
+
 # r = ripgrep on hidden files with pager
 function r {
 	rg -.p "$*" | less -R
