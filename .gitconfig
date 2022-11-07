@@ -85,8 +85,6 @@
     decorate
 [push]
     default = current
-[color]
-    ui = auto
 [core]
     excludesfile = ~/.gitignore_global
     pager = delta
