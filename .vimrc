@@ -21,24 +21,3 @@ set iskeyword+=i " Consider hyphens to be part of keywords/identifiers
 set showcmd " Show more command feedback
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣ " Show lots of invisibles (when that mode is on)
 set tabpagemax=50 " Set max number of tabs that can be exploded out
-
-
-" Key bindings
-" ----
-
-nnoremap , ;
-let mapleader=";"
-
-set notimeout " Do not time out in the middle of custom mappings
-set ttimeout " ...but still time out on key codes
-set ttimeoutlen=100 " ...after 100 milliseconds
-
-" Y -> yank to EOL
-" This is more consistent with other commands (e.g., D -> delete to EOL, C -> change to EOL) than the default behavior: yank the whole line (covered by yy)
-nnoremap Y y$
-
-" Toggle line numbers
-nnoremap <silent> <leader>m :set nu!<CR>
-
-" Disable search term highlighting until next search
-nnoremap <silent> <leader>h :noh<CR>
