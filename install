@@ -13,8 +13,7 @@ fi
 cd "$(dirname "$0")" || exit
 for f in .*; do
 	TARGET="$HOME/$f"
-	if [ -d "$TARGET" ] && [ -L "$TARGET" ]; then
-		rm "$TARGET"
+	if [ -f "$TARGET" ]; then
+		ln -sfv "$(pwd)/$f" "$TARGET"
 	fi
-	ln -sfv "$(pwd)/$f" "$TARGET"
 done
