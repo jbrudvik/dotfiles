@@ -44,6 +44,6 @@ RPS1+='$(exit_code_with_color)'
 RPS1+=' $FG[101]${cmd_elapsed_seconds_fmt} %{$my_gray%}%n@%m%{$reset_color%}%'
 
 # User settings
-if [ -f "$HOME/.bash_config" ]; then
-  source "$HOME/.bash_config"
+if [ -f "$HOME/.sh_config" ]; then
+  source "$HOME/.sh_config"
 fi

@@ -12,6 +12,6 @@ export HISTSIZE=5000
 export HISTFILESIZE=5000
 
 # User settings
-if [ -f "$HOME/.bash_config" ]; then
-	source "$HOME/.bash_config"
+if [ -f "$HOME/.sh_config" ]; then
+	source "$HOME/.sh_config"
 fi
