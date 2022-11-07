@@ -10,7 +10,7 @@ alias gotop='TERM=xterm gotop'
 alias watchexec='TERM=xterm watchexec'
 alias bat='TERM=xterm bat'
 
-# Short aliases
+# Single-letter aliases
 alias t='tmux'
 alias g='git'
 alias h='hx'
@@ -42,18 +42,12 @@ function f {
 	fi
 }
 
-# Memorable aliases
-alias hex='hecate'
+function ide {
+}
 
-# Variant: ls
-alias lsc='CLICOLOR_FORCE=1 ls -G'
-
-# New: What is my IP?
+# Other helpful/memorable aliases
 alias ip='ipconfig getifaddr en0'
-
-# New: Get first and last lines
 alias first='head -1'
 alias last='tail -1'
-
-# Variant: dig
+alias hex='hecate'
 alias digsimple='dig +nostats +nocomments +nocmd'
