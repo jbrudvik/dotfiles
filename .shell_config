@@ -30,7 +30,6 @@ source ~/.cargo/env
 export N_PREFIX=$HOME/.n
 export PATH="$HOME/.n/bin:$PATH"
 
-
 #########
 # Aliases
 #########
