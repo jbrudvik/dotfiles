@@ -78,6 +78,7 @@ function f {
 }
 
 function ide {
+	true
 }
 
 # Other helpful/memorable aliases
