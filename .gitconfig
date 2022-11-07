@@ -87,7 +87,7 @@
     default = current
 [core]
     excludesfile = ~/.gitignore_global
-    pager = delta
+    pager = "f() { if [ $(tput cols) -ge 140 ]; then "delta --side-by-side"; else "delta"; fi }; f"
 [pull]
     ff = only
 [init]
@@ -95,8 +95,9 @@
 [interactive]
     diffFilter = delta --color-only
 [delta]
-    navigate = true # use n and N to move between diff sections
     light = false
+    navigate = true # use n and N to move between diff sections
+    line-numbers = true
 [merge]
     conflictstyle = diff3
 [diff]
