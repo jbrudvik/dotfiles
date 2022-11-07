@@ -16,6 +16,7 @@ alias g='git'
 alias h='hx'
 alias d='docker'
 alias k='kubectl'
+alias c='cargo'
 alias b='br'
 
 # r = ripgrep on hidden files with pager
