@@ -87,14 +87,19 @@
     default = current
 [color]
     ui = auto
-[color "diff"]
-    meta = blue
-[difftool]
-    prompt = false
-    trustExitCode = true
 [core]
     excludesfile = ~/.gitignore_global
+    pager = delta
 [pull]
     ff = only
 [init]
     defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true # use n and N to move between diff sections
+    light = false
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
