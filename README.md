@@ -76,7 +76,4 @@ $ dotfiles/update
 
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Elm](https://www.rust-lang.org/tools/install)
-- [Go](https://go.dev/doc/install)
-- [Node](https://github.com/pyenv/pyenv#installation)
-- [Python](https://github.com/pyenv/pyenv#installation)
-- [Haskell](https://docs.haskellstack.org/en/stable/#how-to-install-stack)
+- [Node](https://github.com/tj/n)
