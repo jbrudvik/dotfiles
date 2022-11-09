@@ -123,6 +123,25 @@ function f {
 	fi
 }
 
+# ide = Launch "ide": tmux panes with $EDITOR, shell
 function ide {
-	true
+	# Generate session name
+	SESSION=${PWD##*/} # Current directory basename
+	if tmux has-session -t "$SESSION" 2>/dev/null; then
+		COUNTER=2
+		SESSION_WITH_SUFFIX="$SESSION-$COUNTER"
+		while tmux has-session -t "$SESSION_WITH_SUFFIX" 2>/dev/null; do
+			COUNTER=$((COUNTER + 1))
+			SESSION_WITH_SUFFIX="$SESSION-$COUNTER"
+		done
+		SESSION="$SESSION_WITH_SUFFIX"
+	fi
+
+	# Create new tmux session
+	tmux new-session -s "$SESSION" -d
+	tmux send-keys -t "$SESSION" '$EDITOR .' C-m
+	tmux split-window -t "$SESSION" -h
+	tmux select-pane -L -t "$SESSION"
+	tmux attach-session -t "$SESSION"
 }
+alias i=ide
