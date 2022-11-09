@@ -119,7 +119,7 @@ function f {
 		# echo "No file selected"
 		true
 	else
-		hx "${result}"
+		$EDITOR "${result}"
 	fi
 }
 
