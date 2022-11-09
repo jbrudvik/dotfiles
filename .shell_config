@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#############
+# Foundations
+#############
+
 # Set PATH: Prioritize local over global
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -13,6 +17,10 @@ export PATH="$REALDIR:$PATH"
 # Initialize Homebrew
 command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
+#######
+# Tools
+#######
+
 # Default editor used by other programs
 if command -v hx >/dev/null; then
 	export EDITOR='hx'
@@ -22,6 +30,10 @@ fi
 
 # broot file browser
 source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
+
+#######################
+# Programming languages
+#######################
 
 # Rust
 source ~/.cargo/env
@@ -84,6 +96,17 @@ alias la='exa -a'
 alias ll='exa -l'
 alias lla='exa -la'
 
+# Other helpful/memorable aliases
+alias ip='ipconfig getifaddr en0'
+alias first='head -1'
+alias last='tail -1'
+alias hex='hecate'
+alias digsimple='dig +nostats +nocomments +nocmd'
+
+###########
+# Functions
+###########
+
 # r = ripgrep on hidden files with pager
 function r {
 	rg -.p "$*" | less -R
@@ -103,10 +126,3 @@ function f {
 function ide {
 	true
 }
-
-# Other helpful/memorable aliases
-alias ip='ipconfig getifaddr en0'
-alias first='head -1'
-alias last='tail -1'
-alias hex='hecate'
-alias digsimple='dig +nostats +nocomments +nocmd'
