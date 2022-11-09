@@ -1,6 +1,6 @@
 # dotfiles
 
-[![Build](https://github.com/jbrudvik/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/jbrudvik/dotfiles/actions/workflows/build.yml)
+[![CI](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/jbrudvik/dotfiles/actions/workflows/build.yml)
 
 ## macOS prerequisites
 
