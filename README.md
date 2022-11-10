@@ -74,6 +74,7 @@ $ dotfiles/update
 - [hecate](https://github.com/evanmiller/hecate)
 - [bottom](https://github.com/ClementTsang/bottom#installation)
 - [dog](https://github.com/ogham/dog#installation)
+- [gping](https://github.com/orf/gping#install-cd)
 
 ## Install programming languages
 
