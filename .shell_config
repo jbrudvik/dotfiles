@@ -101,7 +101,6 @@ alias ip='ipconfig getifaddr en0'
 alias first='head -1'
 alias last='tail -1'
 alias hex='hecate'
-alias digsimple='dig +nostats +nocomments +nocmd'
 
 ###########
 # Functions
