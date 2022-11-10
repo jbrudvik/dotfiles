@@ -77,6 +77,6 @@ $ dotfiles_update
 ## Install programming languages
 
 - [Rust](https://www.rust-lang.org/tools/install)
-- [Elm](https://www.rust-lang.org/tools/install)
+- [Elm](https://guide.elm-lang.org/install/elm.html)
 - [Node](https://github.com/tj/n)
 - [Go](https://go.dev/doc/install)
