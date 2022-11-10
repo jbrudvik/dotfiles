@@ -7,6 +7,13 @@ ZSH_THEME="af-magic"
 plugins=(zsh-syntax-highlighting git docker kubectl rust fzf-zsh-plugin)
 source $ZSH/oh-my-zsh.sh
 
+# Fix fzf with fzf-zsh-plugin (broken as of 11/10/2022)
+# - https://github.com/unixorn/fzf-zsh-plugin/issues/50
+# - https://github.com/unixorn/fzf-zsh-plugin/issues/69
+export FZF_DEFAULT_COMMAND=
+export FZF_ALT_C_COMMAND=
+export FZF_CTRL_T_COMMAND=
+
 # Make af-magic's $my_gray brighter
 typeset +H my_gray="$FG[243]"
 
