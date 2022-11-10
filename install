@@ -9,7 +9,7 @@ if [ ! -d "$ZSH_SYNTAX_HIGHLIGHTING_PATH" ]; then
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_SYNTAX_HIGHLIGHTING_PATH"
 fi
 
-# Install dotfiles
+# Install dotfiles in $HOME
 cd "$(dirname "$0")" || exit
 for f in .*; do
 	TARGET="$HOME/$f"
