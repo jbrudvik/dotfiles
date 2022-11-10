@@ -152,5 +152,5 @@ alias i=ide
 # Local settings
 ################
 if [ -f "$HOME/.shell_config_local" ]; then
-	source "$HOME/.shell_config_local""
+	source "$HOME/.shell_config_local"
 fi
