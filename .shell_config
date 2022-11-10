@@ -139,7 +139,7 @@ function ide {
 
 	# Create new tmux session
 	tmux new-session -s "$SESSION" -d
-	tmux send-keys -t "$SESSION" '$EDITOR .' C-m
+	tmux send-keys -t "$SESSION" "$EDITOR ." C-m
 	tmux split-window -t "$SESSION" -h
 	tmux select-pane -L -t "$SESSION"
 	tmux attach-session -t "$SESSION"
