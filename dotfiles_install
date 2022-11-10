@@ -4,9 +4,10 @@
 echo "Install dotfiles:"
 cd "$(dirname "$0")" || exit
 for dotfile in .*; do
+	SOURCE="$(pwd)/$dotfile"
 	TARGET="$HOME/$dotfile"
-	if [ -f "$TARGET" ]; then
-		ln -sfv "$(pwd)/$dotfile" "$TARGET"
+	if [ -f "$SOURCE" ]; then
+		ln -sfv "$SOURCE" "$TARGET"
 	fi
 done
 
