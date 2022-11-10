@@ -147,3 +147,10 @@ function ide {
 	tmux attach-session -t "$SESSION"
 }
 alias i=ide
+
+################
+# Local settings
+################
+if [ -f "$HOME/.bash_local" ]; then
+	source "$HOME/.bash_local"
+fi
