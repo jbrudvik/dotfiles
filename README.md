@@ -23,6 +23,7 @@ $ sudo apt install zsh
 ```sh
 $ sudo dnf install git
 $ sudo dnf install zsh
+$ sudo dnf install @development-tools
 ```
 
 ## Set up zsh and oh-my-zsh
