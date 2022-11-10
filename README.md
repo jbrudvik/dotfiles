@@ -85,5 +85,3 @@ $ dotfiles/update_dotfiles
 - [Elm](https://www.rust-lang.org/tools/install)
 - [Node](https://github.com/tj/n)
 - [Go](https://go.dev/doc/install)
-- [Python](https://github.com/pyenv/pyenv#installation)
-- [Haskell](https://docs.haskellstack.org/en/stable/#how-to-install-stack)

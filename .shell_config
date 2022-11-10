@@ -58,13 +58,6 @@ else
 	export PATH=$PATH:"$HOME/go/bin"
 fi
 
-# Python via pyenv
-command -v pyenv >/dev/null && eval "$(pyenv init -)"
-export PATH="$HOME/.pyenv/shims:$PATH"
-PYTHON=$(command -v python)
-export PYTHON
-export PATH="$HOME/.poetry/bin:$PATH"
-
 #########
 # Aliases
 #########
