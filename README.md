@@ -14,14 +14,14 @@ $ brew install zsh zsh-completions
 ### Debian Linux
 
 ```sh
-$ sudo apt update && sudo apt install git
-$ sudo apt-get install zsh
+$ sudo apt install git
+$ sudo apt install zsh
 ```
 
 ### Fedora Linux
 
 ```sh
-$ sudo dnf -y update && sudo dnf -y install git
+$ sudo dnf install git
 $ sudo dnf install zsh
 ```
 
