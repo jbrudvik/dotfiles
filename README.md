@@ -2,32 +2,27 @@
 
 [![CI](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml)
 
-## macOS prerequisites
+## Install prerequisites
 
-### Install Homebrew
+### MacOS
 
 ```sh
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### Install zsh
-
-```sh
 $ brew install zsh zsh-completions
 ```
 
-## Linux (Debian / Ubuntu) prerequisites
-
-### Install Git
+### Debian Linux
 
 ```sh
 $ sudo apt update && sudo apt install git
+$ sudo apt-get install zsh
 ```
 
-### Install zsh
+### Fedora Linux
 
 ```sh
-$ sudo apt-get install zsh
+$ sudo dnf -y update && sudo dnf -y install git
+$ sudo dnf install zsh
 ```
 
 ## Set up zsh and oh-my-zsh
