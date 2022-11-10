@@ -75,6 +75,7 @@ $ dotfiles/update
 - [bottom](https://github.com/ClementTsang/bottom#installation)
 - [dog](https://github.com/ogham/dog#installation)
 - [gping](https://github.com/orf/gping#install-cd)
+- [procs](https://github.com/dalance/procs#installation)
 
 ## Install programming languages
 
