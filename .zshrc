@@ -1,5 +1,15 @@
 #!/usr/bin/env zsh
 
+# Download oh-my-zsh plugins, if needed
+ZSH_SYNTAX_HIGHLIGHTING_PATH="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+if [ ! -d "$ZSH_SYNTAX_HIGHLIGHTING_PATH" ]; then
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_SYNTAX_HIGHLIGHTING_PATH"
+fi
+FZF_ZSH_PLUGIN_PATH="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin"
+if [ ! -d "$FZF_ZSH_PLUGIN_PATH" ]; then
+  git clone https://github.com/unixorn/fzf-zsh-plugin.git "$FZF_ZSH_PLUGIN_PATH"
+fi
+
 # Set up oh-my-zsh
 ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"

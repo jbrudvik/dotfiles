@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 
+# TODO: Do something other than this -- maybe just drop it?
 GLOBIGNORE=".:..:.git"
 shopt -u dotglob
-
-# Install oh-my-zsh syntax highlighting
-ZSH_SYNTAX_HIGHLIGHTING_PATH="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-if [ ! -d "$ZSH_SYNTAX_HIGHLIGHTING_PATH" ]; then
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_SYNTAX_HIGHLIGHTING_PATH"
-fi
 
 # Install dotfiles in $HOME
 cd "$(dirname "$0")" || exit
