@@ -2,5 +2,5 @@
 
 cd "$(dirname "$0")" || exit
 git pull
-./install_dotfiles
+./dotfiles_install
 cd "$OLDPWD" || exit

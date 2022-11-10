@@ -49,13 +49,13 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 
 ```sh
 $ git clone git@github.com:jbrudvik/dotfiles.git
-$ dotfiles/install_dotfiles
+$ dotfiles/dotfiles_install
 ```
 
 ## Update dotfiles
 
 ```sh
-$ dotfiles/update_dotfiles
+$ dotfiles_update
 ```
 
 ## Install tools
