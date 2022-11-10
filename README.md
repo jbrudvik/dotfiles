@@ -43,7 +43,7 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 ## Install dotfiles (WARNING: DESTRUCTIVE!)
 
 ```sh
-$ git clone git@github.com:jbrudvik/dotfiles.git
+$ git clone https://github.com/jbrudvik/dotfiles.git
 $ dotfiles/dotfiles_install
 ```
 
