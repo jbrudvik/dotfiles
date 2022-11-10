@@ -76,7 +76,6 @@ alias vim='TERM=xterm vim'
 alias git='TERM=xterm git'
 alias tput='TERM=xterm tput'
 alias top='TERM=xterm top'
-alias gotop='TERM=xterm gotop'
 alias watchexec='TERM=xterm watchexec'
 alias bat='TERM=xterm bat'
 

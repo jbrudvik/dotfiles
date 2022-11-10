@@ -72,7 +72,7 @@ $ dotfiles/update
 - [xh](https://github.com/ducaale/xh#installation)
 - [tldr](https://github.com/tldr-pages/tldr)
 - [hecate](https://github.com/evanmiller/hecate)
-- [gotop](https://github.com/xxxserxxx/gotop#installation)
+- [bottom](https://github.com/ClementTsang/bottom#installation)
 - [dog](https://github.com/ogham/dog#installation)
 
 ## Install programming languages
