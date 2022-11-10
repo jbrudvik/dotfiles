@@ -1,14 +1,30 @@
 #!/usr/bin/env bash
 
-# TODO: Do something other than this -- maybe just drop it?
-GLOBIGNORE=".:..:.git"
-shopt -u dotglob
-
-# Install dotfiles in $HOME
+# Install dotfiles into $HOME
+echo "Install dotfiles:"
 cd "$(dirname "$0")" || exit
-for f in .*; do
-	TARGET="$HOME/$f"
+for dotfile in .*; do
+	TARGET="$HOME/$dotfile"
 	if [ -f "$TARGET" ]; then
-		ln -sfv "$(pwd)/$f" "$TARGET"
+		ln -sfv "$(pwd)/$dotfile" "$TARGET"
 	fi
+done
+
+# Install .config files into $HOME/.config
+# Assumptions about .config:
+# - .config contains only non-hidden dirs
+# - Non-hidden dirs only contain non-hidden files/dirs
+echo
+echo "Install .config files:"
+for dir in .config/*; do
+	mkdir -pv "$HOME/$dir"
+	for f in "$dir"/*; do
+		SOURCE="$(pwd)/$f"
+		TARGET="$HOME/$f"
+		if [ -f "$f" ]; then
+			ln -sfv "$SOURCE" "$TARGET"
+		else
+			ln -sFv "$SOURCE" "$TARGET"
+		fi
+	done
 done
