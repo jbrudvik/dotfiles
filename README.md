@@ -76,6 +76,7 @@ $ dotfiles/update
 - [dog](https://github.com/ogham/dog#installation)
 - [gping](https://github.com/orf/gping#install-cd)
 - [procs](https://github.com/dalance/procs#installation)
+- [duf](https://github.com/muesli/duf#installation)
 
 ## Install programming languages
 

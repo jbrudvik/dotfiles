@@ -96,6 +96,9 @@ alias la='exa -a'
 alias ll='exa -l'
 alias lla='exa -la'
 
+# Alias with defaults
+alias duf='duf -r'
+
 # Other helpful/memorable aliases
 alias ip='ipconfig getifaddr en0'
 alias first='head -1'
