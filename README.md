@@ -31,7 +31,7 @@ $ sudo dnf install zsh
 
 ```sh
 $ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
-$ sudo chsh -s $(command -v zsh) $(whoami)
+$ sudo chsh -s $(command -v zsh) $(whoami) || sudo lchsh
 ```
 
 ### Install [oh-my-zsh](https://ohmyz.sh)
