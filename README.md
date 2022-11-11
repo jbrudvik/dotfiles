@@ -57,9 +57,18 @@ $ dotfiles_update
 ## Install programming languages
 
 - [Rust](https://www.rust-lang.org/tools/install)
+  - LSP: [rust-analyzer](https://rust-analyzer.github.io/manual.html)
+  - DAP: [lldb-vscode](https://github.com/vadimcn/vscode-lldb)
 - [Elm](https://guide.elm-lang.org/install/elm.html)
+  - LSP: [elm-language-server](https://github.com/elm-tooling/elm-language-server)
 - [Node](https://github.com/tj/n)
 - [Go](https://go.dev/doc/install)
+  - LSP: [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
+  - DAP: [dlv](https://github.com/go-delve/delve)
+- Other LSP / DAP:
+  - Bash LSP: [bash-language-server](https://github.com/bash-lsp/bash-language-server)
+  - JavaScript, TypeScript LSP: [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
+  - Docker LSP: [docker-langserver](https://github.com/rcjsuen/dockerfile-language-server-nodejs)
 
 ## Install tools
 
