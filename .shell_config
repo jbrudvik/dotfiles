@@ -89,8 +89,8 @@ alias la='exa -a'
 alias ll='exa -l'
 alias lla='exa -la'
 
-# Alias with defaults
-alias duf='duf -r'
+# Aliases to set defaults
+alias dust='dust -r'
 
 # Other helpful/memorable aliases
 alias ip='ipconfig getifaddr en0'
