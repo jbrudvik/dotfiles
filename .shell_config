@@ -72,6 +72,7 @@ alias top='TERM=xterm top'
 alias watchexec='TERM=xterm watchexec'
 alias bat='TERM=xterm bat'
 alias procs='TERM=xterm procs --theme=dark'
+alias cargo='TERM=xterm cargo'
 
 # Single-letter aliases
 alias t='tmux'
