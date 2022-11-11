@@ -81,3 +81,4 @@ $ dotfiles_update
 - [gping](https://github.com/orf/gping#install-cd)
 - [procs](https://github.com/dalance/procs#installation)
 - [dust](https://github.com/bootandy/dust#install)
+- [duf](https://github.com/bootandy/dust#install)
