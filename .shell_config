@@ -38,17 +38,13 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Rust
 source ~/.cargo/env
 
-# Node via n
-export N_PREFIX=$HOME/.n
-export PATH="$HOME/.n/bin:$PATH"
-
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
 	export GOARCH=arm64
 	if command -v go >/dev/null; then
 		GOPATH=$(go env GOPATH)
-		export PATH="$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}:$PATH"
+		export PATH="$PATH:$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}"
 	else
 		export PATH=$PATH:/usr/local/go/bin
 	fi
@@ -56,7 +52,12 @@ else
 	export PATH=$PATH:"$HOME/.go/bin"
 	export GOPATH="$HOME/go"
 	export PATH=$PATH:"$HOME/go/bin"
+	export PATH=$PATH:/usr/local/go/bin
 fi
+
+# Node via n
+export N_PREFIX=$HOME/.n
+export PATH="$PATH:$HOME/.n/bin"
 
 #########
 # Aliases
