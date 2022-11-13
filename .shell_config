@@ -72,11 +72,13 @@ alias c='cargo'
 alias b='br'
 
 # Replace ls with exa
-alias l='exa'
-alias ls='exa'
-alias la='exa -a'
-alias ll='exa -l'
-alias lla='exa -la'
+if command -v exa >/dev/null; then
+	alias l='exa'
+	alias ls='exa'
+	alias la='exa -a'
+	alias ll='exa -l'
+	alias lla='exa -la'
+fi
 
 # Aliases to set defaults
 alias dust='dust -r'
