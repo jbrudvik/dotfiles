@@ -62,20 +62,6 @@ fi
 # Aliases
 #########
 
-# Fix tmux issues
-alias less='TERM=xterm less'
-alias man='TERM=xterm man'
-alias vim='TERM=xterm vim'
-alias git='TERM=xterm git'
-alias tput='TERM=xterm tput'
-alias top='TERM=xterm top'
-alias watchexec='TERM=xterm watchexec'
-alias bat='TERM=xterm bat'
-alias procs='TERM=xterm procs --theme=dark'
-alias cargo='TERM=xterm cargo'
-alias lldb='TERM=xterm lldb'
-alias rust-lldb='TERM=xterm rust-lldb'
-
 # Single-letter aliases
 alias t='tmux'
 alias g='git'
