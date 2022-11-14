@@ -9,6 +9,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install Git
   - MacOS: Installed by default
   - Debian: `$ sudo apt update && sudo apt install git`
+- Install make
+  - MacOS: Installed by default
+  - Debian: `$ sudo apt install make`
 - Install [Homebrew](https://brew.sh)
   - MacOS: `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   - Debian: Not needed
