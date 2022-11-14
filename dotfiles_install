@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install dotfiles into $HOME
-echo "Install dotfiles:"
+echo "Installing dotfiles:"
 cd "$(dirname "$0")" || exit
 for dotfile in .*; do
 	SOURCE="$(pwd)/$dotfile"
@@ -16,7 +16,7 @@ done
 # - .config contains only non-hidden dirs
 # - Non-hidden dirs only contain non-hidden files/dirs
 echo
-echo "Install .config files:"
+echo "Installing .config files:"
 for dir in .config/*; do
 	mkdir -pv "$HOME/$dir"
 	for f in "$dir"/*; do
