@@ -57,7 +57,6 @@ PS2='%{$FG[105]%}\ %{$reset_color%}'
 # Right prompt
 RPS1=''
 RPS1+='$(exit_code_with_color)'
-(( $+functions[virtualenv_prompt_info] )) && RPS1+='$(virtualenv_prompt_info)'
 RPS1+=' $FG[101]${cmd_elapsed_seconds_fmt} %{$my_gray%}%n@%m%{$reset_color%}%'
 
 # User settings
