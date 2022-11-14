@@ -28,36 +28,36 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - Debian: `$ curl https://go.dev/dl/go1.19.3.linux-amd64.tar.gz -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz && rm go1.19.3.linux-amd64.tar.gz`
 - Install [Python](https://www.python.org)
   - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
-  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 - Install [Elm](https://elm-lang.org)
   - MacOS: `$ brew install elm`
   - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
 - Install [Node](https://nodejs.org)
   - MacOS: `$ brew install n && n lts`
-  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n
+  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 - Install [TypeScript](https://www.typescriptlang.org): `$ npm install -g typescript`
 
 ### Install [language servers (LSP)](https://en.wikipedia.org/wiki/Language_Server_Protocol)
 
-- Install Rust LSP: [rust-analyzer](https://github.com/rust-lang/rust-analyzer)
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
   - MacOS: `$ brew install rust-analyzer`
   - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-- Install Go LSP: [gopls](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install Elm LSP: [elm-language-server](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
-- Install Bash LSP: [bash-language-server](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
-- Install JavaScript/TypeScript LSP: [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server): `$ npm install -g typescript-language-server`
-- Install Docker LSP: [docker-langserver](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
+- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
+- Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
+- Install [typescript-language-server (JavaScript/TypeScript LSP)](https://github.com/typescript-language-server/typescript-language-server): `$ npm install -g typescript-language-server`
+- Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
 
 ### Install debuggers
 
-- Install Rust debugger: [lldb](https://lldb.llvm.org)
+- Install [lldb (Rust debugger)](https://lldb.llvm.org)
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libllvm-ocaml-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
-- Install Go debugger: [dlv](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+- Install [dlv (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
 ### Install [DAPs](https://microsoft.github.io/debug-adapter-protocol/)
 
-- Rust DAP: [lldb-vscode](https://github.com/vadimcn/vscode-lldb)
+- Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
   - MacOS: TODO
   - Debian: TODO
 
