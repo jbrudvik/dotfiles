@@ -13,7 +13,7 @@ jobs:
       - name: Check installed Vim
         run: vim --version
       - name: Install shfmt
-        run: sudo snap install shfmt
+        run: sudo apt install shfmt
       - name: Install Prettier
         run: npm install --location=global prettier
       - name: Install shellcheck
