@@ -13,7 +13,7 @@ jobs:
       - name: Check installed Vim
         run: vim --version
       - name: Install shfmt
-        run: sudo apt install shfmt
+        run: curl -sS https://webi.sh/shfmt | sh
       - name: Install Prettier
         run: npm install --location=global prettier
       - name: Install shellcheck
