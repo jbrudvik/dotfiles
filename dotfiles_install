@@ -22,10 +22,6 @@ for dir in .config/*; do
 	for f in "$dir"/*; do
 		SOURCE="$(pwd)/$f"
 		TARGET="$HOME/$f"
-		if [ -f "$f" ]; then
-			ln -sfv "$SOURCE" "$TARGET"
-		else
-			ln -sFv "$SOURCE" "$TARGET"
-		fi
+		ln -snfv "$SOURCE" "$TARGET"
 	done
 done
