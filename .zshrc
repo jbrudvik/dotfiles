@@ -11,6 +11,7 @@ if [ ! -d "$FZF_ZSH_PLUGIN_PATH" ]; then
 fi
 
 # Set up oh-my-zsh
+DISABLE_AUTO_UPDATE=true
 ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
