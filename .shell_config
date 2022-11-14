@@ -67,9 +67,9 @@ export PATH="$PATH:$HOME/.n/bin"
 alias t='tmux'
 alias g='git'
 alias h='hx'
+alias c='cargo'
 alias d='docker'
 alias k='kubectl'
-alias c='cargo'
 alias b='br'
 
 # Replace ls with exa
