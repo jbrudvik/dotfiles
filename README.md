@@ -2,92 +2,123 @@
 
 [![CI](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml)
 
-## Install prerequisites
+This guide walks through installing my preferred settings for both MacOS and Debian Linux. The Debian environment is assumed to be an underpowered machine (e.g., a free VM on a cloud provider).
 
-### MacOS
+## Install basics and dotfiles
 
-```sh
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-$ brew install zsh zsh-completions
-```
+- Install Git
+  - MacOS: Installed by default
+  - Debian: `$ sudo apt update && sudo apt install git`
+- Install [Homebrew](https://brew.sh)
+  - MacOS: `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+  - Debian: Not needed
+- Install [Kitty](https://sw.kovidgoyal.net/kitty/): `$ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
+- Install [zsh](https://en.wikipedia.org/wiki/Z_shell)
+  - MacOS: `$ brew install zsh zsh-completions`
+  - Debian: `$ sudo apt install zsh`
+- Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`
+- Install [oh-my-zsh](https://ohmyz.sh): `$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+- Install dotfiles (WARNING: DESTRUCTIVE!): `$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/dotfiles_install`
 
-### Debian Linux
+## Install programming languages
 
-```sh
-$ sudo apt install git
-$ sudo apt install zsh
-```
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [Go](https://go.dev)
+  - MacOS: `$ brew install go`
+  - Debian: `$ curl https://go.dev/dl/go1.19.3.linux-amd64.tar.gz -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz && rm go1.19.3.linux-amd64.tar.gz`
+- Install [Python](https://www.python.org)
+  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python
+- Install [Elm](https://elm-lang.org)
+  - MacOS: `$ brew install elm`
+  - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
+- Install [Node](https://nodejs.org)
+  - MacOS: `$ brew install n && n lts`
+  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n
+- Install [TypeScript](https://www.typescriptlang.org): `$ npm install -g typescript`
 
-### Fedora Linux
+### Install [language servers (LSP)](https://en.wikipedia.org/wiki/Language_Server_Protocol)
 
-```sh
-$ sudo dnf install git
-$ sudo dnf install zsh
-$ sudo dnf install @development-tools
-```
+- Install Rust LSP: [rust-analyzer](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+- Install Go LSP: [gopls](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install Elm LSP: [elm-language-server](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
+- Install Bash LSP: [bash-language-server](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
+- Install JavaScript/TypeScript LSP: [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server): `$ npm install -g typescript-language-server`
+- Install Docker LSP: [docker-langserver](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
 
-## Set up zsh and oh-my-zsh
+### Install debuggers
 
-### Set zsh as login shell
+- Install Rust debugger: [lldb](https://lldb.llvm.org)
+  - MacOS: Installed by default
+  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libllvm-ocaml-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
+- Install Go debugger: [dlv](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
-```sh
-$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"
-$ sudo chsh -s $(command -v zsh) $(whoami) || sudo lchsh
-```
+### Install [DAPs](https://microsoft.github.io/debug-adapter-protocol/)
 
-### Install [oh-my-zsh](https://ohmyz.sh)
+- Rust DAP: [lldb-vscode](https://github.com/vadimcn/vscode-lldb)
+  - MacOS: TODO
+  - Debian: TODO
 
-```sh
-$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+## Install tools
 
-## Install dotfiles (WARNING: DESTRUCTIVE!)
+- Install [cargo b(inary)install](https://github.com/cargo-bins/cargo-binstall)
+  - MacOS: `$ cargo install cargo-binstall`
+  - Debian: `$ curl https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz -OL && sudo tar -C "$HOME/.cargo/bin" -xzf cargo-binstall-x86_64-unknown-linux-musl.tgz && rm cargo-binstall-x86_64-unknown-linux-musl.tgz`
+- Install [delta](https://github.com/dandavison/delta)
+  - MacOS: `$ brew install git-delta`
+  - Debian: `$ cargo binstall git-delta`
+- Install [exa](https://github.com/ogham/exa#installation)
+  - MacOS: `$ brew install exa`
+  - Debian: `$ sudo apt install exa`
+- Install [tmux](https://github.com/tmux/tmux)
+  - MacOS: `$ brew install tmux`
+  - Debian: `$ sudo apt install tmux`
+- Install [helix](https://docs.helix-editor.com)
+  - MacOS: `$ brew install helix`
+  - Debian: `$ curl -L -o helix.tar.gz https://github.com/helix-editor/helix/releases/download/22.08.1/helix-22.08.1-x86_64-linux.tar.xz && sudo mv helix-22.08.1-x86_64-linux/hx /usr/local/bin && mv helix-22.08.1-x86_64-linux/runtime .config/helix/ && rm helix.tar.gz`
+- Install [ripgrep](https://github.com/BurntSushi/ripgrep)
+  - MacOS: `$ brew install ripgrep`
+  - Debian: `$ sudo apt install ripgrep`
+- Install [bat](https://github.com/sharkdp/bat)
+  - MacOS: `$ brew install bat`
+  - Debian: `$ sudo apt install bat && sudo ln -s $(which batcat) /usr/local/bin/bat`
+- Install [fzf](https://github.com/junegunn/fzf)
+  - MacOS: `$ brew install fzf`
+  - Debian: `$ sudo apt install fzf`
+- Install [fd](https://github.com/sharkdp/fd)
+  - MacOS: `$ brew install fd`
+  - Debian: `$ sudo apt install fd-find && sudo ln -s $(which fdfind) /usr/local/bin/fd`
+- Install [watchexec](https://github.com/watchexec/watchexec)
+  - MacOS: `$ brew install watchexec`
+  - Debian: `$ cargo binstall watchexec-cli`
+- Install [broot](https://dystroy.org/broot)
+  - MacOS: `$ brew install broot && broot`
+  - Debian: `$ cargo binstall broot && broot`
+- Install [xh](https://github.com/ducaale/xh)
+  - MacOS: `$ brew install xh`
+  - Debian: `$ cargo binstall xh`
+- Install [tldr](https://github.com/tldr-pages/tldr): `$ npm install -g tldr`
+- Install [hecate](https://github.com/evanmiller/hecate): `$ go install github.com/evanmiller/hecate@latest`
+- Install [bottom](https://github.com/ClementTsang/bottom)
+  - MacOS: `$ brew install bottom`
+  - Debian: `$ cargo binstall bottom`
+- Install [dog](https://github.com/ogham/dog)
+  - MacOS: `$ brew install dog`
+  - Debian: `$ curl -LO https://packages.azlux.fr/debian/pool/main/d/dog/dog_0.1.0_amd64.deb && sudo dpkg -i dog_0.1.0_amd64.deb && rm dog_0.1.0_amd64.deb`
+- Install [procs](https://github.com/dalance/procs)
+  - MacOS: `$ brew install procs`
+  - Debian: `$ cargo binstall procs`
+- Install [dust](https://github.com/bootandy/dust)
+  - MacOS: `$ brew install dust`
+  - Debian: `$ curl -L -o dust.gz https://github.com/bootandy/dust/releases/download/v0.8.3/dust-v0.8.3-i686-unknown-linux-gnu.tar.gz && tar -xvf dust.gz && sudo mv dust-v0.8.3-i686-unknown-linux-gnu/dust /usr/local/bin && rm -rf dust-v0.8.3-i686-unknown-linux-gnu && rm dust.gz`
+- Install [duf](https://github.com/muesli/duf)
+  - MacOS: `$ brew install duf`
+  - Debian: `$ sudo apt install duf`
 
-```sh
-$ git clone https://github.com/jbrudvik/dotfiles.git
-$ dotfiles/dotfiles_install
-```
-
-## Update dotfiles
+## Update
 
 ```sh
 $ dotfiles_update
 ```
-
-## Install programming languages
-
-- [Rust](https://www.rust-lang.org/tools/install)
-  - LSP: [rust-analyzer](https://rust-analyzer.github.io/manual.html)
-  - DAP: [lldb-vscode](https://github.com/vadimcn/vscode-lldb)
-- [Elm](https://guide.elm-lang.org/install/elm.html)
-  - LSP: [elm-language-server](https://github.com/elm-tooling/elm-language-server)
-- [Node](https://github.com/tj/n)
-- [Go](https://go.dev/doc/install)
-  - LSP: [gopls](https://pkg.go.dev/golang.org/x/tools/gopls)
-  - DAP: [dlv](https://github.com/go-delve/delve)
-- Other LSP / DAP:
-  - Bash LSP: [bash-language-server](https://github.com/bash-lsp/bash-language-server)
-  - JavaScript, TypeScript LSP: [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
-  - Docker LSP: [docker-langserver](https://github.com/rcjsuen/dockerfile-language-server-nodejs)
-
-## Install tools
-
-- [tmux](https://github.com/tmux/tmux/wiki/Installing)
-- [helix](https://docs.helix-editor.com/install.html)
-- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
-- [delta](https://github.com/dandavison/delta#get-started)
-- [bat](https://github.com/sharkdp/bat#installation)
-- [fzf](https://github.com/junegunn/fzf#installation)
-- [exa](https://github.com/ogham/exa#installation)
-- [fd](https://github.com/sharkdp/fd#installation)
-- [watchexec](https://github.com/watchexec/watchexec#install)
-- [broot](https://dystroy.org/broot/install/)
-- [xh](https://github.com/ducaale/xh#installation)
-- [tldr](https://github.com/tldr-pages/tldr)
-- [hecate](https://github.com/evanmiller/hecate)
-- [bottom](https://github.com/ClementTsang/bottom#installation)
-- [dog](https://github.com/ogham/dog#installation)
-- [gping](https://github.com/orf/gping#install-cd)
-- [procs](https://github.com/dalance/procs#installation)
-- [dust](https://github.com/bootandy/dust#install)
-- [duf](https://github.com/bootandy/dust#install)
