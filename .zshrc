@@ -51,13 +51,13 @@ exit_code_with_color() {
 }
 
 # Primary prompt
-PS1='$FG[032]%~$(git_prompt_info) $FG[105]%(!.#.$)%{$reset_color%} '
+PS1='%{$FG[243]%}%n@%m:$FG[032]%~$(git_prompt_info) $FG[105]%(!.#.$)%{$reset_color%} '
 PS2='%{$FG[105]%}\ %{$reset_color%}'
 
 # Right prompt
 RPS1=''
 RPS1+='$(exit_code_with_color)'
-RPS1+=' $FG[101]${cmd_elapsed_seconds_fmt} %{$my_gray%}%n@%m%{$reset_color%}%'
+RPS1+=' $FG[243]${cmd_elapsed_seconds_fmt}'
 
 # User settings
 if [ -f "$HOME/.shell_config" ]; then
