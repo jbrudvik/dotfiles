@@ -15,7 +15,7 @@ DISABLE_AUTO_UPDATE=true
 ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="af-magic"
-plugins=(zsh-syntax-highlighting git docker kubectl rust fzf-zsh-plugin)
+plugins=(zsh-syntax-highlighting fzf-zsh-plugin git rust docker kubectl)
 source $ZSH/oh-my-zsh.sh
 
 # Fix fzf with fzf-zsh-plugin (broken as of 11/10/2022)
