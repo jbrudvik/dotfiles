@@ -61,4 +61,4 @@ RPS1+='$(exit_code_with_color)'
 RPS1+=' $FG[243]${cmd_elapsed_seconds_fmt}'
 
 # Load cross-shell settings
-source "$HOME/.shell_config"
+source "$HOME/.shellrc"

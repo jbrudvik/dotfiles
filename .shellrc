@@ -136,6 +136,7 @@ alias i=ide
 ################
 # Local settings
 ################
-if [ -f "$HOME/.shell_config_local" ]; then
-	source "$HOME/.shell_config_local"
+
+if [ -f "$HOME/.shellrc_local" ]; then
+	source "$HOME/.shellrc_local"
 fi
