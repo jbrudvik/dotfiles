@@ -5,9 +5,7 @@
 #############
 
 # Set PATH: Prioritize local over global
-export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Add dotfiles directory to PATH
 REALPATH=$([ -L "$0" ] && readlink "$0")
@@ -17,16 +15,8 @@ export PATH="$PATH:$REALDIR"
 # Initialize Homebrew
 command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-#######
-# Tools
-#######
-
-# Default editor used by other programs
-if command -v hx >/dev/null; then
-	export EDITOR='hx'
-else
-	export EDITOR='vim'
-fi
+# Set Helix as default editor
+command -v hx >/dev/null && export EDITOR='hx'
 
 # broot file browser
 source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
@@ -55,7 +45,7 @@ else
 	export PATH=$PATH:/usr/local/go/bin
 fi
 
-# Node via n
+# Node
 export N_PREFIX=$HOME/.n
 export PATH="$PATH:$HOME/.n/bin"
 
