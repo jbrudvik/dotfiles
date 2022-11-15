@@ -20,7 +20,8 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: `$ brew install zsh zsh-completions`
   - Debian: `$ sudo apt install zsh`
 - Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`
-- Install [oh-my-zsh](https://ohmyz.sh): `$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+- Install [zinit](https://github.com/zdharma-continuum/zinit): `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
+  - Then restart shell and run: `$ zinit self-update`
 - Install dotfiles (WARNING: DESTRUCTIVE!): `$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/dotfiles_install`
 
 ## Install programming languages
