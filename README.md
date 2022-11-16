@@ -121,6 +121,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [duf](https://github.com/muesli/duf)
   - MacOS: `$ brew install duf`
   - Debian: `$ sudo apt install duf`
+- Install [tokei](https://github.com/XAMPPRocky/tokei)
+  - MacOS: `$ brew install tokei`
+  - Debian: `$ cargo binstall tokei`
 
 ## Update
 
