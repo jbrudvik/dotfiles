@@ -1,0 +1,70 @@
+format = """
+$username\
+$hostname\
+$directory\
+[(\\($git_branch$git_commit$git_state$git_status\\) )](yellow)\
+$jobs\
+$status\
+$character"""
+
+# right_format = """$cmd_duration"""
+
+add_newline = false
+
+[username]
+show_always = true
+style_root = "red"
+style_user = "243"
+format = "[$user]($style)[@](243)"
+
+[hostname]
+ssh_only = false
+style = "243"
+format = "[$hostname:]($style)"
+
+[directory]
+truncation_length = 20
+truncate_to_repo = false
+truncation_symbol = "…/"
+read_only = ""
+style = "bold blue"
+
+[git_branch]
+style = "yellow"
+format = "[$branch(:$remote_branch)]($style)"
+
+[git_commit]
+style = "yellow"
+
+[git_state]
+style = "yellow"
+
+[git_status]
+modified = "M"
+renamed = "R"
+deleted = "D"
+staged = "+"
+ahead = ">"
+behind = "<"
+diverged = "<>"
+style = "yellow"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[jobs]
+style = "bold 13"
+symbol = "&"
+
+[status]
+# TODO: Color code based on status (well, don't show unless error...)
+disabled = false
+format = "[$status ]($style)"
+
+[character]
+# TODO: Change character to # if root?
+success_symbol = "[\\$](grey)"
+error_symbol = "[\\$](bold red)"
+
+[cmd_duration]
+min_time = 1000
+style = "243"
+format = "[$duration]($style)"

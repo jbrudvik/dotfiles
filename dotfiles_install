@@ -13,15 +13,19 @@ done
 
 # Install .config files into $HOME/.config
 # Assumptions about .config:
-# - .config contains only non-hidden dirs
-# - Non-hidden dirs only contain non-hidden files/dirs
+# - .config contains only non-hidden files and dirs
+# - Dirs contain non-hidden files/dirs
 echo
 echo "Installing .config files:"
-for dir in .config/*; do
-	mkdir -pv "$HOME/$dir"
-	for f in "$dir"/*; do
-		SOURCE="$(pwd)/$f"
-		TARGET="$HOME/$f"
-		ln -snfv "$SOURCE" "$TARGET"
-	done
+for file_or_dir in .config/*; do
+	if [ -f "$file_or_dir" ]; then
+		f="$file_or_dir"
+		ln -sfv "$(pwd)/$f" "$HOME/$f"
+	else
+		dir="$file_or_dir"
+		mkdir -pv "$HOME/$dir"
+		for f in "$dir"/*; do
+			ln -snfv "$(pwd)/$f" "$HOME/$f"
+		done
+	fi
 done
