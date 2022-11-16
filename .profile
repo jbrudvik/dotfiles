@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-echo "Running .bashrc"
+echo "Running .profile"
 
 ###########################
 # Load cross-shell settings
 ###########################
 
-source "$HOME/.shellrc"
+source "$HOME/.shell_profile"

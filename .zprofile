@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-echo "Running .bashrc"
+echo "Running .zprofile"
 
 ###########################
 # Load cross-shell settings
 ###########################
 
-source "$HOME/.shellrc"
+source "$HOME/.shell_profile"

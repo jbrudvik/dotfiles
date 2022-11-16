@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-source "$HOME/.bashrc"
+echo "Running .bash_profile"
+
+###########################
+# Load cross-shell settings
+###########################
+
+source "$HOME/.shell_profile"

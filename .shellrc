@@ -1,62 +1,6 @@
 #!/usr/bin/env bash
 
-####################################################
-# Don't run .shellrc multiple times (e.g., via tmux)
-####################################################
-if [ -n "$DID_RUN_SHELLRC" ]; then
-	return
-else
-	export DID_RUN_SHELLRC=true
-fi
-
-#############
-# Foundations
-#############
-
-# Set PATH: Prioritize local over global
-export PATH="$PATH:$HOME/.local/bin"
-
-# Add dotfiles directory to PATH
-REALPATH=$([ -L "$0" ] && readlink "$0")
-REALDIR=$(dirname "$REALPATH")
-export PATH="$PATH:$REALDIR"
-
-# Initialize Homebrew
-command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Set Helix as default editor
-command -v hx >/dev/null && export EDITOR='hx'
-
-# broot file browser
-source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
-
-#######################
-# Programming languages
-#######################
-
-# Rust
-source ~/.cargo/env
-
-# Go
-if [ "$(uname -s)" = "Darwin" ]; then
-	export GOOS=darwin
-	export GOARCH=arm64
-	if command -v go >/dev/null; then
-		GOPATH=$(go env GOPATH)
-		export PATH="$PATH:$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}"
-	else
-		export PATH=$PATH:/usr/local/go/bin
-	fi
-else
-	export PATH=$PATH:"$HOME/.go/bin"
-	export GOPATH="$HOME/go"
-	export PATH=$PATH:"$HOME/go/bin"
-	export PATH=$PATH:/usr/local/go/bin
-fi
-
-# Node
-export N_PREFIX=$HOME/.n
-export PATH="$PATH:$HOME/.n/bin"
+echo "Running .shellrc"
 
 #########
 # Aliases

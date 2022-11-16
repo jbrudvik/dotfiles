@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+echo "Running .zshrc"
+
 #######################
 # Generated zinit setup
 #######################
@@ -35,12 +37,14 @@ export FZF_DEFAULT_COMMAND=
 export FZF_ALT_C_COMMAND=
 export FZF_CTRL_T_COMMAND=
 
-#################
-# Load components
-#################
+#############################
+# Initialize prompt: Starship
+#############################
 
-# Load Starship prompt
 eval "$(starship init zsh)"
 
+###########################
 # Load cross-shell settings
+###########################
+
 source "$HOME/.shellrc"
