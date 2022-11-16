@@ -12,13 +12,11 @@ $character"""
 add_newline = false
 
 [username]
-show_always = true
 style_root = "red"
 style_user = "243"
 format = "[$user]($style)[@](243)"
 
 [hostname]
-ssh_only = false
 style = "243"
 format = "[$hostname:]($style)"
 
