@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Running .shell_profile"
-
 ######################################
 # Guard against running more than once
 ######################################
@@ -11,8 +9,6 @@ if [ -n "$DID_RUN_SHELL_PROFILE" ]; then
 else
 	export DID_RUN_SHELL_PROFILE=true
 fi
-
-echo "Actually, not running .shell_profile"
 
 #############
 # Foundations

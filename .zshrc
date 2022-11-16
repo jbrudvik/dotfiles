@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Running .zshrc"
-
 #######################
 # Generated zinit setup
 #######################

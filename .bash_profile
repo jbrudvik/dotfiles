@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Running .bash_profile"
-
 ###########################
 # Load cross-shell settings
 ###########################
