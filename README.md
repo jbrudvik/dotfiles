@@ -31,6 +31,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [Go](https://go.dev)
   - MacOS: `$ brew install go`
   - Debian: `$ curl https://go.dev/dl/go1.19.3.linux-amd64.tar.gz -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz && rm go1.19.3.linux-amd64.tar.gz`
+- Install [C (clang)](https://clang.llvm.org)
+  - MacOS: Installed by default
+  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
 - Install [Python](https://www.python.org)
   - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
   - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
@@ -55,9 +58,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 
 ### Install debuggers
 
-- Install [lldb (Rust debugger)](https://lldb.llvm.org)
-  - MacOS: Installed by default
-  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libllvm-ocaml-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
 - Install [dlv (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
 ### Install [DAPs](https://microsoft.github.io/debug-adapter-protocol/)
