@@ -35,6 +35,15 @@ export FZF_DEFAULT_COMMAND=
 export FZF_ALT_C_COMMAND=
 export FZF_CTRL_T_COMMAND=
 
+###############################
+# Secure ShellFish (iOS) config
+###############################
+
+if [[ "$LC_TERMINAL" = "ShellFish" ]]; then
+  export LC_CTYPE=
+  # export LANG="C.UTF-8"
+fi
+
 #############################
 # Initialize prompt: Starship
 #############################
