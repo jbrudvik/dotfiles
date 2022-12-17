@@ -98,6 +98,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [watchexec](https://github.com/watchexec/watchexec)
   - MacOS: `$ brew install watchexec`
   - Debian: `$ cargo binstall watchexec-cli`
+- Install [glow](https://github.com/charmbracelet/glow)
+  - MacOS: `$ brew install glow`
+  - Linux: `$ go install github.com/charmbracelet/glow@latest`
 - Install [broot](https://dystroy.org/broot)
   - MacOS: `$ brew install broot && broot`
   - Debian: `$ cargo binstall broot && broot`
