@@ -82,7 +82,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - Debian: `$ sudo apt install tmux`
 - Install [helix](https://docs.helix-editor.com)
   - MacOS: `$ brew install helix`
-  - Debian: `$ curl -L -o helix.tar.gz https://github.com/helix-editor/helix/releases/download/22.08.1/helix-22.08.1-x86_64-linux.tar.xz && sudo mv helix-22.08.1-x86_64-linux/hx /usr/local/bin && mv helix-22.08.1-x86_64-linux/runtime .config/helix/ && rm helix.tar.gz`
+  - Debian: `$ curl -L -o helix.tar.gz https://github.com/helix-editor/helix/releases/download/22.12/helix-22.12-x86_64-linux.tar.xz && tar -xf helix.tar.xz && mv helix-22.12-x86_64-linux helix && sudo mv helix/hx /usr/local/bin && mv helix/runtime .config/helix/ && rm helix.tar.gz`
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep)
   - MacOS: `$ brew install ripgrep`
   - Debian: `$ sudo apt install ripgrep`
