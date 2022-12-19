@@ -25,10 +25,6 @@ esc = ["collapse_selection", "keep_primary_selection"]
 ";" = ["select_mode", "goto_line_end"]
 V = ["extend_to_line_bounds", "select_mode"]
 
-# More intuitive forward/backward
-H = "jump_backward"
-L = "jump_forward"
-
 # Easy buffer switching -- following bufferline layout
 J = "goto_previous_buffer"
 K = "goto_next_buffer"
@@ -37,10 +33,16 @@ C-k = "keep_selections"
 X = ":buffer-close"
 
 [keys.select]
+
+# Navigation
 "{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
 "}" = ["extend_to_line_bounds", "goto_next_paragraph"]
 0 = "goto_line_start"
 "$" = "goto_line_end"
+
+# Selection
 ";" = "goto_line_end"
+
+# Make j/k work like Vim in visual block mode
 j = ["extend_line_down", "extend_to_line_bounds"]
 k = ["extend_line_up", "extend_to_line_bounds"]
