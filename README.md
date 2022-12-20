@@ -68,9 +68,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 
 ## Install tools
 
-- Install [cargo b(inary)install](https://github.com/cargo-bins/cargo-binstall)
-  - MacOS: `$ cargo install cargo-binstall`
-  - Debian: `$ curl https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz -OL && sudo tar -C "$HOME/.cargo/bin" -xzf cargo-binstall-x86_64-unknown-linux-musl.tgz && rm cargo-binstall-x86_64-unknown-linux-musl.tgz`
 - Install [delta](https://github.com/dandavison/delta)
   - MacOS: `$ brew install git-delta`
   - Debian: `$ cargo binstall git-delta`
@@ -95,6 +92,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [fd](https://github.com/sharkdp/fd)
   - MacOS: `$ brew install fd`
   - Debian: `$ sudo apt install fd-find && sudo ln -s $(which fdfind) /usr/local/bin/fd`
+- Install [cargo b(inary)install](https://github.com/cargo-bins/cargo-binstall)
+  - MacOS: `$ cargo install cargo-binstall`
+  - Debian: `$ curl https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz -OL && sudo tar -C "$HOME/.cargo/bin" -xzf cargo-binstall-x86_64-unknown-linux-musl.tgz && rm cargo-binstall-x86_64-unknown-linux-musl.tgz`
 - Install [watchexec](https://github.com/watchexec/watchexec)
   - MacOS: `$ brew install watchexec`
   - Debian: `$ cargo binstall watchexec-cli`
