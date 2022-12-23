@@ -24,8 +24,8 @@ fi
 
 # Aliases to set defaults
 alias dust='dust -r'
-
 alias watchexec='watchexec --project-origin .'
+alias gmc='gmc -g'
 
 # Other helpful/memorable aliases
 alias ipaddress='ipconfig getifaddr en0'
