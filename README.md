@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/jbrudvik/dotfiles/actions/workflows/ci.yml)
 
-This guide walks through installing my preferred settings for both MacOS and Debian Linux. The Debian environment is assumed to be an underpowered machine (e.g., a free VM on a cloud provider).
+This guide walks through installing my preferred settings for both MacOS and Debian Linux. The Debian environment is assumed to be an underpowered machine.
 
 ## Install basics and dotfiles
 
