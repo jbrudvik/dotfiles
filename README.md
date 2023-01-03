@@ -43,7 +43,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [Node](https://nodejs.org)
   - MacOS: `$ brew install n && n lts`
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
-- Install [TypeScript](https://www.typescriptlang.org): `$ npm install -g typescript`
 
 ### Install [language servers (LSP)](https://en.wikipedia.org/wiki/Language_Server_Protocol)
 
@@ -53,7 +52,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
 - Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
 - Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
-- Install [typescript-language-server (JavaScript/TypeScript LSP)](https://github.com/typescript-language-server/typescript-language-server): `$ npm install -g typescript-language-server`
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
 
 ### Install debuggers
