@@ -15,7 +15,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [Homebrew](https://brew.sh)
   - MacOS: `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   - Debian: Not needed
-- Install [Kitty](https://sw.kovidgoyal.net/kitty/): `$ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
+- Install [Kitty](https://sw.kovidgoyal.net/kitty/):
+  - MacOS: `$ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
+  - Debian: `sudo apt-get install kitty`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell)
   - MacOS: `$ brew install zsh zsh-completions`
   - Debian: `$ sudo apt install zsh`
