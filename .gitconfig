@@ -25,6 +25,7 @@
     # Basics
     co = checkout
     s = status -s
+    ss = status
     d = diff
     ds = diff --staged
     dt = difftool
