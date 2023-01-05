@@ -30,7 +30,6 @@ J = "goto_previous_buffer"
 K = "goto_next_buffer"
 C-j = "join_selections"
 C-k = "keep_selections"
-X = ":buffer-close"
 
 [keys.select]
 
