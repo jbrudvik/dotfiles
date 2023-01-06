@@ -10,6 +10,9 @@ insert = "bar"
 [editor.file-picker]
 hidden = false
 
+[editor.search]
+smart-case = false
+
 [keys.normal]
 
 # Make it easier to escape multiple selections
