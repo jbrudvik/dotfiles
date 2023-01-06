@@ -1,48 +1,11 @@
 #!/usr/bin/env bash
 
-#########
-# Aliases
-#########
-
-# Single-letter aliases
-alias t='tmux'
-alias g='git'
-alias h='hx'
-alias c='cargo'
-alias d='docker'
-alias k='kubectl'
-alias b='bat'
-
-# Replace ls with exa
-if command -v exa >/dev/null; then
-	alias l='exa'
-	alias ls='exa'
-	alias la='exa -a'
-	alias ll='exa -l'
-	alias lla='exa -la'
-fi
-
-# Aliases to set defaults
-alias dust='dust -r'
-alias watchexec='watchexec --project-origin .'
-
-# Other helpful/memorable aliases
-alias ipaddress='ipconfig getifaddr en0'
-alias first='head -1'
-alias last='tail -1'
-alias hex='hecate'
-
 ###########
 # Functions
 ###########
 
-# r = ripgrep on hidden files with pager
-function r {
-	rg -.p "$*" | less -R
-}
-
 # f = Use fzf to open files in helix
-function f {
+function fzfhx {
 	result=$(rg --hidden -l "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')
 	if [ -z "${result}" ]; then
 		# echo "No file selected"
@@ -50,6 +13,11 @@ function f {
 	else
 		$EDITOR "${result}"
 	fi
+}
+
+# r = ripgrep on hidden files with pager
+function rgh {
+	rg -.p "$*" | less -R
 }
 
 # ide = Launch "ide": tmux panes with $EDITOR, shell
@@ -73,7 +41,42 @@ function ide {
 	tmux select-pane -L -t "$SESSION"
 	tmux attach-session -t "$SESSION"
 }
-alias i=ide
+
+#########
+# Aliases
+#########
+
+# Short aliases
+alias t='tmux'
+alias g='git'
+alias h='hx'
+alias c='cargo'
+alias d='docker'
+alias k='kubectl'
+alias b='bat'
+alias br='broot'
+alias f='fzfhx'
+alias r='rgh'
+alias i='ide'
+
+# Replace ls with exa
+if command -v exa >/dev/null; then
+	alias l='exa'
+	alias ls='exa'
+	alias la='exa -a'
+	alias ll='exa -l'
+	alias lla='exa -la'
+fi
+
+# Aliases to set defaults
+alias dust='dust -r'
+alias watchexec='watchexec --project-origin .'
+
+# Other helpful/memorable aliases
+alias ipaddress='ipconfig getifaddr en0'
+alias first='head -1'
+alias last='tail -1'
+alias hex='hecate'
 
 ################
 # Local settings
