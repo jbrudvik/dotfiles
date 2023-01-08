@@ -2,7 +2,7 @@ theme = "ayu_dark"
 
 [editor]
 true-color = true
-bufferline = "always"
+bufferline = "never"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -29,10 +29,8 @@ esc = ["collapse_selection", "keep_primary_selection"]
 V = ["extend_to_line_bounds", "select_mode"]
 
 # Easy buffer switching -- following bufferline layout
-J = "goto_previous_buffer"
-K = "goto_next_buffer"
-C-j = "join_selections"
-C-k = "keep_selections"
+C-J = "goto_previous_buffer"
+C-K = "goto_next_buffer"
 
 [keys.select]
 
