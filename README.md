@@ -98,6 +98,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [watchexec](https://github.com/watchexec/watchexec)
   - MacOS: `$ brew install watchexec`
   - Debian: `$ cargo binstall watchexec-cli`
+- Install [Caddy](https://caddyserver.com)
+  - MacOS: `$ brew install caddy`
+  - Debian: `$ sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list && sudo apt update && sudo apt install caddy`
 - Install [glow](https://github.com/charmbracelet/glow)
   - MacOS: `$ brew install glow`
   - Linux: `$ go install github.com/charmbracelet/glow@latest`
