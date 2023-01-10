@@ -29,8 +29,8 @@ esc = ["collapse_selection", "keep_primary_selection"]
 V = ["extend_to_line_bounds", "select_mode"]
 
 # Easy buffer switching -- following bufferline layout
-C-J = "goto_previous_buffer"
-C-K = "goto_next_buffer"
+C-j = "goto_previous_buffer"
+C-k = "goto_next_buffer"
 
 [keys.select]
 
