@@ -35,9 +35,6 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Programming languages
 #######################
 
-# Rust
-source ~/.cargo/env
-
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
@@ -54,6 +51,9 @@ else
 	export PATH=$PATH:"$HOME/go/bin"
 	export PATH=$PATH:/usr/local/go/bin
 fi
+
+# Rust
+source ~/.cargo/env
 
 # Node
 export N_PREFIX=$HOME/.n
