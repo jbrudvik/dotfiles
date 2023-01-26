@@ -27,44 +27,61 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install dotfiles (WARNING: DESTRUCTIVE!): `$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/dotfiles_install`
 
-## Install programming languages
+## Install programming languages and tooling
+
+### Go
 
 - Install [Go](https://go.dev)
   - MacOS: `$ brew install go`
   - Debian: `$ curl https://go.dev/dl/go1.19.3.linux-amd64.tar.gz -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz && rm go1.19.3.linux-amd64.tar.gz`
+- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install [dlv (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+
+### Rust
+
 - Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+- Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
+  - MacOS: TODO
+  - Debian: TODO
+
+### C
+
 - Install [C (clang)](https://clang.llvm.org)
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
+
+### Python
+
 - Install [Python](https://www.python.org)
   - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
   - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
+
+### Elm
+
 - Install [Elm](https://elm-lang.org)
   - MacOS: `$ brew install elm`
   - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
+- Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
+
+### Node
+
 - Install [Node](https://nodejs.org)
   - MacOS: `$ brew install n && n lts`
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 
-### Install [language servers (LSP)](https://en.wikipedia.org/wiki/Language_Server_Protocol)
+### Bash
 
-- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-- Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
 - Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
+- Install [ShellCheck](https://github.com/koalaman/shellcheck)
+  - MacOS: `$ brew install shellcheck`
+  - Debian: `$ sudo apt install shellcheck`
+
+### Docker
+
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
-
-### Install debuggers
-
-- Install [dlv (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
-
-### Install [DAPs](https://microsoft.github.io/debug-adapter-protocol/)
-
-- Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
-  - MacOS: TODO
-  - Debian: TODO
 
 ## Install tools
 
