@@ -30,7 +30,8 @@ function ide {
 
 	# Generate session name
 	SESSION=${PWD##*/} # Current directory basename
-	if tmux has-session -t "$SESSION" 2>/dev/null; then
+	SESSION=${SESSION//./_} # Replace illegal characters for tmux session names
+	if tmux has-session -t "$SESSION" 2>/dev/null; then # If session already exists, append a counter
 		COUNTER=2
 		SESSION_WITH_SUFFIX="$SESSION-$COUNTER"
 		while tmux has-session -t "$SESSION_WITH_SUFFIX" 2>/dev/null; do
