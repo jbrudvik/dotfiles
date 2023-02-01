@@ -3,6 +3,7 @@ theme = "ayu_dark"
 [editor]
 true-color = true
 bufferline = "never"
+scroll-lines = 1
 
 [editor.cursor-shape]
 insert = "bar"
