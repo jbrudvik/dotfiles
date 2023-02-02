@@ -14,6 +14,9 @@ hidden = false
 [editor.search]
 smart-case = false
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 
 # Make it easier to escape multiple selections
