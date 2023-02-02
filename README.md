@@ -85,6 +85,10 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 
 ## Install tools
 
+- Install [tmux](https://github.com/tmux/tmux)
+  - MacOS: `$ brew install tmux`
+  - Debian: `$ sudo apt install tmux`
+- Install [Helix](https://docs.helix-editor.com): `$ git clone https://github.com/helix-editor/helix && cd helix && cargo install --locked --path helix-term && ln -s "$PWD/runtime" "$HOME/.cargo/bin/runtime"`
 - Install [cargo b(inary)install](https://github.com/cargo-bins/cargo-binstall)
   - MacOS: `$ cargo install cargo-binstall`
   - Debian: `$ curl https://github.com/cargo-bins/cargo-binstall/releases/latest/download/cargo-binstall-x86_64-unknown-linux-musl.tgz -OL && sudo tar -C "$HOME/.cargo/bin" -xzf cargo-binstall-x86_64-unknown-linux-musl.tgz && rm cargo-binstall-x86_64-unknown-linux-musl.tgz`
@@ -94,12 +98,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [exa](https://github.com/ogham/exa#installation)
   - MacOS: `$ brew install exa`
   - Debian: `$ sudo apt install exa`
-- Install [tmux](https://github.com/tmux/tmux)
-  - MacOS: `$ brew install tmux`
-  - Debian: `$ sudo apt install tmux`
-- Install [helix](https://docs.helix-editor.com)
-  - MacOS: `$ brew install helix`
-  - Debian: `$ curl -L -o helix.tar.xz https://github.com/helix-editor/helix/releases/download/22.12/helix-22.12-x86_64-linux.tar.xz && tar -xf helix.tar.xz && mv helix-22.12-x86_64-linux helix && sudo mv helix/hx /usr/local/bin && mv helix/runtime .config/helix/ && rm helix.tar.xz`
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep)
   - MacOS: `$ brew install ripgrep`
   - Debian: `$ sudo apt install ripgrep`
