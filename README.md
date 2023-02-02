@@ -9,10 +9,10 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [Kitty](https://sw.kovidgoyal.net/kitty/):
   - MacOS: `$ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
   - Debian: `sudo apt-get install kitty`
-- Install Git
+- Install [Git](https://git-scm.com)
   - MacOS: Installed by default
   - Debian: `$ sudo apt update && sudo apt install git`
-- Install make
+- Install [Make](https://www.gnu.org/software/make/)
   - MacOS: Installed by default
   - Debian: `$ sudo apt install make`
 - Install [Homebrew](https://brew.sh)
