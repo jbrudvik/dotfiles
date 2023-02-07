@@ -59,6 +59,12 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
   - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 
+### Node
+
+- Install [Node](https://nodejs.org)
+  - MacOS: `$ brew install n && n lts`
+  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
+
 ### Elm
 
 - Install [Elm](https://elm-lang.org)
@@ -66,11 +72,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
 - Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
 
-### Node
+### HTML / CSS / JSON
 
-- Install [Node](https://nodejs.org)
-  - MacOS: `$ brew install n && n lts`
-  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
+- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 
 ### Bash
 
