@@ -6,7 +6,7 @@
 
 # A non-interactive broot (a better tree)
 function b {
-     br -c :pt "$@"
+     broot -c :pt "$@"
 }
 
 # fzfhx = Use fzf to open files in Helix
