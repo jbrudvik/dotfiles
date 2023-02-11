@@ -4,8 +4,8 @@
 # Functions
 ###########
 
-# Replace tree with smarter broot command
-function tree {
+# A non-interactive broot (a better tree)
+function b {
      br -c :pt "$@"
 }
 
@@ -65,7 +65,6 @@ alias h='hx'
 alias c='cargo'
 alias d='docker'
 alias k='kubectl'
-alias b='bat'
 alias br='broot'
 alias f='fzfhx'
 alias r='rgh'
