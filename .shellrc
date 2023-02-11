@@ -4,7 +4,12 @@
 # Functions
 ###########
 
-# f = Use fzf to open files in helix
+# Replace tree with smarter broot command
+function tree {
+     br -c :pt "$@"
+}
+
+# fzfhx = Use fzf to open files in Helix
 function fzfhx {
 	result=$(rg --hidden -l "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')
 	if [ -z "${result}" ]; then
@@ -15,7 +20,7 @@ function fzfhx {
 	fi
 }
 
-# r = ripgrep on hidden files with pager
+# rgh = ripgrep on hidden files with pager
 function rgh {
 	rg -.p "$*" | less -R
 }
