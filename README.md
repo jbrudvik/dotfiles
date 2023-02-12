@@ -37,6 +37,23 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
+### C
+
+- Install [C (clang)](https://clang.llvm.org)
+  - MacOS: Installed by default
+  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
+
+### Node
+
+- Install [Node](https://nodejs.org)
+  - MacOS: `$ brew install n && n lts`
+  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
+
+### HTML/CSS/JSON/JavaScript/React
+
+- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
+- Use Vite to create new projects: `$ npm create vite@latest`
+
 ### Rust
 
 - Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
@@ -46,35 +63,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
   - MacOS: TODO
   - Debian: TODO
-
-### C
-
-- Install [C (clang)](https://clang.llvm.org)
-  - MacOS: Installed by default
-  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
-
-### Python
-
-- Install [Python](https://www.python.org)
-  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
-  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
-
-### Node
-
-- Install [Node](https://nodejs.org)
-  - MacOS: `$ brew install n && n lts`
-  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
-
-### Elm
-
-- Install [Elm](https://elm-lang.org)
-  - MacOS: `$ brew install elm`
-  - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
-- Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
-
-### HTML / CSS / JSON
-
-- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 
 ### Bash
 
@@ -86,6 +74,19 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 ### Docker
 
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
+
+### Python
+
+- Install [Python](https://www.python.org)
+  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
+
+### Elm
+
+- Install [Elm](https://elm-lang.org)
+  - MacOS: `$ brew install elm`
+  - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
+- Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
 
 ## Install tools
 
