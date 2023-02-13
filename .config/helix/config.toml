@@ -17,31 +17,35 @@ smart-case = false
 [editor.soft-wrap]
 enable = true
 
+
 [keys.normal]
 
 # Make it easier to escape multiple selections
 esc = ["collapse_selection", "keep_primary_selection"]
 
 # Navigation
+0 = "extend_to_line_start"
+"^" = ["select_mode", "goto_first_nonwhitespace", "exit_select_mode"]
+"$" = "extend_to_line_end"
+"'" = ["select_mode", "goto_first_nonwhitespace", "exit_select_mode"]
+";" = "extend_to_line_end"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
-0 = "goto_first_nonwhitespace"
-"$" = "goto_line_end"
 
 # Selection
-";" = ["select_mode", "goto_line_end"]
 V = ["extend_to_line_bounds", "select_mode"]
+
 
 [keys.select]
 
 # Navigation
+0 = "goto_line_start"
+"^" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+"'" = "goto_first_nonwhitespace"
+";" = "goto_line_end"
 "{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
 "}" = ["extend_to_line_bounds", "goto_next_paragraph"]
-0 = "goto_line_start"
-"$" = "goto_line_end"
-
-# Selection
-";" = "goto_line_end"
 
 # Make j/k work like Vim in visual block mode
 j = ["extend_line_down", "extend_to_line_bounds"]
