@@ -43,9 +43,9 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
 
-### Node
+### Node.js
 
-- Install [Node](https://nodejs.org)
+- Install [Node.js](https://nodejs.org)
   - MacOS: `$ brew install n && n lts`
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 
