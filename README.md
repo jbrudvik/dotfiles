@@ -81,13 +81,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
   - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 
-### Elm
-
-- Install [Elm](https://elm-lang.org)
-  - MacOS: `$ brew install elm`
-  - Debian: `$ curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz && gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin`
-- Install [elm-language-server (Elm LSP)](https://github.com/elm-tooling/elm-language-server): `$ npm install -g @elm-tooling/elm-language-server`
-
 ## Install tools
 
 - Install [tmux](https://github.com/tmux/tmux)
