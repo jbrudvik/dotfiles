@@ -49,7 +49,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: `$ brew install n && n lts`
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 
-### HTML/CSS/JSON/JavaScript/React
+### HTML / CSS / JavaScript / React
 
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Use Vite to create new projects: `$ npm create vite@latest`
