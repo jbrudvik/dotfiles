@@ -64,6 +64,12 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: TODO
   - Debian: TODO
 
+### Python
+
+- Install [Python](https://www.python.org)
+  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
+
 ### Bash
 
 - Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
@@ -74,12 +80,6 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 ### Docker
 
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
-
-### Python
-
-- Install [Python](https://www.python.org)
-  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
-  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 
 ## Install tools
 
