@@ -69,6 +69,7 @@ alias br='broot'
 alias f='fzfhx'
 alias r='rgh'
 alias i='ide'
+alias ba='b -hi'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
