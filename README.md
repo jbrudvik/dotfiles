@@ -33,7 +33,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 
 - Install [Go](https://go.dev)
   - MacOS: `$ brew install go`
-  - Debian: `$ curl https://go.dev/dl/go1.19.3.linux-amd64.tar.gz -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz && rm go1.19.3.linux-amd64.tar.gz`
+  - Debian: `$ GO_DOWNLOAD="go1.20.1.linux-amd64.tar.gz"; curl "https://go.dev/dl/${GO_DOWNLOAD}" -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GO_DOWNLOAD} && rm ${GO_DOWNLOAD}`
 - Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
