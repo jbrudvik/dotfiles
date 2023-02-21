@@ -42,3 +42,9 @@ auto-format = true
 name = "yaml"
 formatter = { command = 'prettier', args = ["--parser", "yaml"] }
 auto-format = true
+
+[[language]]
+name = "bash"
+indent = { tab-width = 4, unit = "\t" }
+formatter = { command = "shfmt" }
+auto-format = true
