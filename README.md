@@ -73,6 +73,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 ### Bash
 
 - Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
+- Install [shfmt](https://github.com/mvdan/sh): `$ go install mvdan.cc/sh/v3/cmd/shfmt@latest`
 - Install [ShellCheck](https://github.com/koalaman/shellcheck)
   - MacOS: `$ brew install shellcheck`
   - Debian: `$ sudo apt install shellcheck`
