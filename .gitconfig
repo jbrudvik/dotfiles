@@ -33,6 +33,7 @@
     mt = mergetool
     f = fetch
     a = add
+    ap = add -p
     c = commit -v
     b = branch
 
