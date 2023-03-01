@@ -76,6 +76,13 @@
     lmm = "!git l HEAD ^$(git default-branch)"
     ltm = "!git l $(git default-branch) ^HEAD"
 
+    # log (--stat)
+    i = "!git l --stat"
+    im = "!git lm --stat"
+    it = "!git lt --stat"
+    imm = "!git lmm --stat"
+    itm = "!git ltt --stat"
+
     # log (verbose)
     v = "!git l -p"
     vm = "!git lm -p"
