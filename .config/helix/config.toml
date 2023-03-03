@@ -50,3 +50,8 @@ V = ["extend_to_line_bounds", "select_mode"]
 # Make j/k work like Vim in visual block mode
 j = ["extend_line_down", "extend_to_line_bounds"]
 k = ["extend_line_up", "extend_to_line_bounds"]
+
+
+[keys.insert]
+
+C-space = "completion"
