@@ -62,6 +62,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 ### HTML / CSS / JavaScript / React
 
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
+- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
 - Use Vite to create new projects: `$ npm create vite@latest`
 
 ### Python
