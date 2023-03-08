@@ -59,6 +59,7 @@ function ide {
 #########
 
 # Short aliases
+alias z='zellij'
 alias t='tmux'
 alias g='git'
 alias h='hx'
