@@ -6,7 +6,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 
 ## Install basics and dotfiles
 
-- Install [Kitty](https://sw.kovidgoyal.net/kitty/):
+- Install [kitty](https://sw.kovidgoyal.net/kitty/):
   - MacOS: `$ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
   - Debian: `sudo apt-get install kitty`
 - Install [Git](https://git-scm.com)
