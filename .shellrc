@@ -86,10 +86,11 @@ alias dust='dust -r'
 alias watchexec='watchexec --project-origin .'
 
 # Other helpful/memorable aliases
-alias ipaddress='ipconfig getifaddr en0'
 alias first='head -1'
 alias last='tail -1'
 alias hex='hecate'
+alias ipaddress='ipconfig getifaddr en0'
+alias ports='sudo ss -ltpn'
 
 ################
 # Local settings
