@@ -126,11 +126,11 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 - Install [xh](https://github.com/ducaale/xh)
   - MacOS: `$ brew install xh`
   - Debian: `$ cargo binstall xh`
-- Install [tldr](https://github.com/tldr-pages/tldr): `$ npm install -g tldr`
-- Install [hecate](https://github.com/evanmiller/hecate): `$ go install github.com/evanmiller/hecate@latest`
 - Install [bottom](https://github.com/ClementTsang/bottom)
   - MacOS: `$ brew install bottom`
   - Debian: `$ cargo binstall bottom`
+- Install [tldr](https://github.com/tldr-pages/tldr): `$ npm install -g tldr`
+- Install [hecate](https://github.com/evanmiller/hecate): `$ go install github.com/evanmiller/hecate@latest`
 - Install [dog](https://github.com/ogham/dog)
   - MacOS: `$ brew install dog`
   - Debian: `$ curl -LO https://packages.azlux.fr/debian/pool/main/d/dog/dog_0.1.0_amd64.deb && sudo dpkg -i dog_0.1.0_amd64.deb && rm dog_0.1.0_amd64.deb`
