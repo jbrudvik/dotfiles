@@ -6,8 +6,6 @@ cd "$(dirname "$0")" || exit
 if [ "$(git pull)" != "Already up to date." ]; then
 	echo
 	./dotfiles_install
-	echo
-	source ./dotfiles_reload
 else
 	echo "Already up to date"
 fi
