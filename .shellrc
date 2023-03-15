@@ -23,7 +23,7 @@ function fzfhx {
 # ipaddr = Show IP address
 function ipaddr {
 	if command -v ip >/dev/null; then
-		ip route show default | awk '{print $3}'
+		ip route show dev eth0 | tail -1 | awk '{print $NF}'
 	elif command -v ipconfig >/dev/null; then
 		ipconfig getifaddr en0
 	else
