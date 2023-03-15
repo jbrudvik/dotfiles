@@ -89,7 +89,7 @@ alias watchexec='watchexec --project-origin .'
 alias first='head -1'
 alias last='tail -1'
 alias hex='hecate'
-alias ipaddress='ipconfig getifaddr en0'
+alias ipaddr='ipconfig getifaddr en0'
 if command -v ss >/dev/null; then
 	alias ports='sudo ss -ltpn'
 elif command -v lsof >/dev/null; then
