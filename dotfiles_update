@@ -3,9 +3,7 @@
 echo "Updating dotfiles:"
 cd "$(dirname "$0")" || exit
 
-result=$(git pull --dry-run)
-if [ -n "${result}" ]; then
-	git pull
+if [ -n "$(git pull)" ]; then
 	echo
 	./dotfiles_install
 	echo
