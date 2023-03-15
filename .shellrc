@@ -63,14 +63,14 @@ alias z='zellij'
 alias t='tmux'
 alias g='git'
 alias h='hx'
-alias c='cargo'
-alias d='docker'
-alias k='kubectl'
 alias br='broot'
+alias ba='b -hi'
 alias f='fzfhx'
 alias r='rgh'
 alias i='ide'
-alias ba='b -hi'
+alias c='cargo'
+alias d='docker'
+alias k='kubectl'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
