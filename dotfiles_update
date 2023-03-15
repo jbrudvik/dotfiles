@@ -5,6 +5,7 @@ cd "$(dirname "$0")" || exit
 
 result=$(git pull --dry-run)
 if [ -n "${result}" ]; then
+	git pull
 	echo
 	./dotfiles_install
 	echo
