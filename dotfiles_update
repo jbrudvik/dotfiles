@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
+echo "Updating dotfiles:"
 cd "$(dirname "$0")" || exit
-git pull
-echo
-./dotfiles_install
+
+result=$(git pull --dry-run)
+if [ -n "${result}" ]; then
+	echo
+	./dotfiles_install
+	echo
+	./dotfiles_reload
+else
+	echo "Already up to date"
+fi
+
 cd "$OLDPWD" || exit

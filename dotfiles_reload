@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Reloading dotfiles"
+source "$HOME/.shellrc"
