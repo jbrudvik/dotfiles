@@ -3,7 +3,7 @@
 echo "Updating dotfiles:"
 cd "$(dirname "$0")" || exit
 
-if [ "$(git pull)" == "Already up to date." ]; then
+if [ "$(git pull)" != "Already up to date." ]; then
 	echo
 	./dotfiles_install
 	echo
