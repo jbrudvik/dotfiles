@@ -82,6 +82,7 @@ alias i='ide'
 alias c='cargo'
 alias d='docker'
 alias k='kubectl'
+alias yooo='echo yooooooo'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
