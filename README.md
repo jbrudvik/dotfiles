@@ -152,6 +152,10 @@ This guide walks through installing my preferred settings for both MacOS and Deb
   - MacOS: `$ brew install tokei`
   - Debian: `$ cargo binstall tokei`
 
+## Install server tools (Linux only)
+
+- Install [UFW (Uncomplicated Firewall)](https://code.launchpad.net/ufw): `$ sudo apt install ufw`
+
 ## Update
 
 ```sh
