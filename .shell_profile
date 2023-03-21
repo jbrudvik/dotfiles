@@ -40,6 +40,11 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Programming languages
 #######################
 
+# PostgreSQL
+if [ "$(uname -s)" = "Darwin" ]; then
+	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
+fi
+
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin

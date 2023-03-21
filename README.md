@@ -29,6 +29,11 @@ This guide walks through installing my preferred settings for both MacOS and Deb
 
 ## Install programming languages and tooling
 
+### PostgreSQL
+
+- Install [PostgreSQL](https://www.postgresql.org)
+  - MacOS: `$ brew install postgresql@15`
+
 ### Go
 
 - Install [Go](https://go.dev)
