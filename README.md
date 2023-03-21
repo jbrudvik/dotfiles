@@ -36,11 +36,7 @@ This guide walks through installing my preferred settings for both MacOS and Deb
     - `$ brew install postgresql@15`
     - `$ brew services start postgresql@15`
   - Debian:
-    - `$ sudo apt-get update`
-    - `$ sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'`
-    - `$ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -``
-    - `$ sudo apt-get update`
-    - `$ sudo apt-get install postgresql-15`
+    - `$ sudo apt-get install postgresql`
     - `$ systemctl start postgresql`
 
 ### Go
