@@ -2,41 +2,25 @@
     name = Jeremy Brudvik
     email = jeremy@brudvik.me
 [alias]
-
     # Useful modifiers:
-    #
-    # --staged
-    # --stat
     # -p
-    # --reverse
+    # --stat
+    # --staged
     # --graph
-    # --amend (NOTE: Not -a)
-
-    # Useful commands:
-    #
-    # $ git grep <pattern>
-    # $ git remote prune origin --dry-run
-    # $ git b -vv
-    # $ git shortlog
-    # $ git checkout -p
-    # $ git reset -p
-
+    # --reverse
+    # --amend
 
     # Basics
-    co = checkout
     s = status -s
     ss = status
     d = diff
-    ds = diff --staged
-    dt = difftool
-    dts = difftool --staged
-    mt = mergetool
     f = fetch
     a = add
     ap = add -p
     c = commit -v
-    b = branch
-
+    co = checkout
+    b = branch -vv
+    g = grep
 
     # Logging
     #
