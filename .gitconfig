@@ -8,7 +8,6 @@
     # --staged
     # --graph
     # --reverse
-    # --amend
 
     # Short aliases
     s = status -s
@@ -20,6 +19,7 @@
     a = add
     ap = add -p
     c = commit -v
+    ca = c --amend
     co = checkout
     b = branch -vv
     g = grep
