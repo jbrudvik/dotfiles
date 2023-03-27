@@ -24,7 +24,7 @@
     b = branch -vv
     g = grep
 
-    # mine/theirs
+    # Helpers for viewing local vs remote changes
     # - mine: in local branch but not "other"
     # - theirs: in "other" but not local branch
     current-branch = rev-parse --abbrev-ref HEAD
@@ -32,7 +32,7 @@
     mine = "!echo HEAD ^origin/$(git current-branch)"
     theirs = "!echo origin/$(git current-branch) ^HEAD"
 
-    # Short aliasing using mine/theirs
+    # Short aliases using mine/theirs
     lm = "!git l $(git mine)"
     lt = "!git l $(git theirs)"
     llm = "!git ll $(git mine)"
