@@ -63,14 +63,7 @@
     dthm = "!git d $(git default-branch) ^HEAD"
 
     # log (compressed)
-    t = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
-    tm = "!git t $(git mine)"
-    tt = "!git t $(git theirs)"
-    tmm = "!git t HEAD ^$(git default-branch)"
-    ttm = "!git t $(git default-branch) ^HEAD"
-
-    # log
-    l = log --date=local
+    l = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
     lm = "!git l $(git mine)"
     lt = "!git l $(git theirs)"
     lmm = "!git l HEAD ^$(git default-branch)"
@@ -92,6 +85,7 @@
 
 [log]
     decorate
+	date = local
 [push]
     default = current
 [core]
