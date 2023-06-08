@@ -29,6 +29,12 @@ MacOS and Debian Linux config
 
 ## Install programming languages and tooling
 
+### C
+
+- Install [C (clang)](https://clang.llvm.org)
+  - MacOS: Installed by default
+  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm`
+
 ### OCaml
 
 - Install [OCaml](https://ocaml.org):
@@ -53,12 +59,6 @@ MacOS and Debian Linux config
 - Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
   - MacOS: TODO
   - Debian: TODO
-
-### C
-
-- Install [C (clang)](https://clang.llvm.org)
-  - MacOS: Installed by default
-  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
 
 ### JavaScript / Node.js
 
