@@ -40,10 +40,8 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Programming languages
 #######################
 
-# PostgreSQL
-if [ "$(uname -s)" = "Darwin" ]; then
-	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
-fi
+# OCaml
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" >/dev/null 2>/dev/null
 
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
@@ -68,6 +66,15 @@ source ~/.cargo/env
 # Node
 export N_PREFIX=$HOME/.n
 export PATH="$PATH:$HOME/.n/bin"
+
+# Wasmer
+export WASMER_DIR="/Users/jbrudvik/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# PostgreSQL
+if [ "$(uname -s)" = "Darwin" ]; then
+	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
+fi
 
 ################
 # Local settings

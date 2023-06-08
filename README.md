@@ -29,15 +29,12 @@ MacOS and Debian Linux config
 
 ## Install programming languages and tooling
 
-### PostgreSQL
+### OCaml
 
-- Install [PostgreSQL](https://www.postgresql.org)
-  - MacOS:
-    - `$ brew install postgresql@15`
-    - `$ brew services start postgresql@15`
-  - Debian:
-    - `$ sudo apt-get install postgresql`
-    - `$ systemctl start postgresql`
+- Install [OCaml](https://ocaml.org):
+  - `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
+  - `$ opam init`
+  - `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
 
 ### Go
 
@@ -63,17 +60,23 @@ MacOS and Debian Linux config
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm python3-clang`
 
-### Node.js
+### JavaScript / Node.js
 
 - Install [Node.js](https://nodejs.org)
   - MacOS: `$ brew install n && n lts`
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
-
-### HTML / CSS / JavaScript / React
-
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
-- Use Vite to create new projects: `$ npm create vite@latest`
+
+### PostgreSQL
+
+- Install [PostgreSQL](https://www.postgresql.org)
+  - MacOS:
+    - `$ brew install postgresql@15`
+    - `$ brew services start postgresql@15`
+  - Debian:
+    - `$ sudo apt-get install postgresql`
+    - `$ systemctl start postgresql`
 
 ### Python
 
@@ -92,6 +95,10 @@ MacOS and Debian Linux config
 ### Docker
 
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
+
+### WebAssembly
+
+- Install [Wasmer](https://github.com/wasmerio/wasmer): [https://github.com/wasmerio/wasmer](curl https://get.wasmer.io -sSfL | sh)
 
 ## Install tools
 
