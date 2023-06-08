@@ -105,7 +105,7 @@ MacOS and Debian Linux config
 - Install [tmux](https://github.com/tmux/tmux)
   - MacOS: `$ brew install tmux`
   - Debian: `$ sudo apt install tmux`
-- Install [Helix](https://docs.helix-editor.com): `$ git clone https://github.com/helix-editor/helix && cd helix && cargo install --locked --path helix-term && ln -s "$PWD/runtime" "$HOME/.cargo/bin/runtime"`
+- Install [Helix](https://docs.helix-editor.com): `$ git clone https://github.com/helix-editor/helix && cd helix && cargo install --locked --path helix-term && ln -s "$PWD/runtime" "$HOME/.config/helix/runtime"`
 - Install [Prettier](https://github.com/prettier/prettier) globally: `$ npm install -g prettier`
 - Install [cargo b(inary)install](https://github.com/cargo-bins/cargo-binstall)
   - MacOS: `$ cargo install cargo-binstall`
