@@ -37,12 +37,9 @@ MacOS and Debian Linux config
 
 ### OCaml
 
-- Install [OCaml](https://ocaml.org)
-  - `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
-- Initialize [opam](https://opam.ocaml.org)
-  - `$ opam init`
-- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools)
-  - `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
+- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
+- Initialize [opam](https://opam.ocaml.org): `$ opam init`
+- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
 
 ### Go
 
