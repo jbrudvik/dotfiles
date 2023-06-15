@@ -6,39 +6,28 @@
     # -p
     # --stat
     # --staged
-    # --graph
-    # --reverse
 
     # Short aliases
     s = status -s
-    ss = status
-    l = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
-    ll = log --stat
     d = diff
+    l = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
     f = fetch
     a = add
-    ap = add -p
     c = commit -v
-    ca = c --amend
     co = checkout
-    b = branch -vv
+    b = rev-parse --abbrev-ref HEAD
     g = grep
 
-    # Helpers for viewing local vs remote changes
-    # - mine: in local branch but not "other"
-    # - theirs: in "other" but not local branch
-    current-branch = rev-parse --abbrev-ref HEAD
-    other = "!if $(git log origin/$(git current-branch) &> /dev/null); then echo origin/$(git current-branch); else echo $(git symbolic-ref --short HEAD); fi"
-    mine = "!echo HEAD ^origin/$(git current-branch)"
-    theirs = "!echo origin/$(git current-branch) ^HEAD"
+    # Helpers for viewing local vs remote branch changes:
+    # - m (mine): in local only
+    # - t (theirs): in remote only
+    m = "!echo HEAD ^origin/$(git b)"
+    t = "!echo origin/$(git b) ^HEAD"
+    dm = "!git d $(git m)"
+    dt = "!git d $(git t)"
+    lm = "!git l $(git m)"
+    lt = "!git l $(git t)"
 
-    # Short aliases using mine/theirs
-    lm = "!git l $(git mine)"
-    lt = "!git l $(git theirs)"
-    llm = "!git ll $(git mine)"
-    llt = "!git ll $(git theirs)"
-    dm = "!git d $(git mine)"
-    dt = "!git d $(git theirs)"
 [log]
     decorate
 	date = local
