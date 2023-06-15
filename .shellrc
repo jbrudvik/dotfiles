@@ -4,8 +4,19 @@
 # Functions
 ###########
 
+# ipaddr = Show IP address
+function ipaddr {
+	if command -v ip >/dev/null; then
+		ip route show dev eth0 | tail -1 | awk '{print $NF}'
+	elif command -v ipconfig >/dev/null; then
+		ipconfig getifaddr en0
+	else
+		echo "Cannot get IP address; neither ip nor ipconfig are installed."
+	fi
+}
+
 # A non-interactive broot (a better tree)
-function b {
+function tree {
 	broot -c :pt "$@"
 }
 
@@ -18,22 +29,6 @@ function fzfhx {
 	else
 		$EDITOR "${result}"
 	fi
-}
-
-# ipaddr = Show IP address
-function ipaddr {
-	if command -v ip >/dev/null; then
-		ip route show dev eth0 | tail -1 | awk '{print $NF}'
-	elif command -v ipconfig >/dev/null; then
-		ipconfig getifaddr en0
-	else
-		echo "Cannot get IP address; neither ip nor ipconfig are installed."
-	fi
-}
-
-# rgh = ripgrep on hidden files with pager
-function rgh {
-	rg -.p "$*" | less -R
 }
 
 # ide = Launch "ide": tmux panes with $EDITOR, shell
@@ -70,18 +65,12 @@ function ide {
 #########
 
 # Short aliases
-alias z='zellij'
 alias t='tmux'
+alias h='hx .'
 alias g='git'
-alias h='hx'
-alias br='broot'
-alias ba='b -hi'
+alias b='broot'
 alias f='fzfhx'
-alias r='rgh'
 alias i='ide'
-alias c='cargo'
-alias d='docker'
-alias k='kubectl'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
@@ -93,6 +82,8 @@ if command -v exa >/dev/null; then
 fi
 
 # Aliases to set defaults
+alias less='less -R'
+alias rg='rg --pretty'
 alias dust='dust -r'
 alias watchexec='watchexec --project-origin .'
 
