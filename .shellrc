@@ -31,7 +31,7 @@ function fzfhx {
 	fi
 }
 
-# ide = Launch "ide": tmux panes with $EDITOR, shell
+# ide = Launch "ide": Named tmux session
 # Optional argument: A path to cd into
 function ide {
 	# Change directory if requested
@@ -53,11 +53,7 @@ function ide {
 	fi
 
 	# Create new tmux session
-	tmux new-session -s "$SESSION" -d
-	tmux send-keys -t "$SESSION" "$EDITOR ." C-m
-	tmux split-window -t "$SESSION" -h
-	tmux select-pane -L -t "$SESSION"
-	tmux attach-session -t "$SESSION"
+	tmux new-session -s "$SESSION"
 }
 
 #########
@@ -68,8 +64,8 @@ function ide {
 alias t='tmux'
 alias h='hx .'
 alias g='git'
-alias b='broot'
 alias f='fzfhx'
+alias b='broot'
 alias i='ide'
 
 # Replace ls with exa
