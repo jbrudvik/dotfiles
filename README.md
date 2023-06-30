@@ -35,12 +35,6 @@ MacOS and Debian Linux config
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm`
 
-### OCaml
-
-- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
-- Initialize [opam](https://opam.ocaml.org): `$ opam init`
-- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
-
 ### Go
 
 - Install [Go](https://go.dev)
@@ -76,6 +70,17 @@ MacOS and Debian Linux config
   - Debian:
     - `$ sudo apt-get install postgresql`
     - `$ systemctl start postgresql`
+
+### OCaml
+
+- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
+- Initialize [opam](https://opam.ocaml.org): `$ opam init`
+- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
+
+### PureScript
+
+- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
+- Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
 
 ### Python
 
