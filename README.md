@@ -35,24 +35,6 @@ MacOS and Debian Linux config
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm`
 
-### Go
-
-- Install [Go](https://go.dev)
-  - MacOS: `$ brew install go`
-  - Debian: `$ GO_DOWNLOAD="go1.20.1.linux-amd64.tar.gz"; curl "https://go.dev/dl/${GO_DOWNLOAD}" -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GO_DOWNLOAD} && rm ${GO_DOWNLOAD}`
-- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
-
-### Rust
-
-- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-- Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
-  - MacOS: TODO
-  - Debian: TODO
-
 ### JavaScript / Node.js
 
 - Install [Node.js](https://nodejs.org)
@@ -61,15 +43,13 @@ MacOS and Debian Linux config
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
 
-### PostgreSQL
+### Go
 
-- Install [PostgreSQL](https://www.postgresql.org)
-  - MacOS:
-    - `$ brew install postgresql@15`
-    - `$ brew services start postgresql@15`
-  - Debian:
-    - `$ sudo apt-get install postgresql`
-    - `$ systemctl start postgresql`
+- Install [Go](https://go.dev)
+  - MacOS: `$ brew install go`
+  - Debian: `$ GO_DOWNLOAD="go1.20.1.linux-amd64.tar.gz"; curl "https://go.dev/dl/${GO_DOWNLOAD}" -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GO_DOWNLOAD} && rm ${GO_DOWNLOAD}`
+- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
 ### OCaml
 
@@ -82,6 +62,31 @@ MacOS and Debian Linux config
 
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
 - Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
+
+### Haskell
+
+- Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
+
+### Rust
+
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+- Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
+  - MacOS: TODO
+  - Debian: TODO
+
+### PostgreSQL
+
+- Install [PostgreSQL](https://www.postgresql.org)
+  - MacOS:
+    - `$ brew install postgresql@15`
+    - `$ brew services start postgresql@15`
+  - Debian:
+    - `$ sudo apt-get install postgresql`
+    - `$ systemctl start postgresql`
 
 ### Python
 
