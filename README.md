@@ -51,6 +51,19 @@ MacOS and Debian Linux config
 - Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
+### Rust
+
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+
+### Python
+
+- Install [Python](https://www.python.org)
+  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
+
 ### OCaml
 
 - Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
@@ -68,16 +81,6 @@ MacOS and Debian Linux config
 - Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
 
-### Rust
-
-- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-- Install [lldb-vscode (Rust DAP)](https://github.com/vadimcn/vscode-lldb)
-  - MacOS: TODO
-  - Debian: TODO
-
 ### PostgreSQL
 
 - Install [PostgreSQL](https://www.postgresql.org)
@@ -88,12 +91,6 @@ MacOS and Debian Linux config
     - `$ sudo apt-get install postgresql`
     - `$ systemctl start postgresql`
 
-### Python
-
-- Install [Python](https://www.python.org)
-  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
-  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
-
 ### Bash
 
 - Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
@@ -101,6 +98,12 @@ MacOS and Debian Linux config
 - Install [ShellCheck](https://github.com/koalaman/shellcheck)
   - MacOS: `$ brew install shellcheck`
   - Debian: `$ sudo apt install shellcheck`
+
+### Markdown
+
+- Install [Marksman (Markdown LSP)](https://github.com/artempyanykh/marksman)
+  - MacOS: `$ brew install marksman`
+  - Debian: `$ curl -L https://github.com/artempyanykh/marksman/releases/download/2023-07-01/marksman-linux-x64 -o marksman && chmod +x marksman && sudo mv marksman /usr/local/bin`
 
 ### Docker
 
