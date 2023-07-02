@@ -64,22 +64,22 @@ MacOS and Debian Linux config
   - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
   - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 
-### OCaml
+### Haskell
 
-- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
-- Initialize [opam](https://opam.ocaml.org): `$ opam init`
-- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
-- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
+- Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
 
 ### PureScript
 
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
 - Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
 
-### Haskell
+### OCaml
 
-- Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
+- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
+- Initialize [opam](https://opam.ocaml.org): `$ opam init`
+- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
+- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
 
 ### PostgreSQL
 
