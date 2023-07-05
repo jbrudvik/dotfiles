@@ -58,28 +58,10 @@ MacOS and Debian Linux config
   - MacOS: `$ brew install rust-analyzer`
   - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 
-### Python
-
-- Install [Python](https://www.python.org)
-  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
-  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
-
-### Haskell
-
-- Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
-
 ### PureScript
 
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
 - Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
-
-### OCaml
-
-- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
-- Initialize [opam](https://opam.ocaml.org): `$ opam init`
-- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
-- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
 
 ### PostgreSQL
 
@@ -90,6 +72,24 @@ MacOS and Debian Linux config
   - Debian:
     - `$ sudo apt-get install postgresql`
     - `$ systemctl start postgresql`
+
+### Haskell
+
+- Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
+
+### OCaml
+
+- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
+- Initialize [opam](https://opam.ocaml.org): `$ opam init`
+- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
+- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
+
+### Python
+
+- Install [Python](https://www.python.org)
+  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 
 ### Bash
 
