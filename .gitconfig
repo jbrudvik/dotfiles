@@ -12,6 +12,7 @@
     d = diff
     l = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
     f = fetch
+    p = pull
     a = add
     c = commit -v
     co = checkout
