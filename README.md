@@ -33,7 +33,7 @@ MacOS and Debian Linux config
 
 - Install [C (clang)](https://clang.llvm.org)
   - MacOS: Installed by default
-  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm`
+  - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm libgmp-dev`
 
 ### JavaScript / Node.js
 
@@ -76,7 +76,9 @@ MacOS and Debian Linux config
 
 ### Haskell
 
-- Install [Haskell](https://www.haskell.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+- Install [Haskell](https://www.haskell.org):
+  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+  - `$ ghcup tui`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
 
 ### OCaml
