@@ -35,6 +35,23 @@ MacOS and Debian Linux config
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm libgmp-dev`
 
+### Haskell
+
+- Install [Haskell](https://www.haskell.org):
+  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+  - `$ ghcup tui`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
+
+### PostgreSQL
+
+- Install [PostgreSQL](https://www.postgresql.org)
+  - MacOS:
+    - `$ brew install postgresql@15`
+    - `$ brew services start postgresql@15`
+  - Debian:
+    - `$ sudo apt-get install postgresql`
+    - `$ systemctl start postgresql`
+
 ### JavaScript / Node.js
 
 - Install [Node.js](https://nodejs.org)
@@ -42,6 +59,12 @@ MacOS and Debian Linux config
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
+
+### PureScript
+
+- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
+- Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
+- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
 
 ### Go
 
@@ -57,36 +80,6 @@ MacOS and Debian Linux config
 - Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
   - MacOS: `$ brew install rust-analyzer`
   - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-
-### PureScript
-
-- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
-- Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
-- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
-
-### PostgreSQL
-
-- Install [PostgreSQL](https://www.postgresql.org)
-  - MacOS:
-    - `$ brew install postgresql@15`
-    - `$ brew services start postgresql@15`
-  - Debian:
-    - `$ sudo apt-get install postgresql`
-    - `$ systemctl start postgresql`
-
-### Haskell
-
-- Install [Haskell](https://www.haskell.org):
-  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
-  - `$ ghcup tui`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
-
-### OCaml
-
-- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
-- Initialize [opam](https://opam.ocaml.org): `$ opam init`
-- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
-- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
 
 ### Python
 
@@ -115,6 +108,13 @@ MacOS and Debian Linux config
 ### WebAssembly
 
 - Install [Wasmer](https://github.com/wasmerio/wasmer): [https://github.com/wasmerio/wasmer](curl https://get.wasmer.io -sSfL | sh)
+
+### OCaml
+
+- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
+- Initialize [opam](https://opam.ocaml.org): `$ opam init`
+- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
+- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
 
 ## Install tools
 
