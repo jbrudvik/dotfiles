@@ -4,6 +4,7 @@ theme = "ayu_dark"
 true-color = true
 bufferline = "never"
 scroll-lines = 1
+gutters = ["diagnostics", "line-numbers", "spacer"]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,7 +17,6 @@ smart-case = false
 
 [editor.soft-wrap]
 enable = true
-
 
 [keys.normal]
 
