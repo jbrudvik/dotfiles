@@ -2,11 +2,6 @@
     name = Jeremy Brudvik
     email = jeremy@brudvik.me
 [alias]
-    # Frequently-used modifiers:
-    # -p
-    # --stat
-    # --staged
-
     # Short aliases
     s = status -s
     d = diff
@@ -29,6 +24,11 @@
     lm = "!git l $(git m)"
     lt = "!git l $(git t)"
 
+    # Quicker ways to add -p, --stat, --staged
+    ds = diff --staged
+    ap = add -p . # My most common way to add
+    lp = "!git l -p"
+    ls = "!git l --stat"
 [log]
     decorate
 	date = local
