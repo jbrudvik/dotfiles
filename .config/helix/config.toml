@@ -19,20 +19,12 @@ smart-case = false
 enable = true
 
 [keys.normal]
-
-# Escape multiple selections easily
-esc = ["collapse_selection", "keep_primary_selection"]
-
+esc = ["collapse_selection", "keep_primary_selection"] # Escape multiple selections easily
 X = "extend_line_above"
-
-# Navigate via paragraphs easier
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
 
 [keys.select]
-
 X = "extend_line_above"
-
-# Navigate via paragraphs easier
 "{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
 "}" = ["extend_to_line_bounds", "goto_next_paragraph"]
