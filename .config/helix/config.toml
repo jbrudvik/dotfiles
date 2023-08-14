@@ -28,3 +28,7 @@ X = "extend_line_above"
 X = "extend_line_above"
 "{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
 "}" = ["extend_to_line_bounds", "goto_next_paragraph"]
+
+[keys.normal.space]
+f = "file_picker_in_current_directory" # Prefer opening file picker in cwd
+F = "file_picker"
