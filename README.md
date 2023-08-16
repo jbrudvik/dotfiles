@@ -40,7 +40,9 @@ MacOS and Debian Linux config
 - Install [Haskell](https://www.haskell.org):
   - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
   - `$ ghcup tui`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ cabal install hoogle`
+- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
+- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
 
 ### PostgreSQL
 
