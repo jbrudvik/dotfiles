@@ -31,31 +31,6 @@ function fzfhx {
 	fi
 }
 
-# ide = Launch "ide": Named tmux session
-# Optional argument: A path to cd into
-function ide {
-	# Change directory if requested
-	if [ -n "$1" ]; then
-		cd "$1" || return
-	fi
-
-	# Generate session name
-	SESSION=${PWD##*/}                                  # Current directory basename
-	SESSION=${SESSION//./_}                             # Replace illegal characters for tmux session names
-	if tmux has-session -t "$SESSION" 2>/dev/null; then # If session already exists, append a counter
-		COUNTER=2
-		SESSION_WITH_SUFFIX="$SESSION-$COUNTER"
-		while tmux has-session -t "$SESSION_WITH_SUFFIX" 2>/dev/null; do
-			COUNTER=$((COUNTER + 1))
-			SESSION_WITH_SUFFIX="$SESSION-$COUNTER"
-		done
-		SESSION="$SESSION_WITH_SUFFIX"
-	fi
-
-	# Create new tmux session
-	tmux new-session -s "$SESSION"
-}
-
 #########
 # Aliases
 #########
@@ -66,7 +41,6 @@ alias h='hx'
 alias g='git'
 alias f='fzfhx'
 alias b='broot'
-alias i='ide'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
