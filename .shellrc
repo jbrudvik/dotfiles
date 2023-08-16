@@ -62,7 +62,7 @@ function ide {
 
 # Short aliases
 alias t='tmux'
-alias h='hx .'
+alias h='hx'
 alias g='git'
 alias f='fzfhx'
 alias b='broot'
