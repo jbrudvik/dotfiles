@@ -41,8 +41,8 @@ MacOS and Debian Linux config
   - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
   - `$ ghcup tui`
 - Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
-- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
+- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
 
 ### PostgreSQL
 
