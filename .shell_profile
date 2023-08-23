@@ -63,10 +63,8 @@ if [ "$(uname -s)" = "Darwin" ]; then
 		export PATH=$PATH:/usr/local/go/bin
 	fi
 else
-	export PATH=$PATH:"$HOME/.go/bin"
+	export PATH=$PATH:"$HOME/.go/bin:$HOME/go/bin:/usr/local/go/bin"
 	export GOPATH="$HOME/go"
-	export PATH=$PATH:"$HOME/go/bin"
-	export PATH=$PATH:/usr/local/go/bin
 fi
 
 # Rust
