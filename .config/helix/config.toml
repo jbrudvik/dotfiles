@@ -33,3 +33,6 @@ X = "extend_line_above"
 f = "file_picker_in_current_directory" # Prefer opening file picker in cwd
 F = "file_picker"
 G = "file_picker_in_current_buffer_directory"
+
+[keys.normal.g]
+w = "rotate_view"
