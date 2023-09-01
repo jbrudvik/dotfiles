@@ -44,6 +44,16 @@ MacOS and Debian Linux config
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
 - Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
 
+### Go
+
+- Install [Go 1.21](https://go.dev)
+  - MacOS: `$ brew install go`
+  - Debian: `$ GO_DOWNLOAD="go1.21.0.linux-amd64.tar.gz"; curl "https://go.dev/dl/${GO_DOWNLOAD}" -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GO_DOWNLOAD} && rm ${GO_DOWNLOAD}`
+- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports): `$ go install golang.org/x/tools/cmd/goimports@latest`
+- Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
+- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+
 ### PostgreSQL
 
 - Install [PostgreSQL](https://www.postgresql.org)
@@ -67,14 +77,6 @@ MacOS and Debian Linux config
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
 - Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
 - Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
-
-### Go
-
-- Install [Go](https://go.dev)
-  - MacOS: `$ brew install go`
-  - Debian: `$ GO_DOWNLOAD="go1.20.1.linux-amd64.tar.gz"; curl "https://go.dev/dl/${GO_DOWNLOAD}" -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GO_DOWNLOAD} && rm ${GO_DOWNLOAD}`
-- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
 ### Rust
 
