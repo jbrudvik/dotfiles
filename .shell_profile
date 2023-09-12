@@ -40,18 +40,6 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Programming languages
 #######################
 
-# Haskell
-[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
-
-# PostgreSQL
-if [ "$(uname -s)" = "Darwin" ]; then
-	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
-fi
-
-# Node
-export N_PREFIX=$HOME/.n
-export PATH="$PATH:$HOME/.n/bin"
-
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
@@ -67,11 +55,20 @@ else
 	export GOPATH="$HOME/go"
 fi
 
+# Haskell
+[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
+
 # Rust
 source ~/.cargo/env
 
-# OCaml
-[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" >/dev/null 2>/dev/null
+# PostgreSQL
+if [ "$(uname -s)" = "Darwin" ]; then
+	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
+fi
+
+# Node
+export N_PREFIX=$HOME/.n
+export PATH="$PATH:$HOME/.n/bin"
 
 # Wasmer
 export WASMER_DIR="/Users/jbrudvik/.wasmer"
