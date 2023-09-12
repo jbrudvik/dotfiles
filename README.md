@@ -113,13 +113,6 @@ MacOS and Debian Linux config
 
 - Install [Wasmer](https://github.com/wasmerio/wasmer): [https://github.com/wasmerio/wasmer](curl https://get.wasmer.io -sSfL | sh)
 
-### OCaml
-
-- Install [OCaml](https://ocaml.org): `$ bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"`
-- Initialize [opam](https://opam.ocaml.org): `$ opam init`
-- Install [OCaml Platform Tools](https://ocaml.org/docs/up-and-running#installing-the-ocaml-platform-tools): `$ opam install dune merlin ocaml-lsp-server odoc ocamlformat utop dune-release`
-- Install [odig](https://erratique.ch/software/odig): `$ opam install ocaml-manual odig && odig doc`
-
 ## Install tools
 
 - Install [tmux](https://github.com/tmux/tmux)
