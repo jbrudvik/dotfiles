@@ -35,15 +35,6 @@ MacOS and Debian Linux config
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm libgmp-dev`
 
-### Haskell
-
-- Install [Haskell](https://www.haskell.org):
-  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
-  - `$ ghcup tui`
-- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
-- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
-
 ### Go
 
 - Install [Go 1.21](https://go.dev)
@@ -53,6 +44,22 @@ MacOS and Debian Linux config
 - Install [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports): `$ go install golang.org/x/tools/cmd/goimports@latest`
 - Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+
+### Haskell
+
+- Install [Haskell](https://www.haskell.org):
+  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+  - `$ ghcup tui`
+- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
+- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
+
+### Rust
+
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 
 ### PostgreSQL
 
@@ -77,13 +84,6 @@ MacOS and Debian Linux config
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
 - Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
 - Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
-
-### Rust
-
-- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 
 ### Python
 
