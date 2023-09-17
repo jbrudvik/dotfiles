@@ -55,12 +55,6 @@ else
 	export GOPATH="$HOME/go"
 fi
 
-# Haskell
-[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
-
-# Rust
-source ~/.cargo/env
-
 # PostgreSQL
 if [ "$(uname -s)" = "Darwin" ]; then
 	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
@@ -73,6 +67,12 @@ export PATH="$PATH:$HOME/.n/bin"
 # Wasmer
 export WASMER_DIR="/Users/jbrudvik/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# Haskell
+[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
+
+# Rust
+source ~/.cargo/env
 
 ################
 # Local settings
