@@ -41,7 +41,6 @@ MacOS and Debian Linux config
   - MacOS: `$ brew install go`
   - Debian: `$ GO_DOWNLOAD="go1.21.0.linux-amd64.tar.gz"; curl "https://go.dev/dl/${GO_DOWNLOAD}" -OL && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ${GO_DOWNLOAD} && rm ${GO_DOWNLOAD}`
 - Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports): `$ go install golang.org/x/tools/cmd/goimports@latest`
 - Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
