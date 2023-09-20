@@ -25,10 +25,10 @@
     lt = "!git l $(git t)"
 
     # Quicker ways to add -p, --stat, --staged
-    ds = diff --staged
-    ap = add -p . # My most common way to add
+    ap = add -p
     lp = "!git l -p"
     ls = "!git l --stat"
+    ds = diff --staged
 [log]
     decorate
 	date = local
