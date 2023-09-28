@@ -62,9 +62,12 @@ MacOS and Debian Linux config
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
 
-### WebAssembly
+### Rust
 
-- Install [Wasmer](https://github.com/wasmerio/wasmer): [https://github.com/wasmerio/wasmer](curl https://get.wasmer.io -sSfL | sh)
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 
 ### Haskell
 
@@ -74,13 +77,6 @@ MacOS and Debian Linux config
 - Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
 - Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
-
-### Rust
-
-- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 
 ### PureScript
 
@@ -107,6 +103,10 @@ MacOS and Debian Linux config
 - Install [Marksman (Markdown LSP)](https://github.com/artempyanykh/marksman)
   - MacOS: `$ brew install marksman`
   - Debian: `$ curl -L https://github.com/artempyanykh/marksman/releases/download/2023-07-01/marksman-linux-x64 -o marksman && chmod +x marksman && sudo mv marksman /usr/local/bin`
+
+### WebAssembly
+
+- Install [Wasmer](https://github.com/wasmerio/wasmer): [https://github.com/wasmerio/wasmer](curl https://get.wasmer.io -sSfL | sh)
 
 ### Docker
 
