@@ -50,6 +50,8 @@ MacOS and Debian Linux config
 - Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
   - MacOS: `$ brew install rust-analyzer`
   - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+- Install [Clippy]: `$ rustup component add clippy`
+- Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
 
 ### PostgreSQL
 
