@@ -71,6 +71,13 @@ MacOS and Debian Linux config
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
 
+### Zig
+
+- Install [Zig](https://ziglang.org)
+  - MacOS: `$ brew install zig`
+- Install [zls](https://github.com/zigtools/zls)
+  - MacOS: `$ brew install zls`
+
 ### Haskell
 
 - Install [Haskell](https://www.haskell.org):
