@@ -44,6 +44,20 @@ MacOS and Debian Linux config
 - Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
+### Zig
+
+- Install [Zig](https://ziglang.org)
+  - MacOS: `$ brew install zig`
+  - Debian: `$ curl -L https://ziglang.org/download/0.11.0/zig-linux-x86_64-0.11.0.tar.xz -o zig.tar.xz && tar -xvf zig.tar.xz && sudo mv zig /usr/local/ && rm zig.tar.xz`
+- Install [zls](https://github.com/zigtools/zls)
+  - MacOS: `$ brew install zls`
+  - Debian:
+    - `$ curl -L https://github.com/zigtools/zls/releases/download/0.11.0/zls-x86_64-linux.tar.gz -o zls.tar.gz`
+    - `$ tar -xvf zls.tar.gz ./bin/zls -O zls`
+    - `$ chmod 755 zls`
+    - `$ sudo mv zls /usr/local/bin/`
+    - `$ rm zls.tar.gz`
+
 ### Rust
 
 - Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
@@ -70,13 +84,6 @@ MacOS and Debian Linux config
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
-
-### Zig
-
-- Install [Zig](https://ziglang.org)
-  - MacOS: `$ brew install zig`
-- Install [zls](https://github.com/zigtools/zls)
-  - MacOS: `$ brew install zls`
 
 ### Haskell
 
