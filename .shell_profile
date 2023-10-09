@@ -55,6 +55,11 @@ else
 	export GOPATH="$HOME/go"
 fi
 
+# Zig
+if [ "$(uname -s)" = "Linux" ]; then
+	export PATH="$PATH:/usr/local/zig"
+fi
+
 # Rust
 source ~/.cargo/env
 
