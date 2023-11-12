@@ -25,6 +25,8 @@ X = "extend_line_above"
 "#" = ["move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
+"+" = "goto_prev_diag"
+"=" = "goto_next_diag"
 
 [keys.select]
 X = "extend_line_above"
