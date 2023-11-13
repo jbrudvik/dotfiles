@@ -55,14 +55,6 @@ else
 	export GOPATH="$HOME/go"
 fi
 
-# Zig
-if [ "$(uname -s)" = "Linux" ]; then
-	export PATH="$PATH:/usr/local/zig"
-fi
-
-# Rust
-source ~/.cargo/env
-
 # PostgreSQL
 if [ "$(uname -s)" = "Darwin" ]; then
 	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
@@ -71,6 +63,14 @@ fi
 # Node
 export N_PREFIX=$HOME/.n
 export PATH="$PATH:$HOME/.n/bin"
+
+# Zig
+if [ "$(uname -s)" = "Linux" ]; then
+	export PATH="$PATH:/usr/local/zig"
+fi
+
+# Rust
+source ~/.cargo/env
 
 # Haskell
 [ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
