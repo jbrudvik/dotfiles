@@ -44,6 +44,24 @@ MacOS and Debian Linux config
 - Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
 - Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
 
+### PostgreSQL
+
+- Install [PostgreSQL](https://www.postgresql.org)
+  - MacOS:
+    - `$ brew install postgresql@15`
+    - `$ brew services start postgresql@15`
+  - Debian:
+    - `$ sudo apt-get install postgresql`
+    - `$ systemctl start postgresql`
+
+### JavaScript / Node.js
+
+- Install [Node.js](https://nodejs.org)
+  - MacOS: `$ brew install n && n lts`
+  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
+- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
+- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
+
 ### Zig
 
 - Install [Zig](https://ziglang.org)
@@ -66,24 +84,6 @@ MacOS and Debian Linux config
   - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 - Install [Clippy]: `$ rustup component add clippy`
 - Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
-
-### PostgreSQL
-
-- Install [PostgreSQL](https://www.postgresql.org)
-  - MacOS:
-    - `$ brew install postgresql@15`
-    - `$ brew services start postgresql@15`
-  - Debian:
-    - `$ sudo apt-get install postgresql`
-    - `$ systemctl start postgresql`
-
-### JavaScript / Node.js
-
-- Install [Node.js](https://nodejs.org)
-  - MacOS: `$ brew install n && n lts`
-  - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
-- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
-- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
 
 ### Haskell
 
