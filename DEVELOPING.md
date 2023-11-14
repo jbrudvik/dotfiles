@@ -23,10 +23,7 @@ $ brew install shellcheck
 ## Before committing
 
 ```sh
-# Format
 $ make format
-
-# Lint
 $ make lint
 ```
 
