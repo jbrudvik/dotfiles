@@ -4,7 +4,7 @@ theme = "ayu_dark"
 true-color = true
 bufferline = "never"
 scroll-lines = 1
-gutters = ["diagnostics", "line-numbers", "spacer"] # Disable diff by default
+gutters = ["diagnostics", "line-numbers", "spacer"] # Disable git diff by default
 
 [editor.cursor-shape]
 insert = "bar"
@@ -39,4 +39,4 @@ F = "file_picker"
 G = "file_picker_in_current_buffer_directory"
 
 [keys.normal.g]
-w = "rotate_view"
+w = "rotate_view" # Switch to next split
