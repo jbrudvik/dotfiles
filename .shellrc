@@ -36,11 +36,8 @@ function fzfhx {
 #########
 
 # Short aliases
-alias t='tmux'
 alias h='hx'
 alias g='git'
-alias z='zig'
-alias c='cargo'
 alias f='fzfhx'
 alias b='broot'
 
