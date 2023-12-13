@@ -37,6 +37,7 @@ X = "extend_line_above"
 f = "file_picker_in_current_directory" # Prefer opening file picker in cwd
 F = "file_picker"
 G = "file_picker_in_current_buffer_directory"
+m = [":write", ":sh make"] # Write then make
 
 [keys.normal.g]
 w = "rotate_view" # Switch to next split
