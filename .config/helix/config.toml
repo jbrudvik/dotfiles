@@ -39,6 +39,8 @@ F = "file_picker"
 G = "file_picker_in_current_buffer_directory"
 w = ":write"
 m = ":sh make"
+"=" = ":set whitespace.render none"
+"+" = ":set whitespace.render all"
 
 [keys.normal.g]
 w = "rotate_view" # Switch to next split
