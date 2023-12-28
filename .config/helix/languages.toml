@@ -9,31 +9,6 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 auto-format = true
 
 [[language]]
-name = "json"
-formatter = { command = 'prettier', args = ["--parser", "json"] }
-auto-format = true
-
-[[language]]
-name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "jsx"
-formatter = { command = 'prettier', args = ["--stdin-filepath", "file.jsx"] }
-auto-format = true
-
-[[language]]
-name = "tsx"
-formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
-auto-format = true
-
-[[language]]
 name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
 auto-format = true
@@ -52,3 +27,96 @@ auto-format = true
 [[language]]
 name = "bash"
 file-types = ["conf", "config"]
+
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
+
+[[language]]
+name = "javascript"
+auto-format = true
+comment-token = "//"
+file-types = ["js", "mjs", "cjs"]
+injection-regex = "(js|javascript)"
+language-id = "javascript"
+language-servers = ["typescript-language-server", "biome"]
+roots = []
+scope = "source.js"
+shebangs = ["node"]
+
+[language.formatter]
+command = "biome"
+args = ["format", "--stdin-file-path", "test.js"]
+
+[language.indent]
+tab-width = 2
+unit = "  "
+
+[[language]]
+name = "typescript"
+auto-format = true
+file-types = ["ts", "mts", "cts"]
+injection-regex = "(ts|typescript)"
+language-id = "typescript"
+language-servers = ["typescript-language-server", "biome"]
+roots = []
+scope = "source.ts"
+shebangs = []
+
+[language.formatter]
+command = "biome"
+args = ["format", "--stdin-file-path", "test.ts"]
+
+[language.indent]
+tab-width = 2
+unit = "  "
+
+[[language]]
+name = "tsx"
+auto-format = true
+file-types = ["tsx"]
+injection-regex = "(tsx)"
+language-id = "typescriptreact"
+language-servers = ["typescript-language-server", "biome"]
+roots = []
+scope = "source.tsx"
+
+[language.formatter]
+command = "biome"
+args = ["format", "--stdin-file-path", "test.tsx"]
+
+[language.indent]
+tab-width = 2
+unit = "  "
+
+[[language]]
+name = "jsx"
+auto-format = true
+comment-token = "//"
+file-types = ["jsx"]
+grammar = "javascript"
+injection-regex = "jsx"
+language-id = "javascriptreact"
+language-servers = ["typescript-language-server", "biome"]
+roots = []
+scope = "source.jsx"
+
+[language.formatter]
+command = "biome"
+args = ["format", "--stdin-file-path", "test.jsx"]
+
+[language.indent]
+tab-width = 2
+unit = "  "
+
+[[language]]
+name = "json"
+auto-format = true
+file-types = ["json", "jsonc", "arb", "ipynb", "geojson"]
+injection-regex = "json"
+language-servers = ["biome"]
+roots = []
+scope = "source.json"
+
+[language.formatter]
+command = "biome"
+args = ["format", "--stdin-file-path", "test.json"]

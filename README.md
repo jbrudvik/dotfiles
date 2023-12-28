@@ -61,6 +61,9 @@ MacOS and Debian Linux config
   - Debian: `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript)
+- Install [Biome](https://biomejs.dev)
+  - MacOS: `$ brew install biome`
+  - Debian: `$ npm install -g @biomejs/biome`
 
 ### Zig
 
