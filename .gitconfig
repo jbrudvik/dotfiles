@@ -14,21 +14,18 @@
     b = rev-parse --abbrev-ref HEAD
     g = grep
 
-    # Helpers for viewing local vs remote branch changes:
-    # - m (mine): in local only
-    # - t (theirs): in remote only
-    m = "!echo HEAD ^origin/$(git b)"
-    t = "!echo origin/$(git b) ^HEAD"
-    dm = "!git d $(git m)"
-    dt = "!git d $(git t)"
-    lm = "!git l $(git m)"
-    lt = "!git l $(git t)"
-
-    # Quicker ways to add -p, --stat, --staged
+    # Shorthand for -p
     ap = add -p
     lp = "!git l -p"
+
+    # Shorthand for --stat
+    ds = diff --stat
     ls = "!git l --stat"
-    ds = diff --staged
+
+    # @{u} = upstream
+    # @{u}.. = in local but not upstream
+    # ..@{u} = in upstream but not local
+
 [log]
     decorate
 	date = local
