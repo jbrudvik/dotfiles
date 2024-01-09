@@ -125,7 +125,7 @@ MacOS and Debian Linux config
 
 ### WebAssembly
 
-- Install [Wasmer](https://github.com/wasmerio/wasmer): [https://github.com/wasmerio/wasmer](curl https://get.wasmer.io -sSfL | sh)
+- Install [Wasmer](https://github.com/wasmerio/wasmer): `$ curl https://get.wasmer.io -sSfL | sh`
 
 ### Docker
 
