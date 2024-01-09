@@ -65,6 +65,21 @@ MacOS and Debian Linux config
   - MacOS: `$ brew install biome`
   - Debian: `$ npm install -g @biomejs/biome`
 
+### Rust
+
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+- Install [Clippy](https://github.com/rust-lang/rust-clippy): `$ rustup component add clippy`
+- Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
+
+### Python
+
+- Install [Python](https://www.python.org)
+  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
+
 ### Zig
 
 - Install [Zig](https://ziglang.org)
@@ -78,15 +93,6 @@ MacOS and Debian Linux config
     - `$ chmod 755 zls`
     - `$ sudo mv zls /usr/local/bin/`
     - `$ rm zls.tar.gz`
-
-### Rust
-
-- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-- Install [Clippy](https://github.com/rust-lang/rust-clippy): `$ rustup component add clippy`
-- Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
 
 ### Haskell
 
@@ -102,12 +108,6 @@ MacOS and Debian Linux config
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
 - Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
 - Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
-
-### Python
-
-- Install [Python](https://www.python.org)
-  - MacOS: `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
-  - Debian: `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
 
 ### Bash
 
