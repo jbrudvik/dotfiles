@@ -71,24 +71,6 @@ tab-width = 2
 unit = "  "
 
 [[language]]
-name = "tsx"
-auto-format = true
-file-types = ["tsx"]
-injection-regex = "(tsx)"
-language-id = "typescriptreact"
-language-servers = ["typescript-language-server", "biome"]
-roots = []
-scope = "source.tsx"
-
-[language.formatter]
-command = "biome"
-args = ["format", "--stdin-file-path", "test.tsx"]
-
-[language.indent]
-tab-width = 2
-unit = "  "
-
-[[language]]
 name = "jsx"
 auto-format = true
 comment-token = "//"
@@ -103,6 +85,24 @@ scope = "source.jsx"
 [language.formatter]
 command = "biome"
 args = ["format", "--stdin-file-path", "test.jsx"]
+
+[language.indent]
+tab-width = 2
+unit = "  "
+
+[[language]]
+name = "tsx"
+auto-format = true
+file-types = ["tsx"]
+injection-regex = "(tsx)"
+language-id = "typescriptreact"
+language-servers = ["typescript-language-server", "biome"]
+roots = []
+scope = "source.tsx"
+
+[language.formatter]
+command = "biome"
+args = ["format", "--stdin-file-path", "test.tsx"]
 
 [language.indent]
 tab-width = 2
