@@ -120,3 +120,15 @@ scope = "source.json"
 [language.formatter]
 command = "biome"
 args = ["format", "--stdin-file-path", "test.json"]
+
+[[language]]
+name = "purescript"
+scope = "source.purescript"
+injection-regex = "purescript"
+file-types = ["purs"]
+roots = ["spago.yaml", "spago.dhall", "bower.json"]
+comment-token = "--"
+language-servers = [ "purescript-language-server" ]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+formatter = { command = "purs-tidy", args = ["format"] }

@@ -74,6 +74,13 @@ MacOS and Debian Linux config
 - Install [Clippy](https://github.com/rust-lang/rust-clippy): `$ rustup component add clippy`
 - Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
 
+### PureScript
+
+- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
+- Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago@next`
+- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
+- Install [purs-tidy (PureScript formatter)](https://github.com/natefaubion/purescript-tidy): `$ npm install -g purs-tidy`
+
 ### Python
 
 - Install [Python](https://www.python.org)
@@ -102,12 +109,6 @@ MacOS and Debian Linux config
 - Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
 - Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
-
-### PureScript
-
-- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
-- Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago`
-- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
 
 ### Bash
 
