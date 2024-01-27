@@ -70,6 +70,8 @@ elif command -v lsof >/dev/null; then
 	alias ports='sudo lsof -PiTCP -sTCP:LISTEN'
 fi
 
+alias spago-watch='watchexec -e purs -- spago bundle'
+
 ################
 # Local settings
 ################
