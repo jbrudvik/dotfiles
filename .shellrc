@@ -70,6 +70,11 @@ elif command -v lsof >/dev/null; then
 	alias ports='sudo lsof -PiTCP -sTCP:LISTEN'
 fi
 
+# Go aliases
+alias go-watch-build='watchexec -e go -- go build'
+alias go-watch-run='watchexec -r -e go -- go run .'
+
+# PureScript aliases
 alias spago-watch='watchexec -e purs -- spago bundle'
 
 ################
