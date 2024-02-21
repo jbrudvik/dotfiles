@@ -35,6 +35,15 @@ MacOS and Debian Linux config
   - MacOS: Installed by default
   - Debian: `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm libgmp-dev`
 
+### Rust
+
+- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
+  - MacOS: `$ brew install rust-analyzer`
+  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
+- Install [Clippy](https://github.com/rust-lang/rust-clippy): `$ rustup component add clippy`
+- Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
+
 ### Go
 
 - Install [Go 1.21](https://go.dev)
@@ -64,15 +73,6 @@ MacOS and Debian Linux config
 - Install [Biome](https://biomejs.dev)
   - MacOS: `$ brew install biome`
   - Debian: `$ npm install -g @biomejs/biome`
-
-### Rust
-
-- Install [Rust](https://www.rust-lang.org): `$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- Install [rust-analyzer (Rust LSP)](https://github.com/rust-lang/rust-analyzer)
-  - MacOS: `$ brew install rust-analyzer`
-  - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
-- Install [Clippy](https://github.com/rust-lang/rust-clippy): `$ rustup component add clippy`
-- Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
 
 ### PureScript
 

@@ -40,6 +40,9 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Programming languages
 #######################
 
+# Rust
+source ~/.cargo/env
+
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
@@ -68,9 +71,6 @@ export PATH="$PATH:$HOME/.n/bin"
 if [ "$(uname -s)" = "Linux" ]; then
 	export PATH="$PATH:/usr/local/zig"
 fi
-
-# Rust
-source ~/.cargo/env
 
 # Haskell
 [ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
