@@ -195,6 +195,9 @@ MacOS and Debian Linux config
 - Install [tokei](https://github.com/XAMPPRocky/tokei)
   - MacOS: `$ brew install tokei`
   - Debian: `$ cargo binstall tokei`
+- Install [killport](https://github.com/jkfran/killport):
+  - MacOS: `$ brew install killport`
+  - Debian: `$ cargo binstall killport`
 
 ## Install server tools (Linux only)
 
