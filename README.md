@@ -43,6 +43,7 @@ MacOS and Debian Linux config
   - Debian: `$ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > rust-analyzer && chmod u+x rust-analyzer && sudo mv rust-analyzer /usr/local/bin`
 - Install [Clippy](https://github.com/rust-lang/rust-clippy): `$ rustup component add clippy`
 - Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
+- Install [bacon](https://github.com/Canop/bacon): `$ cargo install --locked bacon`
 
 ### Go
 
