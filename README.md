@@ -135,7 +135,9 @@ MacOS and Debian Linux config
 
 ## Install tools
 
-- Install [Helix](https://docs.helix-editor.com): `$ git clone https://github.com/helix-editor/helix && cd helix && cargo install --locked --path helix-term && ln -s "$PWD/runtime" "$HOME/.config/helix/runtime"`
+- Install [Helix](https://docs.helix-editor.com):
+  - MacOS: `$ brew install helix`
+  - Debian: `$ git clone https://github.com/helix-editor/helix && cd helix && cargo install --locked --path helix-term && ln -s "$PWD/runtime" "$HOME/.config/helix/runtime"`
 - Install [tmux](https://github.com/tmux/tmux)
   - MacOS: `$ brew install tmux`
   - Debian: `$ sudo apt install tmux`
