@@ -42,4 +42,4 @@ m = ":sh make"
 "=" = ":toggle whitespace.render all none"
 
 [keys.normal.g]
-space = "rotate_view" # Switch to next split
+o = "rotate_view" # Switch to next split
