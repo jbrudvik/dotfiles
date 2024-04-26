@@ -67,17 +67,8 @@ fi
 export N_PREFIX=$HOME/.n
 export PATH="$PATH:$HOME/.n/bin"
 
-# Zig
-if [ "$(uname -s)" = "Linux" ]; then
-	export PATH="$PATH:/usr/local/zig"
-fi
-
 # Haskell
 [ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
-
-# Wasmer
-export WASMER_DIR="/Users/jbrudvik/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
 ################
 # Local settings
