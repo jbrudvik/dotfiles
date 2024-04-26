@@ -26,7 +26,15 @@ function install_dotfiles_in_dir {
 
 echo "Installing dotfiles:"
 
-# Install all dotfiles in "home" directory.
-cd "$(dirname "$0")/home" || exit
+# "Install" dotfiles scripts.
+cd "$(dirname "$0")" || exit
+if [[ ":$PATH:" != *":$(pwd):"* ]]; then
+	cat <<EOF >>"$HOME/.shell_profile_local"
+export PATH="\$PATH:$(pwd)"
+EOF
+	echo "Added dotfiles scripts to PATH by appending to $HOME/.shell_profile_local"
+fi
 
+# "Install" all dotfiles in "home" directory.
+cd ../home || exit
 install_dotfiles_in_dir

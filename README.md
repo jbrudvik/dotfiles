@@ -25,7 +25,7 @@ MacOS and Debian Linux config
 - Install [zinit](https://github.com/zdharma-continuum/zinit): `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
   - Then restart shell and run: `$ zinit self-update`
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
-- Install dotfiles (WARNING: DESTRUCTIVE!): `$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/dotfiles_install`
+- Install dotfiles (WARNING: DESTRUCTIVE!): `$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_install`
 
 ## Install programming languages and tooling
 

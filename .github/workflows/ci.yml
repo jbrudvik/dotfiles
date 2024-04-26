@@ -23,6 +23,6 @@ jobs:
       - name: Lint
         run: make lint
       - name: Test install
-        run: ./dotfiles_install
+        run: ./bin/dotfiles_install
       - name: Test update
-        run: ./dotfiles_update
+        run: ./bin/dotfiles_update
