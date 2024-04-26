@@ -1,31 +1,32 @@
 #!/usr/bin/env bash
 
-# Install dotfiles into $HOME
-echo "Installing dotfiles:"
-cd "$(dirname "$0")" || exit
-for dotfile in .*; do
-	SOURCE="$(pwd)/$dotfile"
-	TARGET="$HOME/$dotfile"
-	if [ -f "$SOURCE" ]; then
-		ln -sfv "$SOURCE" "$TARGET"
-	fi
-done
+GLOBIGNORE=".:.."
 
-# Install .config files into $HOME/.config
-# Assumptions about .config:
-# - .config contains only non-hidden files and dirs
-# - Dirs contain non-hidden files/dirs
-echo
-echo "Installing .config files:"
-for file_or_dir in .config/*; do
-	if [ -f "$file_or_dir" ]; then
-		f="$file_or_dir"
-		ln -sfv "$(pwd)/$f" "$HOME/$f"
-	else
-		dir="$file_or_dir"
-		mkdir -pv "$HOME/$dir"
-		for f in "$dir"/*; do
-			ln -snfv "$(pwd)/$f" "$HOME/$f"
-		done
+# "Install" all dotfiles in dir by by creating symlinks in $HOME.
+#
+# If no argument is provided, current directory is used.
+# Attempts to add into existing directories.
+function install_dotfiles_in_dir {
+	PATH_PREFIX=""
+	if [ $# -eq 1 ]; then
+		PATH_PREFIX="$1/"
 	fi
-done
+
+	for file_or_dir in "$PATH_PREFIX"*; do
+		if [ -f "$file_or_dir" ]; then
+			f="$file_or_dir"
+			ln -snfv "$(pwd)/$f" "$HOME/$f"
+		elif [ -d "$file_or_dir" ]; then
+			dir="$file_or_dir"
+			mkdir -pv "$HOME/$dir"
+			install_dotfiles_in_dir "$file_or_dir"
+		fi
+	done
+}
+
+echo "Installing dotfiles:"
+
+# Install all dotfiles in "home" directory.
+cd "$(dirname "$0")/home" || exit
+
+install_dotfiles_in_dir
