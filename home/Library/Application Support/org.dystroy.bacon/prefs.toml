@@ -1,0 +1,36 @@
+[export]
+enabled = false
+path = ".bacon-locations"
+line_format = "{kind} {path}:{line}:{column} {message}"
+
+# Uncomment and change the key-bindings you want to define
+# (some of those ones are the defaults and are just here
+#  for illustration)
+[keybindings]
+g = "scroll-to-top"
+shift-g = "scroll-to-bottom"
+k = "scroll-lines(-1)"
+j = "scroll-lines(1)"
+u = "scroll-pages(-1)"
+d = "scroll-pages(1)"
+b = "scroll-pages(-1)"
+f = "scroll-pages(1)"
+# esc = "back"
+# ctrl-c = "quit"
+# q = "quit"
+# F5 = "rerun"
+# s = "toggle-summary"
+# w = "toggle-wrap"
+# b = "toggle-backtrace"
+# a = "job:check-all"
+# i = "job:initial"
+# c = "job:clippy"
+o = "job:doc-open"
+# t = "job:test"
+# r = "job:run"
+
+1 = "job:initial"
+2 = "job:clippy"
+3 = "job:test"
+4 = "job:run"
+5 = "job:doc-open"
