@@ -17,7 +17,11 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 
 ## Install dotfiles
 
-- Install dotfiles (WARNING: DESTRUCTIVE!): `$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_install`
+WARNING: DESTRUCTIVE!
+
+```sh
+$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_install`
+```
 
 ## Install programming languages and tooling
 
