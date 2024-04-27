@@ -120,3 +120,11 @@ scope = "source.json"
 [language.formatter]
 command = "biome"
 args = ["format", "--stdin-file-path", "test.json"]
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[[language]]
+name = "python"
+language-servers = [ "ruff" ]
+auto-format = true

@@ -56,6 +56,9 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 ### Python
 
 - Install [Python](https://www.python.org): `$ brew install python`
+- Install [uv](https://github.com/astral-sh/uv): `$ curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Install [ruff](https://github.com/astral-sh/ruff): `$ pip install ruff`
+- Install [ruff-lsp](https://github.com/astral-sh/ruff-lsp#installation-and-usage): `$ brew install ruff-lsp`
 
 ### PureScript
 
