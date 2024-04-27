@@ -23,8 +23,14 @@
     ds = diff --stat
 
     # @{u} = upstream
-    # @{u}.. = in local but not upstream
     # ..@{u} = in upstream but not local
+    # @{u}.. = in local but not upstream
+    lu = "!git l ..@{u}"
+    ld = "!git l @{u}.."
+    lup = "!git lu -p"
+    ldp = "!git ld -p"
+    lus = "!git lu --stat"
+    lds = "!git lu --stat"
 
 [log]
     decorate
