@@ -38,7 +38,7 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 ### Python
 
-- Install [Python](https://www.python.org): `$ sudo apt install python3 python3-dev && sudo ln -s $(which python3) /usr/bin/python`
+- Install [Python](https://www.python.org): `$ sudo apt install python3 python3-dev`
 
 ## Install tools
 

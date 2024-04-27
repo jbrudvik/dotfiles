@@ -67,6 +67,9 @@ fi
 export N_PREFIX=$HOME/.n
 export PATH="$PATH:$HOME/.n/bin"
 
+# Python
+export PATH=/opt/homebrew/opt/python@3.12/libexec/bin:$PATH
+
 # Haskell
 [ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
 

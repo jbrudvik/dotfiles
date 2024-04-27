@@ -55,7 +55,7 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 ### Python
 
-- Install [Python](https://www.python.org): `$ brew install python && sudo ln -s $(which python3) /usr/local/bin/python`
+- Install [Python](https://www.python.org): `$ brew install python`
 
 ### PureScript
 
