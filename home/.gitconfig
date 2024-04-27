@@ -19,8 +19,8 @@
     lp = "!git l -p"
 
     # Shorthand for --stat
-    ds = diff --stat
     ls = "!git l --stat"
+    ds = diff --stat
 
     # @{u} = upstream
     # @{u}.. = in local but not upstream
