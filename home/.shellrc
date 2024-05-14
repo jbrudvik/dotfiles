@@ -42,8 +42,12 @@ alias c='cargo'
 alias b='bacon'
 alias f='fzfhx'
 alias t='tree'
-alias ssh='kitten ssh'
 alias s='spago'
+
+# Replace ssh with `kitten ssh`
+if command -v kitten >/dev/null; then
+	alias ssh='kitten ssh'
+fi
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
