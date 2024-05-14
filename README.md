@@ -48,10 +48,11 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 ### JavaScript / TypeScript
 
-- Install [Node.js](https://nodejs.org): `$ brew install n && n lts`
-- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ npm install -g vscode-langservers-extracted`
-- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ npm install -g typescript-language-server typescript`
+- Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
+- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ bun install -g vscode-langservers-extracted`
+- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
 - Install [Biome](https://biomejs.dev): `$ brew install biome`
+- Install [Node.js](https://nodejs.org): `$ brew install n && n lts`
 
 ### Python
 

@@ -43,6 +43,20 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 # Rust
 source ~/.cargo/env
 
+# PostgreSQL
+if [ "$(uname -s)" = "Darwin" ]; then
+	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
+fi
+
+# Node
+export N_PREFIX=$HOME/.n
+export PATH="$PATH:$HOME/.n/bin"
+
+# Bun
+[ -s "/Users/jbrudvik/.bun/_bun" ] && source "/Users/jbrudvik/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
@@ -57,15 +71,6 @@ else
 	export PATH=$PATH:"$HOME/.go/bin:$HOME/go/bin:/usr/local/go/bin"
 	export GOPATH="$HOME/go"
 fi
-
-# PostgreSQL
-if [ "$(uname -s)" = "Darwin" ]; then
-	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
-fi
-
-# Node
-export N_PREFIX=$HOME/.n
-export PATH="$PATH:$HOME/.n/bin"
 
 # Python
 export PATH=/opt/homebrew/opt/python@3.12/libexec/bin:$PATH
