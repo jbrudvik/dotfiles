@@ -42,7 +42,8 @@ alias c='cargo'
 alias b='bacon'
 alias f='fzfhx'
 alias t='tree'
-alias s='kitten ssh'
+alias ssh='kitten ssh'
+alias s='spago'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
