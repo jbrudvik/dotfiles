@@ -48,10 +48,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
 	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
 fi
 
-# Node
-export N_PREFIX=$HOME/.n
-export PATH="$PATH:$HOME/.n/bin"
-
 # Bun
 [ -s "/Users/jbrudvik/.bun/_bun" ] && source "/Users/jbrudvik/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"

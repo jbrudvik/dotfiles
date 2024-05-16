@@ -39,20 +39,13 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
   - `$ brew install postgresql@15`
   - `$ brew services start postgresql@15`
 
-### Go
-
-- Install [Go 1.21](https://go.dev): `$ brew install go`
-- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
-- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
-
 ### JavaScript / TypeScript
 
 - Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ bun install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
 - Install [Biome](https://biomejs.dev): `$ brew install biome`
-- Install [Node.js](https://nodejs.org): `$ brew install n && n lts`
+- Install [Node](https://nodejs.org): `$ brew install node`
 
 ### Python
 
@@ -61,12 +54,33 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 - Install [ruff](https://github.com/astral-sh/ruff): `$ pip install ruff`
 - Install [ruff-lsp](https://github.com/astral-sh/ruff-lsp#installation-and-usage): `$ brew install ruff-lsp`
 
+### Go
+
+- Install [Go](https://go.dev): `$ brew install go`
+- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
+- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+
+### Bash
+
+- Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ bun install -g bash-language-server`
+- Install [shfmt](https://github.com/mvdan/sh): `$ go install mvdan.cc/sh/v3/cmd/shfmt@latest`
+- Install [ShellCheck](https://github.com/koalaman/shellcheck): `$ brew install shellcheck`
+
+### Markdown
+
+- Install [Marksman (Markdown LSP)](https://github.com/artempyanykh/marksman): `$ brew install marksman`
+
+### Docker
+
+- Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ bun install -g dockerfile-language-server-nodejs`
+
 ### PureScript
 
-- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ npm install -g purescript`
-- Install [Spago](https://github.com/purescript/spago): `$ npm install -g spago@next`
-- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ npm install -g purescript-language-server`
-- Install [purs-tidy (PureScript formatter)](https://github.com/natefaubion/purescript-tidy): `$ npm install -g purs-tidy`
+- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ bun install -g purescript`
+- Install [Spago](https://github.com/purescript/spago): `$ bun install -g spago@next`
+- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ bun install -g purescript-language-server`
+- Install [purs-tidy (PureScript formatter)](https://github.com/natefaubion/purescript-tidy): `$ bun install -g purs-tidy`
 
 ### Haskell
 
@@ -77,24 +91,10 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
 - Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
 
-### Bash
-
-- Install [bash-language-server (Bash LSP)](https://github.com/bash-lsp/bash-language-server): `$ npm install -g bash-language-server`
-- Install [shfmt](https://github.com/mvdan/sh): `$ go install mvdan.cc/sh/v3/cmd/shfmt@latest`
-- Install [ShellCheck](https://github.com/koalaman/shellcheck): `$ brew install shellcheck`
-
-### Markdown
-
-- Install [Marksman (Markdown LSP)](https://github.com/artempyanykh/marksman): `$ brew install marksman`
-
-### Docker
-
-- Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ npm install -g dockerfile-language-server-nodejs`
-
 ## Install tools
 
 - Install [Helix](https://docs.helix-editor.com): `$ brew install helix`
-- Install [Prettier](https://github.com/prettier/prettier) globally: `$ npm install -g prettier`
+- Install [Prettier](https://github.com/prettier/prettier) globally: `$ bun install -g prettier`
 - Install [delta](https://github.com/dandavison/delta): `$ brew install git-delta`
 - Install [exa](https://github.com/ogham/exa#installation): `$ brew install exa`
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep): `$ brew install ripgrep`
@@ -107,7 +107,6 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 - Install [broot](https://dystroy.org/broot): `$ brew install broot && broot`
 - Install [xh](https://github.com/ducaale/xh): `$ brew install xh`
 - Install [bottom](https://github.com/ClementTsang/bottom): `$ brew install bottom`
-- Install [tldr](https://github.com/tldr-pages/tldr): `$ npm install -g tldr`
 - Install [hecate](https://github.com/evanmiller/hecate): `$ go install github.com/evanmiller/hecate@latest`
 - Install [dog](https://github.com/ogham/dog): `$ brew install dog`
 - Install [procs](https://github.com/dalance/procs): `$ brew install procs`

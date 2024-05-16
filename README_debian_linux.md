@@ -35,7 +35,7 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 ### JavaScript / TypeScript
 
 - Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
-- Install [Node.js](https://nodejs.org): `$ curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n && bash n lts && npm install -g n && rm n`
+- Install [Node](https://nodejs.org): `$ sudo apt install nodejs`
 
 ### Python
 
