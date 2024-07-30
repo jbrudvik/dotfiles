@@ -5,12 +5,12 @@ true-color = true
 bufferline = "never"
 scroll-lines = 1
 gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
-end-of-line-diagnostics = "hint"
+# end-of-line-diagnostics = "error"
 
 [editor.inline-diagnostics]
 # Levels: disable, hint, info, warning, error
-cursor-line = "hint"
-other-lines = "disable"
+# cursor-line = "hint"
+# other-lines = "disable"
 
 [editor.cursor-shape]
 insert = "bar"
