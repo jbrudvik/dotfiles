@@ -75,6 +75,11 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ bun install -g dockerfile-language-server-nodejs`
 
+### Elixir
+
+- Install [Elixir](https://elixir-lang.org): `$ brew install elixir`
+- Install [elixir-ls (Elixir LSP)](https://github.com/elixir-lsp/elixir-ls): `$ brew install elixir-ls`
+
 ### PureScript
 
 - Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ bun install -g purescript`

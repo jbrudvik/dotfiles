@@ -41,6 +41,10 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 - Install [Python](https://www.python.org): `$ sudo apt install python3 python3-dev`
 
+### Gleam
+
+- Install [Gleam](https://gleam.run) (includes [Erlang](https://www.erlang.org)): `$ brew install gleam`
+
 ## Install tools
 
 - Install [Caddy](https://caddyserver.com): `$ sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list && sudo apt update && sudo apt install caddy`
