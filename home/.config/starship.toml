@@ -53,16 +53,14 @@ style = "bold 13"
 symbol = "&"
 
 [status]
-# TODO: Color code based on status (well, don't show unless error...)
-disabled = false
 format = "[$status ]($style)"
 
 [character]
-# TODO: Change character to # if root?
 success_symbol = "[\\$](grey)"
 error_symbol = "[\\$](bold red)"
 
 [cmd_duration]
-min_time = 1000
+min_time = 100
 style = "243"
 format = "[$duration]($style)"
+show_milliseconds = true
