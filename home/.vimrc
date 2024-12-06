@@ -12,3 +12,4 @@ set hlsearch " Highlight all search matches
 set noignorecase " Case-sensitive search
 set backspace=indent,eol,start " Allow backspacing over many things (in insert mode)
 set shortmess+=I " Don't show intro message
+nnoremap Y y$ " Yank to end of line
