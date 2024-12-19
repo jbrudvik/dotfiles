@@ -2,12 +2,11 @@ format = """
 $username\
 $hostname\
 $directory\
-[(\\($git_branch$git_commit$git_state$git_status\\) )](yellow)\
 $jobs\
 $status\
 $character"""
 
-right_format = """$cmd_duration"""
+right_format = """"""
 
 add_newline = false
 
