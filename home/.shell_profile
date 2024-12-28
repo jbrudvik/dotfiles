@@ -27,6 +27,9 @@ REALPATH=$([ -L "$0" ] && readlink "$0")
 REALDIR=$(dirname "$REALPATH")
 export PATH="$PATH:$REALDIR"
 
+# Set config directory
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Initialize Homebrew
 command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew shellenv)"
 
