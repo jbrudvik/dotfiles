@@ -36,7 +36,6 @@ function fzfhx {
 #########
 
 # Short aliases
-alias h='hx'
 alias g='git'
 alias c='cargo'
 alias b='bacon'
