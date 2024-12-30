@@ -26,40 +26,14 @@ truncation_symbol = "…/"
 read_only = ""
 style = "bold blue"
 
-[git_branch]
-style = "yellow"
-format = "[$branch(:$remote_branch)]($style)"
-
-[git_commit]
-style = "yellow"
-
-[git_state]
-style = "yellow"
-
-[git_status]
-modified = "M"
-renamed = "R"
-deleted = "D"
-staged = "+"
-ahead = ">"
-behind = "<"
-diverged = "<>"
-style = "yellow"
-format = '([\[$all_status$ahead_behind\]]($style))'
-
 [jobs]
 style = "bold 13"
 symbol = "&"
 
 [status]
 format = "[$status ]($style)"
+disabled = false
 
 [character]
 success_symbol = "[\\$](grey)"
 error_symbol = "[\\$](bold red)"
-
-[cmd_duration]
-min_time = 100
-style = "243"
-format = "[$duration]($style)"
-show_milliseconds = true
