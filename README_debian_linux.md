@@ -2,6 +2,7 @@
 
 ## Install basics
 
+- Install [Zed](https://zed.dev)
 - Install [Ghostty](https://ghostty.org)
 - Install [Git](https://git-scm.com): `$ sudo apt update && sudo apt install git`
 - Install [Make](https://www.gnu.org/software/make/): `$ sudo apt install make`

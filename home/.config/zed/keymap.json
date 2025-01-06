@@ -1,0 +1,40 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: Open Default Keymap`
+// from the command palette.
+[
+  // {
+  //   "bindings": {
+  //   }
+  // },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-?": null // Unbind assistant::ToggleFocus
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "g o": "workspace::ActivateNextPane",
+      "g r": "editor::OpenDocs",
+      "ctrl-c": ["editor::ToggleComments", { "advance_downwards": false }]
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "use_layout_keys": true,
+    "bindings": {
+      "U": "vim::Redo"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-n": "workspace::NewTerminal"
+    }
+  }
+]

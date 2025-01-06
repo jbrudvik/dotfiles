@@ -6,6 +6,7 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 
 ## Install basics
 
+- Install [Zed](https://zed.dev)
 - Install [Ghostty](https://ghostty.org)
 - Install [Homebrew](https://brew.sh): `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ brew install zsh zsh-completions`
