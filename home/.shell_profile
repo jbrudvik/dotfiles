@@ -45,6 +45,7 @@ source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
 
 # Rust
 source ~/.cargo/env
+export BACON_PREFS="$XDG_CONFIG_HOME/bacon.toml"
 
 # PostgreSQL
 if [ "$(uname -s)" = "Darwin" ]; then
