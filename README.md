@@ -6,7 +6,7 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 
 ## Install basics
 
-- Install [kitty](https://sw.kovidgoyal.net/kitty/): `$ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin`
+- Install [Ghostty](https://ghostty.org)
 - Install [Homebrew](https://brew.sh): `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ brew install zsh zsh-completions`
 - Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`

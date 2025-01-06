@@ -1,0 +1,2 @@
+theme = Ayu
+keybind = global:cmd+alt+space=toggle_quick_terminal

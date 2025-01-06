@@ -2,7 +2,7 @@
 
 ## Install basics
 
-- Install [kitty](https://sw.kovidgoyal.net/kitty/): `sudo apt-get install kitty`
+- Install [Ghostty](https://ghostty.org)
 - Install [Git](https://git-scm.com): `$ sudo apt update && sudo apt install git`
 - Install [Make](https://www.gnu.org/software/make/): `$ sudo apt install make`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ sudo apt install zsh`
