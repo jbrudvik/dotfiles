@@ -73,9 +73,6 @@ else
 	export GOPATH="$HOME/go"
 fi
 
-# Python
-export PATH=/opt/homebrew/opt/python@3.12/libexec/bin:$PATH
-
 # Haskell
 [ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env" # ghcup-env
 
