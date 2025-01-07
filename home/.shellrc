@@ -36,11 +36,6 @@ alias t='tree'
 alias vi='nvim'
 alias vim='nvim'
 
-# Replace ssh with `kitten ssh`
-if command -v kitten >/dev/null; then
-	alias ssh='kitten ssh'
-fi
-
 # Replace ls with exa
 if command -v exa >/dev/null; then
 	alias l='exa'
