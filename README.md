@@ -15,6 +15,7 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
   - `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
   - Then restart shell and run: `$ zinit self-update`
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
+- Install [Neovim](https://neovim.io): `$ brew install neovim`
 
 ## Install dotfiles
 
@@ -99,14 +100,6 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 ## Install tools
 
-- Install [Helix](https://docs.helix-editor.com):
-  - Latest release: `$ brew install helix`
-  - Nightly:
-    - `$ git clone https://github.com/helix-editor/helix`
-    - `$ cd helix`
-    - `$ cargo install --path helix-term --locked`
-    - `$ ln -snfv $PWD/runtime ~/.config/helix/runtime`
-    - `$ hx --health`
 - Install [Prettier](https://github.com/prettier/prettier) globally: `$ bun install -g prettier`
 - Install [delta](https://github.com/dandavison/delta): `$ brew install git-delta`
 - Install [exa](https://github.com/ogham/exa#installation): `$ brew install exa`

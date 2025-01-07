@@ -12,6 +12,7 @@
   - `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
   - Then restart shell and run: `$ zinit self-update`
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
+- Install [Neovim](https://neovim.io): `$ sudo apt install neovim`
 
 ## Install dotfiles
 

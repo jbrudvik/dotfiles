@@ -20,17 +20,6 @@ function tree {
 	broot -c :pt "$@"
 }
 
-# fzfhx = Use fzf to open files in Helix
-function fzfhx {
-	result=$(rg --hidden -l "" | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')
-	if [ -z "${result}" ]; then
-		# echo "No file selected"
-		true
-	else
-		$EDITOR "${result}"
-	fi
-}
-
 #########
 # Aliases
 #########
@@ -38,10 +27,14 @@ function fzfhx {
 # Short aliases
 alias g='git'
 alias z='zed'
+alias v='nvim'
 alias c='cargo'
 alias b='bacon'
-alias f='fzfhx'
 alias t='tree'
+
+# Use Neovim in place of Vim
+alias vi='nvim'
+alias vim='nvim'
 
 # Replace ssh with `kitten ssh`
 if command -v kitten >/dev/null; then
