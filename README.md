@@ -11,10 +11,8 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 - Install [Homebrew](https://brew.sh): `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ brew install zsh zsh-completions`
 - Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`
-- Install [zinit](https://github.com/zdharma-continuum/zinit):
-  - `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
-  - Then restart shell and run: `$ zinit self-update`
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
+- Install [Antidote](https://antidote.sh): `$ brew install antidote`
 - Install [Neovim](https://neovim.io): `$ brew install neovim`
 
 ## Install dotfiles

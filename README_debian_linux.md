@@ -8,10 +8,8 @@
 - Install [Make](https://www.gnu.org/software/make/): `$ sudo apt install make`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ sudo apt install zsh`
 - Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`
-- Install [zinit](https://github.com/zdharma-continuum/zinit):
-  - `$ bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`
-  - Then restart shell and run: `$ zinit self-update`
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
+- Install [Antidote](https://antidote.sh)
 - Install [Neovim](https://neovim.io): `$ sudo apt install neovim`
 
 ## Install dotfiles

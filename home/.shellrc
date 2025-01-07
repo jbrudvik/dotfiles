@@ -31,6 +31,7 @@ alias v='nvim'
 alias c='cargo'
 alias b='bacon'
 alias t='tree'
+alias f='fzf-find-edit'
 
 # Use Neovim in place of Vim
 alias vi='nvim'
