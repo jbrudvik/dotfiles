@@ -14,11 +14,6 @@ fi
 # Foundations
 #############
 
-# Shell history
-export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=2000
-export SAVEHIST=1000
-
 # Set PATH: Prioritize local over global
 export PATH="$PATH:$HOME/.local/bin"
 
