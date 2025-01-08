@@ -6,7 +6,7 @@ GLOBIGNORE=".:.."
 #
 # If no argument is provided, current directory is used.
 # Attempts to add into existing directories.
-function install_dotfiles_in_dir {
+function link_dotfiles_in_dir {
 	PATH_PREFIX=""
 	if [ $# -eq 1 ]; then
 		PATH_PREFIX="$1/"
@@ -19,22 +19,13 @@ function install_dotfiles_in_dir {
 		elif [ -d "$file_or_dir" ]; then
 			dir="$file_or_dir"
 			mkdir -pv "$HOME/$dir"
-			install_dotfiles_in_dir "$file_or_dir"
+			link_dotfiles_in_dir "$file_or_dir"
 		fi
 	done
 }
 
-echo "Installing dotfiles:"
+echo "Creating links to dotfiles:"
 
-# "Install" dotfiles scripts.
-cd "$(dirname "$0")" || exit
-if [[ ":$PATH:" != *":$(pwd):"* ]]; then
-	cat <<EOF >>"$HOME/.shell_profile_local"
-export PATH="\$PATH:$(pwd)"
-EOF
-	echo "Added dotfiles scripts to PATH by appending to $HOME/.shell_profile_local"
-fi
-
-# "Install" all dotfiles in "home" directory.
-cd ../home || exit
-install_dotfiles_in_dir
+# Create links to all dotfiles in "home" directory.
+cd home || exit
+link_dotfiles_in_dir

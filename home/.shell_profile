@@ -24,7 +24,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Add dotfiles directory to PATH
 REALPATH=$([ -L "$0" ] && readlink "$0")
-REALDIR=$(dirname "$REALPATH")
+REALDIR=$(dirname $(dirname "$REALPATH"))
 export PATH="$PATH:$REALDIR"
 
 # Set config directory

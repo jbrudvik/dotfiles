@@ -20,7 +20,5 @@ jobs:
         run: make check-format
       - name: Lint
         run: make lint
-      - name: Test install
-        run: ./bin/dotfiles_install
-      - name: Test update
-        run: ./bin/dotfiles_update
+      - name: Test link dotfiles
+        run: ./link_dotfiles

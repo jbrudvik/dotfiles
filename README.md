@@ -17,10 +17,9 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 
 ## Install dotfiles
 
-WARNING: DESTRUCTIVE!
-
 ```sh
-$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_install`
+$ git clone https://github.com/jbrudvik/dotfiles.git
+$ dotfiles/link_dotfiles # WARNING: Destructive!
 ```
 
 ## Install programming languages and tooling
@@ -114,8 +113,10 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 - Install [tokei](https://github.com/XAMPPRocky/tokei): `$ brew install tokei`
 - Install [killport](https://github.com/jkfran/killport): `$ brew install killport`
 
-## Update
+## Update dotfiles
 
 ```sh
-$ dotfiles_update
+$ cd dotfiles
+$ git pull
+$ link_dotfiles # WARNING: Destructive!
 ```

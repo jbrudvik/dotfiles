@@ -11,13 +11,14 @@
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install [Antidote](https://antidote.sh)
 - Install [Neovim](https://neovim.io): `$ sudo apt install neovim`
+- Install [Ghostty](https://ghostty.org)
+- Install [Zed](https://zed.dev)
 
 ## Install dotfiles
 
-WARNING: DESTRUCTIVE!
-
 ```sh
-$ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_install`
+$ git clone https://github.com/jbrudvik/dotfiles.git
+$ dotfiles/link_dotfiles # WARNING: Destructive!
 ```
 
 ## Install programming languages and tooling
@@ -45,3 +46,11 @@ $ git clone https://github.com/jbrudvik/dotfiles.git && dotfiles/bin/dotfiles_in
 
 - Install [Caddy](https://caddyserver.com): `$ sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list && sudo apt update && sudo apt install caddy`
 - Install [UFW (Uncomplicated Firewall)](https://code.launchpad.net/ufw): `$ sudo apt install ufw`
+
+## Update dotfiles
+
+```sh
+$ cd dotfiles
+$ git pull
+$ link_dotfiles # WARNING: Destructive!
+```
