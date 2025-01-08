@@ -6,14 +6,14 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 
 ## Install basics
 
-- Install [Zed](https://zed.dev)
-- Install [Ghostty](https://ghostty.org)
 - Install [Homebrew](https://brew.sh): `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ brew install zsh zsh-completions`
 - Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install [Antidote](https://antidote.sh): `$ brew install antidote`
 - Install [Neovim](https://neovim.io): `$ brew install neovim`
+- Install [Ghostty](https://ghostty.org)
+- Install [Zed](https://zed.dev)
 
 ## Install dotfiles
 
