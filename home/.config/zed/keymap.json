@@ -19,9 +19,16 @@
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "g o": "workspace::ActivateNextPane",
       "g r": "editor::OpenDocs",
-      "ctrl-c": ["editor::ToggleComments", { "advance_downwards": false }]
+      "ctrl-c": ["editor::ToggleComments", { "advance_downwards": false }],
+      "cmd-[": "workspace::ActivatePreviousPane",
+      "cmd-]": "workspace::ActivateNextPane",
+      "cmd-alt-left": ["workspace::ActivatePaneInDirection", "Left"],
+      "cmd-alt-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "cmd-alt-up": ["workspace::ActivatePaneInDirection", "Up"],
+      "cmd-alt-down": ["workspace::ActivatePaneInDirection", "Down"],
+      "cmd-d": "pane::SplitRight",
+      "cmd-shift-d": "pane::SplitDown"
     }
   },
   {
