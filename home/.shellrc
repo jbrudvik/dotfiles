@@ -28,6 +28,7 @@ function tree {
 alias g='git'
 alias z='zed'
 alias v='nvim'
+alias h='hx'
 alias c='cargo'
 alias b='bacon'
 alias t='tree'
