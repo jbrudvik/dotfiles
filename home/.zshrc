@@ -5,6 +5,9 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=2000
 export SAVEHIST=1000
 
+# Use Emacs-style keybindings
+set -o emacs
+
 # Initialize Starship prompt
 eval "$(starship init zsh)"
 
