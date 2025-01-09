@@ -17,8 +17,8 @@ antidote load
 
 # Secure ShellFish (iOS) config
 if [[ "$LC_TERMINAL" = "ShellFish" ]]; then
-	export LC_CTYPE=
-	# export LANG="C.UTF-8"
+    export LC_CTYPE=
+    # export LANG="C.UTF-8"
 fi
 
 # Load cross-shell settings
