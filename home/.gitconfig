@@ -21,6 +21,7 @@
     # Shorthand for --stat
     ls = "!git l --stat"
     ds = diff --stat
+    dst = diff --staged
 
     # @{u} = upstream
     # ..@{u} = in upstream but not local
