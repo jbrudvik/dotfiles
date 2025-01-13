@@ -42,6 +42,11 @@
     }
   },
 
+  // Terminal
+  "terminal": {
+    "line_height": "standard"
+  },
+
   // AI
   "features": {
     "inline_completion_provider": "none"
