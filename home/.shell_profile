@@ -32,9 +32,6 @@ command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew s
 export EDITOR='vi'
 command -v evil-hx >/dev/null && export EDITOR='evil-hx'
 
-# broot file browser
-source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
-
 #######################
 # Programming languages
 #######################

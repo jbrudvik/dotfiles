@@ -15,11 +15,6 @@ function ipaddr {
     fi
 }
 
-# A non-interactive broot (a better tree)
-function tree {
-    broot -c :pt "$@"
-}
-
 #########
 # Aliases
 #########
@@ -30,7 +25,7 @@ alias z='zed'
 alias h='evil-hx'
 alias c='cargo'
 alias b='bacon'
-alias t='tree'
+alias y='yazi'
 alias f='fzf-find-edit'
 
 # Replace ls with exa

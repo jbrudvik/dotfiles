@@ -99,10 +99,10 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 - Install [bat](https://github.com/sharkdp/bat): `$ brew install bat`
 - Install [fzf](https://github.com/junegunn/fzf): `$ brew install fzf`
 - Install [fd](https://github.com/sharkdp/fd): `$ brew install fd`
+- Install [yazi](https://github.com/sxyazi/yazi): `$ brew install yazi`
+- Install [glow](https://github.com/charmbracelet/glow): `$ brew install glow`
 - Install [watchexec](https://github.com/watchexec/watchexec): `$ brew install watchexec`
 - Install [Caddy](https://caddyserver.com): `$ brew install caddy`
-- Install [glow](https://github.com/charmbracelet/glow): `$ brew install glow`
-- Install [broot](https://dystroy.org/broot): `$ brew install broot && broot`
 - Install [xh](https://github.com/ducaale/xh): `$ brew install xh`
 - Install [bottom](https://github.com/ClementTsang/bottom): `$ brew install bottom`
 - Install [hecate](https://github.com/evanmiller/hecate): `$ go install github.com/evanmiller/hecate@latest`
