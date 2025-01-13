@@ -6,18 +6,18 @@
 
 # ipaddr = Show IP address
 function ipaddr {
-	if command -v ip >/dev/null; then
-		ip route show dev eth0 | tail -1 | awk '{print $NF}'
-	elif command -v ipconfig >/dev/null; then
-		ipconfig getifaddr en0
-	else
-		echo "Cannot get IP address; neither ip nor ipconfig are installed."
-	fi
+    if command -v ip >/dev/null; then
+        ip route show dev eth0 | tail -1 | awk '{print $NF}'
+    elif command -v ipconfig >/dev/null; then
+        ipconfig getifaddr en0
+    else
+        echo "Cannot get IP address; neither ip nor ipconfig are installed."
+    fi
 }
 
 # A non-interactive broot (a better tree)
 function tree {
-	broot -c :pt "$@"
+    broot -c :pt "$@"
 }
 
 #########
@@ -27,24 +27,19 @@ function tree {
 # Short aliases
 alias g='git'
 alias z='zed'
-alias v='nvim'
-alias h='hx'
+alias h='evil-hx'
 alias c='cargo'
 alias b='bacon'
 alias t='tree'
 alias f='fzf-find-edit'
 
-# Use Neovim in place of Vim
-alias vi='nvim'
-alias vim='nvim'
-
 # Replace ls with exa
 if command -v exa >/dev/null; then
-	alias l='exa'
-	alias ls='exa'
-	alias la='exa -a'
-	alias ll='exa -l'
-	alias lla='exa -la'
+    alias l='exa'
+    alias ls='exa'
+    alias la='exa -a'
+    alias ll='exa -l'
+    alias lla='exa -la'
 fi
 
 # Aliases to set defaults
@@ -60,9 +55,9 @@ alias hex='hecate'
 
 # Alias: ports
 if command -v ss >/dev/null; then
-	alias ports='sudo ss -ltpn'
+    alias ports='sudo ss -ltpn'
 elif command -v lsof >/dev/null; then
-	alias ports='sudo lsof -PiTCP -sTCP:LISTEN'
+    alias ports='sudo lsof -PiTCP -sTCP:LISTEN'
 fi
 
 # Go aliases
@@ -77,5 +72,5 @@ alias spago-watch='watchexec -e purs -- spago bundle'
 ################
 
 if [ -f "$HOME/.shellrc_local" ]; then
-	source "$HOME/.shellrc_local"
+    source "$HOME/.shellrc_local"
 fi

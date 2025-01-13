@@ -8,12 +8,12 @@ export SAVEHIST=1000
 # Use Emacs-style keybindings
 set -o emacs
 
-# Initialize Starship prompt
-eval "$(starship init zsh)"
-
 # Initialize Antidote zsh plugin manager
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 antidote load
+
+# Initialize Starship prompt
+eval "$(starship init zsh)"
 
 # Secure ShellFish (iOS) config
 if [[ "$LC_TERMINAL" = "ShellFish" ]]; then

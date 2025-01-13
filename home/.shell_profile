@@ -5,9 +5,9 @@
 ######################################
 
 if [ -n "$DID_RUN_SHELL_PROFILE" ]; then
-	return
+    return
 else
-	export DID_RUN_SHELL_PROFILE=true
+    export DID_RUN_SHELL_PROFILE=true
 fi
 
 #############
@@ -30,7 +30,7 @@ command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew s
 
 # Set default editor
 export EDITOR='vi'
-command -v nvim >/dev/null && export EDITOR='nvim'
+command -v evil-hx >/dev/null && export EDITOR='evil-hx'
 
 # broot file browser
 source "$HOME/.config/broot/launcher/bash/br" 2>/dev/null
@@ -45,7 +45,7 @@ export BACON_PREFS="$XDG_CONFIG_HOME/bacon.toml"
 
 # PostgreSQL
 if [ "$(uname -s)" = "Darwin" ]; then
-	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
+    export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
 fi
 
 # Bun
@@ -55,17 +55,17 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
-	export GOOS=darwin
-	export GOARCH=arm64
-	if command -v go >/dev/null; then
-		GOPATH=$(go env GOPATH)
-		export PATH="$PATH:$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}"
-	else
-		export PATH=$PATH:/usr/local/go/bin
-	fi
+    export GOOS=darwin
+    export GOARCH=arm64
+    if command -v go >/dev/null; then
+        GOPATH=$(go env GOPATH)
+        export PATH="$PATH:$GOPATH/bin:$GOPATH/bin/${GOOS}_${GOARCH}"
+    else
+        export PATH=$PATH:/usr/local/go/bin
+    fi
 else
-	export PATH=$PATH:"$HOME/.go/bin:$HOME/go/bin:/usr/local/go/bin"
-	export GOPATH="$HOME/go"
+    export PATH=$PATH:"$HOME/.go/bin:$HOME/go/bin:/usr/local/go/bin"
+    export GOPATH="$HOME/go"
 fi
 
 # Haskell
@@ -76,5 +76,5 @@ fi
 ################
 
 if [ -f "$HOME/.shell_profile_local" ]; then
-	source "$HOME/.shell_profile_local"
+    source "$HOME/.shell_profile_local"
 fi

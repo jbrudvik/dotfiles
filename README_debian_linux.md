@@ -6,11 +6,11 @@
 - Install [Make](https://www.gnu.org/software/make/): `$ sudo apt install make`
 - Install [zsh](https://en.wikipedia.org/wiki/Z_shell): `$ sudo apt install zsh`
 - Set zsh as login shell: `$ grep -q $(command -v zsh) /etc/shells || sudo sh -c "echo $(command -v zsh) >> /etc/shells"; sudo chsh -s $(command -v zsh) $(whoami)`
-- Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install [Antidote](https://antidote.sh)
-- Install [Neovim](https://neovim.io): `$ sudo apt install neovim`
-- Install [Ghostty](https://ghostty.org)
+- Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install [Zed](https://zed.dev)
+- Install [Ghostty](https://ghostty.org)
+- Install [evil-helix](https://github.com/usagi-flow/evil-helix)
 
 ## Install dotfiles
 

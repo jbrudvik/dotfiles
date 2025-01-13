@@ -1,6 +1,7 @@
 theme = "ayu_dark"
 
 [editor]
+evil = true
 true-color = true
 bufferline = "never"
 scroll-lines = 1
@@ -29,14 +30,28 @@ smart-case = false
 enable = true
 
 [keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"] # Escape multiple selections easily
+esc = [
+    "collapse_selection",
+    "keep_primary_selection",
+] # Escape multiple selections easily
 X = "extend_line_above"
-"*" = ["move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
-"#" = ["move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+"*" = [
+    "move_prev_word_start",
+    "move_next_word_end",
+    "search_selection",
+    "search_next",
+]
+"#" = [
+    "move_prev_word_start",
+    "move_next_word_end",
+    "search_selection",
+    "search_prev",
+]
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
 "+" = "goto_prev_diag"
 "=" = "goto_next_diag"
+V = ["select_mode", "extend_line"] # evil-helix: Enter "visual line" mode
 
 [keys.select]
 X = "extend_line_above"
@@ -44,7 +59,7 @@ X = "extend_line_above"
 "}" = ["extend_to_line_bounds", "goto_next_paragraph"]
 
 [keys.normal.space]
-f = "file_picker_in_current_directory" # Prefer opening file picker in cwd
+f = "file_picker_in_current_directory"        # Prefer opening file picker in cwd
 F = "file_picker"
 i = "file_picker_in_current_buffer_directory"
 W = ":write-all"
