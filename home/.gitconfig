@@ -3,7 +3,7 @@
     email = jbrudvik@gmail.com
 [alias]
     # Short aliases
-    s = status -s
+    s = status -sb
     d = diff
     l = log --pretty=format:\"%C(auto)%h%d %C(white)%s %C(blue)[%ad] %C(magenta)<%an>\" --date=relative
     f = fetch
