@@ -13,6 +13,7 @@
     b = branch
     co = checkout
     g = grep
+    sh = show
 
     # i: Shorthand for --stat
     li = "!git l --stat"
