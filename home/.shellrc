@@ -59,9 +59,6 @@ fi
 alias go-watch-build='watchexec -e go -- go build'
 alias go-watch-run='watchexec -r -e go -- go run .'
 
-# PureScript aliases
-alias spago-watch='watchexec -e purs -- spago bundle'
-
 ################
 # Local settings
 ################

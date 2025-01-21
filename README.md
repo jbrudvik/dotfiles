@@ -74,13 +74,6 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ bun install -g dockerfile-language-server-nodejs`
 
-### PureScript
-
-- Install [PureScript](https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md): `$ bun install -g purescript`
-- Install [Spago](https://github.com/purescript/spago): `$ bun install -g spago@next`
-- Install [purescript-language-server (PureScript LSP)](https://github.com/nwolverson/purescript-language-server): `$ bun install -g purescript-language-server`
-- Install [purs-tidy (PureScript formatter)](https://github.com/natefaubion/purescript-tidy): `$ bun install -g purs-tidy`
-
 ### Haskell
 
 - Install [Haskell](https://www.haskell.org):
