@@ -10,8 +10,8 @@
     p = pull
     a = add
     c = commit -v
+    b = branch
     co = checkout
-    b = rev-parse --abbrev-ref HEAD
     g = grep
 
     # Shorthand for -p
