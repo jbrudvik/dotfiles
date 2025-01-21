@@ -46,19 +46,14 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
 - Install [Biome](https://biomejs.dev): `$ brew install biome`
 
-### Python
+### Haskell
 
-- Install [Python](https://www.python.org): `$ brew install python`
-- Install [uv](https://github.com/astral-sh/uv): `$ curl -LsSf https://astral.sh/uv/install.sh | sh`
-- Install [ruff](https://github.com/astral-sh/ruff): `$ pip install ruff`
-- Install [ruff-lsp](https://github.com/astral-sh/ruff-lsp#installation-and-usage): `$ brew install ruff-lsp`
-
-### Go
-
-- Install [Go](https://go.dev): `$ brew install go`
-- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
-- Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
-- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+- Install [Haskell](https://www.haskell.org):
+  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+  - `$ ghcup tui`
+- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
+- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
 
 ### Bash
 
@@ -74,14 +69,19 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 
 - Install [docker-langserver (Docker LSP)](https://github.com/rcjsuen/dockerfile-language-server-nodejs): `$ bun install -g dockerfile-language-server-nodejs`
 
-### Haskell
+### Go
 
-- Install [Haskell](https://www.haskell.org):
-  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
-  - `$ ghcup tui`
-- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
-- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
+- Install [Go](https://go.dev): `$ brew install go`
+- Install [gopls (Go LSP)](https://pkg.go.dev/golang.org/x/tools/gopls): `$ go install golang.org/x/tools/gopls@latest`
+- Install [staticcheck](https://github.com/dominikh/go-tools): `$ go install honnef.co/go/tools/cmd/staticcheck@latest`
+- Install [Delve (Go debugger)](https://github.com/go-delve/delve): `$ go install github.com/go-delve/delve/cmd/dlv@latest`
+
+### Python
+
+- Install [Python](https://www.python.org): `$ brew install python`
+- Install [uv](https://github.com/astral-sh/uv): `$ curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Install [ruff](https://github.com/astral-sh/ruff): `$ pip install ruff`
+- Install [ruff-lsp](https://github.com/astral-sh/ruff-lsp#installation-and-usage): `$ brew install ruff-lsp`
 
 ## Install tools
 
