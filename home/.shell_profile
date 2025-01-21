@@ -50,6 +50,9 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Haskell
+[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env"
+
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then
 	export GOOS=darwin
@@ -64,9 +67,6 @@ else
 	export PATH=$PATH:"$HOME/.go/bin:$HOME/go/bin:/usr/local/go/bin"
 	export GOPATH="$HOME/go"
 fi
-
-# Haskell
-[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env"
 
 ################
 # Local settings
