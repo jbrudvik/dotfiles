@@ -27,6 +27,7 @@ alias c='cargo'
 alias b='bacon'
 alias y='yazi'
 alias f='fzf-find-edit'
+alias d='dust'
 
 # Replace ls with exa
 if command -v exa >/dev/null; then
