@@ -40,22 +40,24 @@
 [log]
     decorate
 	date = local
-[push]
-    default = current
-[core]
-    excludesfile = ~/.gitignore_global
-    pager = "f() { if [ $(tput cols) -ge 140 ]; then "delta --side-by-side"; else "delta"; fi }; f"
-[pull]
-    ff = only
 [init]
     defaultBranch = main
+[push]
+    default = current
+[pull]
+    ff = only
+[core]
+    excludesfile = ~/.gitignore_global
+    pager = delta
 [interactive]
     diffFilter = delta --color-only
 [delta]
-    light = false
+    dark = true
     navigate = true # use n and N to move between diff sections
     line-numbers = true
 [merge]
     conflictstyle = diff3
 [diff]
     colorMoved = default
+[pager]
+    status = true
