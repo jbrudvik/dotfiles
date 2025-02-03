@@ -1,3 +1,4 @@
 theme = Ayu
 keybind = global:cmd+alt+space=toggle_quick_terminal
 keybind = shift+escape=toggle_split_zoom
+font-feature = -calt
