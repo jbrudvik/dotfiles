@@ -69,6 +69,12 @@
   "notification_panel": {
     "button": false
   },
+  "show_user_picture": false,
 
-  "show_user_picture": false
+  // Language overrides
+  "languages": {
+    "Haskell": {
+      "tab_size": 2
+    }
+  }
 }
