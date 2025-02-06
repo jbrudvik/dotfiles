@@ -74,7 +74,8 @@
   // Language overrides
   "languages": {
     "Haskell": {
-      "tab_size": 2
+      "tab_size": 2,
+      "inline_completions_disabled_in": ["string", "comment"]
     }
   }
 }
