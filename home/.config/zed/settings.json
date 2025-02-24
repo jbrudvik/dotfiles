@@ -49,7 +49,7 @@
 
   // AI
   "features": {
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "none"
   },
   "assistant": {
     "default_model": {
@@ -75,7 +75,7 @@
   "languages": {
     "Haskell": {
       "tab_size": 2,
-      "inline_completions_disabled_in": ["string", "comment"]
+      "edit_predictions_disabled_in": ["string", "comment"]
     }
   }
 }

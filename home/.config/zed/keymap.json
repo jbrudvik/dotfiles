@@ -23,10 +23,10 @@
       "ctrl-c": ["editor::ToggleComments", { "advance_downwards": false }],
       "cmd-[": "workspace::ActivatePreviousPane",
       "cmd-]": "workspace::ActivateNextPane",
-      "cmd-alt-left": ["workspace::ActivatePaneInDirection", "Left"],
-      "cmd-alt-right": ["workspace::ActivatePaneInDirection", "Right"],
-      "cmd-alt-up": ["workspace::ActivatePaneInDirection", "Up"],
-      "cmd-alt-down": ["workspace::ActivatePaneInDirection", "Down"],
+      "cmd-alt-left": "workspace::ActivatePaneLeft",
+      "cmd-alt-right": "workspace::ActivatePaneRight",
+      "cmd-alt-up": "workspace::ActivatePaneUp",
+      "cmd-alt-down": "workspace::ActivatePaneDown",
       "cmd-d": "pane::SplitRight",
       "cmd-shift-d": "pane::SplitDown"
     }
