@@ -33,9 +33,9 @@
   },
   {
     "context": "vim_mode == normal",
-    "use_layout_keys": true,
     "bindings": {
-      "U": "vim::Redo"
+      "U": "vim::Redo",
+      "shift-y": ["workspace::SendKeystrokes", "y $"]
     }
   },
   {
