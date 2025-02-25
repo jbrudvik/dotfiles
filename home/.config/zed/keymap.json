@@ -19,7 +19,6 @@
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "g r": "editor::OpenDocs",
       "ctrl-c": ["editor::ToggleComments", { "advance_downwards": false }],
       "cmd-[": "workspace::ActivatePreviousPane",
       "cmd-]": "workspace::ActivateNextPane",
