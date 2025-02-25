@@ -53,7 +53,6 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
   - `$ ghcup tui`
 - Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
-- Install [ghcid](https://github.com/ndmitchell/ghcid): `$ stack install ghcid`
 
 ### Bash
 
