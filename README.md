@@ -13,7 +13,6 @@ MacOS setup follows. See also: [Debian Linux setup](/README_debian_linux.md).
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install [Zed](https://zed.dev)
 - Install [Ghostty](https://ghostty.org)
-- Install [evil-helix](https://github.com/usagi-flow/evil-helix)
 
 ## Install dotfiles
 

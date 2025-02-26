@@ -10,7 +10,6 @@
 - Install [Starship](https://github.com/starship/starship): `$ curl -sS https://starship.rs/install.sh | sh`
 - Install [Zed](https://zed.dev)
 - Install [Ghostty](https://ghostty.org)
-- Install [evil-helix](https://github.com/usagi-flow/evil-helix)
 
 ## Install dotfiles
 

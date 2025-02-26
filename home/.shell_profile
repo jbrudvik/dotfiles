@@ -30,7 +30,6 @@ command -v /opt/homebrew/bin/brew >/dev/null && eval "$(/opt/homebrew/bin/brew s
 
 # Set default editor
 export EDITOR='vi'
-command -v evil-hx >/dev/null && export EDITOR='evil-hx'
 
 #######################
 # Programming languages
