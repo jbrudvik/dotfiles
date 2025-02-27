@@ -21,5 +21,9 @@ set tabstop=2 " Visual size of tab characters
 set shiftwidth=2 " How many columns of text are indented with >> or << (or =G)
 filetype indent on " Enable smart indentation based on filetype
 
+" Use bar cursor in insert mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 " Key mappings
 nnoremap Y y$ " Yank to end of line
