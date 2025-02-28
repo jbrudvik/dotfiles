@@ -31,20 +31,6 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 - Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
 - Install [bacon](https://github.com/Canop/bacon): `$ cargo install --locked bacon`
 
-### PostgreSQL
-
-- Install [PostgreSQL](https://www.postgresql.org)
-  - `$ brew install postgresql@15`
-  - `$ brew services start postgresql@15`
-
-### JavaScript / TypeScript
-
-- Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
-- Install [Node](https://nodejs.org): `$ brew install node`
-- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ bun install -g vscode-langservers-extracted`
-- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
-- Install [Biome](https://biomejs.dev): `$ brew install biome`
-
 ### Haskell
 
 - Install [Haskell](https://www.haskell.org):
@@ -52,6 +38,20 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
   - `$ ghcup tui`
 - Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
 - Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
+
+### JavaScript
+
+- Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
+- Install [Node](https://nodejs.org): `$ brew install node`
+- Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ bun install -g vscode-langservers-extracted`
+- Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
+- Install [Biome](https://biomejs.dev): `$ brew install biome`
+
+### PostgreSQL
+
+- Install [PostgreSQL](https://www.postgresql.org)
+  - `$ brew install postgresql@15`
+  - `$ brew services start postgresql@15`
 
 ### Bash
 
