@@ -7,6 +7,7 @@ set ruler " Show ruler (line and column number, position in file)
 set hlsearch " Highlight all search matches
 set noignorecase " Case-sensitive search
 set backspace=indent,eol,start " Allow backspacing over many things (in insert mode)
+set clipboard^=unnamed,unnamedplus " Use system clipboard
 
 " Colors
 syntax on " Turn on syntax highlighting
