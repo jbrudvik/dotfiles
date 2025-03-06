@@ -46,6 +46,7 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 - Install [vscode-language-servers-extracted (LSP)](https://www.npmjs.com/package/vscode-langservers-extracted): `$ bun install -g vscode-langservers-extracted`
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
 - Install [Biome](https://biomejs.dev): `$ brew install biome`
+- Install [Zed Biome extension](https://zed.dev/docs/languages/biome)
 
 ### PostgreSQL
 
