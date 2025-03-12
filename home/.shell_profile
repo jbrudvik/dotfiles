@@ -39,18 +39,18 @@ export EDITOR='vi'
 source ~/.cargo/env
 export BACON_PREFS="$XDG_CONFIG_HOME/bacon.toml"
 
-# PostgreSQL
-if [ "$(uname -s)" = "Darwin" ]; then
-	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
-fi
-
 # Bun
-[ -s "/Users/jbrudvik/.bun/_bun" ] && source "/Users/jbrudvik/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Haskell
-[ -f "/Users/jbrudvik/.ghcup/env" ] && source "/Users/jbrudvik/.ghcup/env"
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+
+# PostgreSQL
+if [ "$(uname -s)" = "Darwin" ]; then
+	export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
+fi
 
 # Go
 if [ "$(uname -s)" = "Darwin" ]; then

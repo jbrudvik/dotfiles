@@ -31,14 +31,6 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 - Install [Cargo Watch](https://github.com/watchexec/cargo-watch): `$ cargo install cargo-watch`
 - Install [bacon](https://github.com/Canop/bacon): `$ cargo install --locked bacon`
 
-### Haskell
-
-- Install [Haskell](https://www.haskell.org):
-  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
-  - `$ ghcup tui`
-- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
-- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
-
 ### JavaScript
 
 - Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
@@ -47,6 +39,14 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 - Install [typescript-language-server](https://www.npmjs.com/package/typescript-language-server) (including for JavaScript) `$ bun install -g typescript-language-server typescript`
 - Install [Biome](https://biomejs.dev): `$ brew install biome`
 - Install [Zed Biome extension](https://zed.dev/docs/languages/biome)
+
+### Haskell
+
+- Install [Haskell](https://www.haskell.org):
+  - `$ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh`
+  - `$ ghcup tui`
+- Install [HLint](https://github.com/ndmitchell/hlint): `$ stack install hlint`
+- Install [Hoogle](https://github.com/ndmitchell/hoogle): `$ stack install hoogle`
 
 ### PostgreSQL
 
