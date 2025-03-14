@@ -24,7 +24,7 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 
 - Install [C (clang)](https://clang.llvm.org): `$ sudo apt install clang-format clang-tidy clang-tools clang clangd libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libomp-dev libomp5 lld lldb llvm-dev llvm-runtime llvm libgmp-dev`
 
-### JavaScript / TypeScript
+### JavaScript
 
 - Install [Bun](https://bun.sh): `$ curl -fsSL https://bun.sh/install | bash`
 - Install [Node](https://nodejs.org): `$ sudo apt install nodejs`
