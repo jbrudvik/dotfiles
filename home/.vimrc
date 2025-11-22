@@ -14,6 +14,8 @@ syntax on " Turn on syntax highlighting
 set termguicolors
 let ayucolor="dark"
 colorscheme ayu
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NonText guibg=NONE ctermbg=NONE
 
 " Tabs and indents
 set expandtab " Insert tabs instead of spaces when using the tab button
