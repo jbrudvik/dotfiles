@@ -84,6 +84,7 @@ $ dotfiles/link_dotfiles # WARNING: Destructive!
 
 ## Install tools
 
+- Install [Rectangle](https://github.com/rxhanson/Rectangle): `$ brew install --cask rectangle`
 - Install [Prettier](https://github.com/prettier/prettier) globally: `$ bun install -g prettier`
 - Install [delta](https://github.com/dandavison/delta): `$ brew install git-delta`
 - Install [exa](https://github.com/ogham/exa#installation): `$ brew install exa`
