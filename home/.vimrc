@@ -28,5 +28,15 @@ filetype indent on " Enable smart indentation based on filetype
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+"
 " Key mappings
-nnoremap Y y$ " Yank to end of line
+"
+
+" Map Y to yank to EOL (like C, D)
+nnoremap Y y$
+
+" Map <C-L> to clear current search highlights
+nnoremap <nowait><silent> <C-L> :noh<CR>
+
+" Map U to redo
+nnoremap U <C-R>
