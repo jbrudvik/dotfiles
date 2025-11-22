@@ -1,4 +1,28 @@
+# Theme / Color scheme
 theme = Ayu
-keybind = global:cmd+alt+space=toggle_quick_terminal
-keybind = shift+escape=toggle_split_zoom
+background = #000000
+background-opacity = 0.85
+split-divider-color = #3f4043
+
+# Disable ligatures
 font-feature = -calt
+
+# Launch maximized
+window-width = 1000
+window-height = 1000
+
+# Mac UI
+macos-titlebar-style = tabs
+macos-window-shadow = false
+
+# Quick terminal
+keybind = global:shift+cmd+space=toggle_quick_terminal
+quick-terminal-animation-duration = 0
+quick-terminal-size = 100%
+
+# Settings if using Ghostty only as Quick Terminal
+# macos-hidden = always
+# initial-window = false
+
+# Key binding: Use Zed's key binding for "zoom"
+keybind = shift+escape=toggle_split_zoom
